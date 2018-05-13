@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>shaders/basicshader.frag</file>
+        <file>shaders/basicshader.vert</file>
+        <file>images/DefaultMaterial_Base_Color.png</file>
+        <file>models/arduino.obj</file>
+        <file>images/DefaultMaterial_Base_Color2.png</file>
+    </qresource>
+</RCC>
