@@ -49,7 +49,7 @@ private:
 	QVector <QColor> plotColors;
 	QColor bgColor, fgColor;
 	quint32 plotsAmount;
-	double maxYAxisValue;
+	double maxYAxisValue, maxYAxisValue2;
 
 	void setGraphsProperties();
 	void generateBarGraph(QCustomPlot *pointer, const QVector <double> &data, const quint32 &plotsAmount, const QVector <QString> &labels, const QColor &bgColor, const QColor &fgColor);

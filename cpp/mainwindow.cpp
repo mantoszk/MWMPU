@@ -6,9 +6,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent),
 {
 	ui->setupUi(this);
 	connect(ui->calibrateButton, SIGNAL (released()), this, SLOT (onCalibrateButtonClicked()));
-	connect(ui->calibrateButton2, SIGNAL (released()), this, SLOT (onCalibrateButtonClicked()));
 	connect(ui->resetButton, SIGNAL (released()), this, SLOT (onResetButtonClicked()));
-	connect(ui->resetButton2, SIGNAL (released()), this, SLOT (onResetButtonClicked()));
 	connect(ui->connectButton, SIGNAL (released()), this, SLOT (onConnectButtonClicked()));
 	connect(ui->autoButton, SIGNAL (released()), this, SLOT (onAutoButtonClicked()));
 	connect(ui->disconnectButton, SIGNAL (released()), this, SLOT (onDisconnectButtonClicked()));
@@ -51,11 +49,8 @@ void MainWindow::eventLoop()
 	updateBarGraph(ui->distanceGraph2, transform->getDistance(), plotsAmount, labels4, bgColor, fgColor);
 
 	ui->openGLWidget->updateRotation(transform->getAngle());
-	ui->openGLWidget2->updateRotation(transform->getAngle());
 	ui->openGLWidget->updateDistance(transform->getDistance());
-	ui->openGLWidget2->updateDistance(transform->getDistance());
 	ui->openGLWidget->update();
-	ui->openGLWidget2->update();
 }
 
 void MainWindow::setGraphsProperties()
@@ -134,17 +129,30 @@ void MainWindow::generateBarGraph(QCustomPlot *pointer, const QVector<double> &d
 	modifiedData.push_back(data[1]);
 	modifiedData.push_back(-data[2]);
 
-	for(quint32 i =0; i< plotsAmount; ++i)
+	if(pointer == ui->angleGraph || pointer == ui->angleGraph2)
 	{
-		if(qSqrt(data[i]) > maxYAxisValue)
+		for(quint32 i =0; i< plotsAmount; ++i)
 		{
-			maxYAxisValue = data[i];
+			if(qSqrt(data[i]) > sqrt(maxYAxisValue))
+			{
+				maxYAxisValue = data[i];
+			}
 		}
+		pointer->yAxis->setRange(-maxYAxisValue * 1.2, maxYAxisValue * 1.2);
+	}
+	else if(pointer == ui->distanceGraph || pointer == ui->distanceGraph2)
+	{
+		for(quint32 i =0; i< plotsAmount; ++i)
+		{
+			if(qSqrt(data[i]) > sqrt(maxYAxisValue))
+			{
+				maxYAxisValue2 = data[i];
+			}
+		}
+		pointer->yAxis->setRange(-maxYAxisValue2 * 1.2, maxYAxisValue2 * 1.2);
 	}
 
 	chart->setData(ticks, modifiedData);
-	pointer->yAxis->setRange(-maxYAxisValue * 1.2, maxYAxisValue * 1.2);
-	//pointer->yAxis->rescale();
 	pointer->clearItems();
 }
 
