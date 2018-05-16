@@ -1,0 +1,25 @@
+\hypertarget{class_q_c_p_layout}{}\section{Q\+C\+P\+Layout Class Reference}
+\label{class_q_c_p_layout}\index{Q\+C\+P\+Layout@{Q\+C\+P\+Layout}}
+
+
+The abstract base class for layouts.  
+
+
+
+
+\subsection{Detailed Description}
+The abstract base class for layouts. 
+
+This is an abstract base class for layout elements whose main purpose is to define the position and size of other child layout elements. In most cases, layouts don\textquotesingle{}t draw anything themselves (but there are exceptions to this, e.\+g. \mbox{\hyperlink{class_q_c_p_legend}{Q\+C\+P\+Legend}}).
+
+\mbox{\hyperlink{class_q_c_p_layout}{Q\+C\+P\+Layout}} derives from \mbox{\hyperlink{class_q_c_p_layout_element}{Q\+C\+P\+Layout\+Element}}, and thus can itself be nested in other layouts.
+
+\mbox{\hyperlink{class_q_c_p_layout}{Q\+C\+P\+Layout}} introduces a common interface for accessing and manipulating the child elements. Those functions are most notably element\+Count, element\+At, take\+At, take, simplify, remove\+At, remove and clear. Individual subclasses may add more functions to this interface which are more specialized to the form of the layout. For example, \mbox{\hyperlink{class_q_c_p_layout_grid}{Q\+C\+P\+Layout\+Grid}} adds functions that take row and column indices to access cells of the layout grid more conveniently.
+
+Since this is an abstract base class, you can\textquotesingle{}t instantiate it directly. Rather use one of its subclasses like \mbox{\hyperlink{class_q_c_p_layout_grid}{Q\+C\+P\+Layout\+Grid}} or \mbox{\hyperlink{class_q_c_p_layout_inset}{Q\+C\+P\+Layout\+Inset}}.
+
+For a general introduction to the layout system, see the dedicated documentation page The Layout System. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{qcustomplot_8cpp}{qcustomplot.\+cpp}}\end{DoxyCompactItemize}

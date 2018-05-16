@@ -1,0 +1,31 @@
+\hypertarget{class_q_c_p_data_selection}{}\section{Q\+C\+P\+Data\+Selection Class Reference}
+\label{class_q_c_p_data_selection}\index{Q\+C\+P\+Data\+Selection@{Q\+C\+P\+Data\+Selection}}
+
+
+Describes a data set by holding multiple \mbox{\hyperlink{class_q_c_p_data_range}{Q\+C\+P\+Data\+Range}} instances.  
+
+
+
+
+\subsection{Detailed Description}
+Describes a data set by holding multiple \mbox{\hyperlink{class_q_c_p_data_range}{Q\+C\+P\+Data\+Range}} instances. 
+
+\mbox{\hyperlink{class_q_c_p_data_selection}{Q\+C\+P\+Data\+Selection}} manages multiple instances of \mbox{\hyperlink{class_q_c_p_data_range}{Q\+C\+P\+Data\+Range}} in order to represent any (possibly disjoint) set of data selection.
+
+The data selection can be modified with addition and subtraction operators which take \mbox{\hyperlink{class_q_c_p_data_selection}{Q\+C\+P\+Data\+Selection}} and \mbox{\hyperlink{class_q_c_p_data_range}{Q\+C\+P\+Data\+Range}} instances, as well as methods such as add\+Data\+Range and clear. Read access is provided by data\+Range, data\+Ranges, data\+Range\+Count, etc.
+
+The method simplify is used to join directly adjacent or even overlapping \mbox{\hyperlink{class_q_c_p_data_range}{Q\+C\+P\+Data\+Range}} instances. \mbox{\hyperlink{class_q_c_p_data_selection}{Q\+C\+P\+Data\+Selection}} automatically simplifies when using the addition/subtraction operators. The only case when simplify is left to the user, is when calling add\+Data\+Range, with the parameter {\itshape simplify} explicitly set to false. This is useful if many data ranges will be added to the selection successively and the overhead for simplifying after each iteration shall be avoided. In this case, you should make sure to call simplify after completing the operation.
+
+Use enforce\+Type to bring the data selection into a state complying with the constraints for selections defined in Q\+C\+P\+::\+Selection\+Type.
+
+Q\+Custom\+Plot\textquotesingle{}s data selection mechanism is based on \mbox{\hyperlink{class_q_c_p_data_selection}{Q\+C\+P\+Data\+Selection}} and \mbox{\hyperlink{class_q_c_p_data_range}{Q\+C\+P\+Data\+Range}}.\hypertarget{class_q_c_p_data_selection_qcpdataselection-iterating}{}\subsection{Iterating over a data selection}\label{class_q_c_p_data_selection_qcpdataselection-iterating}
+As an example, the following code snippet calculates the average value of a graph\textquotesingle{}s data selection\+:
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{qcustomplot_8cpp}{qcustomplot.\+cpp}}\end{DoxyCompactItemize}

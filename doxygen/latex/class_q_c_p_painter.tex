@@ -1,0 +1,22 @@
+\hypertarget{class_q_c_p_painter}{}\section{Q\+C\+P\+Painter Class Reference}
+\label{class_q_c_p_painter}\index{Q\+C\+P\+Painter@{Q\+C\+P\+Painter}}
+
+
+Q\+Painter subclass used internally.  
+
+
+
+
+\subsection{Detailed Description}
+Q\+Painter subclass used internally. 
+
+This Q\+Painter subclass is used to provide some extended functionality e.\+g. for tweaking position consistency between antialiased and non-\/antialiased painting. Further it provides workarounds for Q\+Painter quirks.
+
+\begin{DoxyWarning}{Warning}
+This class intentionally hides non-\/virtual functions of Q\+Painter, e.\+g. set\+Pen, save and restore. So while it is possible to pass a \mbox{\hyperlink{class_q_c_p_painter}{Q\+C\+P\+Painter}} instance to a function that expects a Q\+Painter pointer, some of the workarounds and tweaks will be unavailable to the function (because it will call the base class implementations of the functions actually hidden by \mbox{\hyperlink{class_q_c_p_painter}{Q\+C\+P\+Painter}}). 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{qcustomplot_8cpp}{qcustomplot.\+cpp}}\end{DoxyCompactItemize}

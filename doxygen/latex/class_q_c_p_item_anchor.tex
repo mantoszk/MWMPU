@@ -1,0 +1,23 @@
+\hypertarget{class_q_c_p_item_anchor}{}\section{Q\+C\+P\+Item\+Anchor Class Reference}
+\label{class_q_c_p_item_anchor}\index{Q\+C\+P\+Item\+Anchor@{Q\+C\+P\+Item\+Anchor}}
+
+
+An anchor of an item to which positions can be attached to.  
+
+
+
+
+\subsection{Detailed Description}
+An anchor of an item to which positions can be attached to. 
+
+An item (\mbox{\hyperlink{class_q_c_p_abstract_item}{Q\+C\+P\+Abstract\+Item}}) may have one or more anchors. Unlike \mbox{\hyperlink{class_q_c_p_item_position}{Q\+C\+P\+Item\+Position}}, an anchor doesn\textquotesingle{}t control anything on its item, but provides a way to tie other items via their positions to the anchor.
+
+For example, a \mbox{\hyperlink{class_q_c_p_item_rect}{Q\+C\+P\+Item\+Rect}} is defined by its positions {\itshape top\+Left} and {\itshape bottom\+Right}. Additionally it has various anchors like {\itshape top}, {\itshape top\+Right} or {\itshape bottom\+Left} etc. So you can attach the {\itshape start} (which is a \mbox{\hyperlink{class_q_c_p_item_position}{Q\+C\+P\+Item\+Position}}) of a \mbox{\hyperlink{class_q_c_p_item_line}{Q\+C\+P\+Item\+Line}} to one of the anchors by calling Q\+C\+P\+Item\+Position\+::set\+Parent\+Anchor on {\itshape start}, passing the wanted anchor of the \mbox{\hyperlink{class_q_c_p_item_rect}{Q\+C\+P\+Item\+Rect}}. This way the start of the line will now always follow the respective anchor location on the rect item.
+
+Note that \mbox{\hyperlink{class_q_c_p_item_position}{Q\+C\+P\+Item\+Position}} derives from \mbox{\hyperlink{class_q_c_p_item_anchor}{Q\+C\+P\+Item\+Anchor}}, so every position can also serve as an anchor to other positions.
+
+To learn how to provide anchors in your own item subclasses, see the subclassing section of the \mbox{\hyperlink{class_q_c_p_abstract_item}{Q\+C\+P\+Abstract\+Item}} documentation. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{qcustomplot_8cpp}{qcustomplot.\+cpp}}\end{DoxyCompactItemize}

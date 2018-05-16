@@ -1,0 +1,22 @@
+\hypertarget{class_q_c_p_axis}{}\section{Q\+C\+P\+Axis Class Reference}
+\label{class_q_c_p_axis}\index{Q\+C\+P\+Axis@{Q\+C\+P\+Axis}}
+
+
+Manages a single axis inside a \mbox{\hyperlink{class_q_custom_plot}{Q\+Custom\+Plot}}.  
+
+
+
+
+\subsection{Detailed Description}
+Manages a single axis inside a \mbox{\hyperlink{class_q_custom_plot}{Q\+Custom\+Plot}}. 
+
+Usually doesn\textquotesingle{}t need to be instantiated externally. Access Q\+Custom\+Plot\textquotesingle{}s default four axes via Q\+Custom\+Plot\+::x\+Axis (bottom), Q\+Custom\+Plot\+::y\+Axis (left), Q\+Custom\+Plot\+::x\+Axis2 (top) and Q\+Custom\+Plot\+::y\+Axis2 (right).
+
+Axes are always part of an axis rect, see \mbox{\hyperlink{class_q_c_p_axis_rect}{Q\+C\+P\+Axis\+Rect}}.  \begin{center}Naming convention of axis parts\end{center}  ~\newline
+  \begin{center}Overview of the spacings and paddings that define the geometry of an axis. The dashed gray line on the left represents the \mbox{\hyperlink{class_q_custom_plot}{Q\+Custom\+Plot}} widget border.\end{center} 
+
+Each axis holds an instance of \mbox{\hyperlink{class_q_c_p_axis_ticker}{Q\+C\+P\+Axis\+Ticker}} which is used to generate the tick coordinates and tick labels. You can access the currently installed ticker or set a new one (possibly one of the specialized subclasses, or your own subclass) via set\+Ticker. For details, see the documentation of \mbox{\hyperlink{class_q_c_p_axis_ticker}{Q\+C\+P\+Axis\+Ticker}}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{qcustomplot_8cpp}{qcustomplot.\+cpp}}\end{DoxyCompactItemize}

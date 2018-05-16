@@ -1,0 +1,28 @@
+\hypertarget{class_q_c_p_axis_ticker_text}{}\section{Q\+C\+P\+Axis\+Ticker\+Text Class Reference}
+\label{class_q_c_p_axis_ticker_text}\index{Q\+C\+P\+Axis\+Ticker\+Text@{Q\+C\+P\+Axis\+Ticker\+Text}}
+
+
+Specialized axis ticker which allows arbitrary labels at specified coordinates.  
+
+
+
+
+\subsection{Detailed Description}
+Specialized axis ticker which allows arbitrary labels at specified coordinates. 
+
+
+
+This \mbox{\hyperlink{class_q_c_p_axis_ticker}{Q\+C\+P\+Axis\+Ticker}} subclass generates ticks which can be directly specified by the user as coordinates and associated strings. They can be passed as a whole with set\+Ticks or one at a time with add\+Tick. Alternatively you can directly access the internal storage via ticks and modify the tick/label data there.
+
+This is useful for cases where the axis represents categories rather than numerical values.
+
+If you are updating the ticks of this ticker regularly and in a dynamic fasion (e.\+g. dependent on the axis range), it is a sign that you should probably create an own ticker by subclassing \mbox{\hyperlink{class_q_c_p_axis_ticker}{Q\+C\+P\+Axis\+Ticker}}, instead of using this one.
+
+The ticker can be created and assigned to an axis like this\+: 
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{qcustomplot_8cpp}{qcustomplot.\+cpp}}\end{DoxyCompactItemize}

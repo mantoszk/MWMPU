@@ -1,0 +1,42 @@
+\hypertarget{class_q_c_p_abstract_plottable}{}\section{Q\+C\+P\+Abstract\+Plottable Class Reference}
+\label{class_q_c_p_abstract_plottable}\index{Q\+C\+P\+Abstract\+Plottable@{Q\+C\+P\+Abstract\+Plottable}}
+
+
+The abstract base class for all data representing objects in a plot.  
+
+
+
+
+\subsection{Detailed Description}
+The abstract base class for all data representing objects in a plot. 
+
+It defines a very basic interface like name, pen, brush, visibility etc. Since this class is abstract, it can\textquotesingle{}t be instantiated. Use one of the subclasses or create a subclass yourself to create new ways of displaying data (see \char`\"{}\+Creating own plottables\char`\"{} below). Plottables that display one-\/dimensional data (i.\+e. data points have a single key dimension and one or multiple values at each key) are based off of the template subclass Q\+C\+P\+Abstract\+Plottable1D, see details there.
+
+All further specifics are in the subclasses, for example\+: \begin{DoxyItemize}
+\item A normal graph with possibly a line and/or scatter points \mbox{\hyperlink{class_q_c_p_graph}{Q\+C\+P\+Graph}} (typically created with Q\+Custom\+Plot\+::add\+Graph) \item A parametric curve\+: \mbox{\hyperlink{class_q_c_p_curve}{Q\+C\+P\+Curve}} \item A bar chart\+: \mbox{\hyperlink{class_q_c_p_bars}{Q\+C\+P\+Bars}} \item A statistical box plot\+: \mbox{\hyperlink{class_q_c_p_statistical_box}{Q\+C\+P\+Statistical\+Box}} \item A color encoded two-\/dimensional map\+: \mbox{\hyperlink{class_q_c_p_color_map}{Q\+C\+P\+Color\+Map}} \item An O\+H\+L\+C/\+Candlestick chart\+: \mbox{\hyperlink{class_q_c_p_financial}{Q\+C\+P\+Financial}}\end{DoxyItemize}
+\hypertarget{class_q_c_p_abstract_plottable_plottables-subclassing}{}\subsection{Creating own plottables}\label{class_q_c_p_abstract_plottable_plottables-subclassing}
+Subclassing directly from \mbox{\hyperlink{class_q_c_p_abstract_plottable}{Q\+C\+P\+Abstract\+Plottable}} is only recommended if you wish to display two-\/dimensional data like \mbox{\hyperlink{class_q_c_p_color_map}{Q\+C\+P\+Color\+Map}}, i.\+e. two logical key dimensions and one (or more) data dimensions. If you want to display data with only one logical key dimension, you should rather derive from Q\+C\+P\+Abstract\+Plottable1D.
+
+If subclassing \mbox{\hyperlink{class_q_c_p_abstract_plottable}{Q\+C\+P\+Abstract\+Plottable}} directly, these are the pure virtual functions you must implement\+: \begin{DoxyItemize}
+\item select\+Test \item draw \item draw\+Legend\+Icon \item get\+Key\+Range \item get\+Value\+Range\end{DoxyItemize}
+See the documentation of those functions for what they need to do.
+
+For drawing your plot, you can use the coords\+To\+Pixels functions to translate a point in plot coordinates to pixel coordinates. This function is quite convenient, because it takes the orientation of the key and value axes into account for you (x and y are swapped when the key axis is vertical and the value axis horizontal). If you are worried about performance (i.\+e. you need to translate many points in a loop like \mbox{\hyperlink{class_q_c_p_graph}{Q\+C\+P\+Graph}}), you can directly use Q\+C\+P\+Axis\+::coord\+To\+Pixel. However, you must then take care about the orientation of the axis yourself.
+
+Here are some important members you inherit from \mbox{\hyperlink{class_q_c_p_abstract_plottable}{Q\+C\+P\+Abstract\+Plottable}}\+: \tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\mbox{\hyperlink{class_q_custom_plot}{Q\+Custom\+Plot}} $\ast${\bfseries m\+Parent\+Plot}  &A pointer to the parent \mbox{\hyperlink{class_q_custom_plot}{Q\+Custom\+Plot}} instance. The parent plot is inferred from the axes that are passed in the constructor. \\\cline{1-2}
+Q\+String {\bfseries m\+Name}  &The name of the plottable. \\\cline{1-2}
+Q\+Pen {\bfseries m\+Pen}  &The generic pen of the plottable. You should use this pen for the most prominent data representing lines in the plottable (e.\+g \mbox{\hyperlink{class_q_c_p_graph}{Q\+C\+P\+Graph}} uses this pen for its graph lines and scatters) \\\cline{1-2}
+Q\+Brush {\bfseries m\+Brush}  &The generic brush of the plottable. You should use this brush for the most prominent fillable structures in the plottable (e.\+g. \mbox{\hyperlink{class_q_c_p_graph}{Q\+C\+P\+Graph}} uses this brush to control filling under the graph) \\\cline{1-2}
+Q\+Pointer$<$\mbox{\hyperlink{class_q_c_p_axis}{Q\+C\+P\+Axis}}$>$ {\bfseries m\+Key\+Axis}, {\bfseries m\+Value\+Axis}  &The key and value axes this plottable is attached to. Call their Q\+C\+P\+Axis\+::coord\+To\+Pixel functions to translate coordinates to pixels in either the key or value dimension. Make sure to check whether the pointer is null before using it. If one of the axes is null, don\textquotesingle{}t draw the plottable. \\\cline{1-2}
+\mbox{\hyperlink{class_q_c_p_selection_decorator}{Q\+C\+P\+Selection\+Decorator}} {\bfseries m\+Selection\+Decorator}  &The currently set selection decorator which specifies how selected data of the plottable shall be drawn and decorated. When drawing your data, you must consult this decorator for the appropriate pen/brush before drawing unselected/selected data segments. Finally, you should call its Q\+C\+P\+Selection\+Decorator\+::draw\+Decoration method at the end of your draw implementation. \\\cline{1-2}
+Q\+C\+P\+::\+Selection\+Type {\bfseries m\+Selectable}  &In which composition, if at all, this plottable\textquotesingle{}s data may be selected. Enforcing this setting on the data selection is done by \mbox{\hyperlink{class_q_c_p_abstract_plottable}{Q\+C\+P\+Abstract\+Plottable}} automatically. \\\cline{1-2}
+\mbox{\hyperlink{class_q_c_p_data_selection}{Q\+C\+P\+Data\+Selection}} {\bfseries m\+Selection}  &Holds the current selection state of the plottable\textquotesingle{}s data, i.\+e. the selected data ranges (\mbox{\hyperlink{class_q_c_p_data_range}{Q\+C\+P\+Data\+Range}}).  \\\cline{1-2}
+\end{longtabu}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{qcustomplot_8cpp}{qcustomplot.\+cpp}}\end{DoxyCompactItemize}

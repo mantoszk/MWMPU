@@ -5,6 +5,10 @@
 #include <QDebug>
 #include <QtMath>
 
+/*!
+ * \brief A class for storing data from sensors received from the microcontroller and handling necessary conversions
+ */
+
 class MeasurementHandler
 {
 public:
@@ -27,8 +31,22 @@ public:
 	void pushYAngVel(double value);
 	void pushZAngVel(double value);
 
+	/*!
+	 * \brief Calculates angle [deg] and distance [cm]
+	 */
+
 	void calcAngleAndDistance();
+
+	/*!
+	 * \brief Deletes angular velocity and linear acceleration data
+	 */
+
 	void clearHistoryData();
+
+	/*!
+	 * \brief Deletes rotation and distance data
+	 */
+
 	void clearRealtimeData();
 
 	QVector <double> getAccMeas() const;

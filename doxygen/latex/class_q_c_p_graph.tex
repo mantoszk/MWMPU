@@ -1,0 +1,34 @@
+\hypertarget{class_q_c_p_graph}{}\section{Q\+C\+P\+Graph Class Reference}
+\label{class_q_c_p_graph}\index{Q\+C\+P\+Graph@{Q\+C\+P\+Graph}}
+
+
+A plottable representing a graph in a plot.  
+
+
+
+
+\subsection{Detailed Description}
+A plottable representing a graph in a plot. 
+
+
+
+Usually you create new graphs by calling Q\+Custom\+Plot\+::add\+Graph. The resulting instance can be accessed via Q\+Custom\+Plot\+::graph.
+
+To plot data, assign it with the set\+Data or add\+Data functions. Alternatively, you can also access and modify the data via the data method, which returns a pointer to the internal Q\+C\+P\+Graph\+Data\+Container.
+
+Graphs are used to display single-\/valued data. Single-\/valued means that there should only be one data point per unique key coordinate. In other words, the graph can\textquotesingle{}t have {\itshape loops}. If you do want to plot non-\/single-\/valued curves, rather use the \mbox{\hyperlink{class_q_c_p_curve}{Q\+C\+P\+Curve}} plottable.
+
+Gaps in the graph line can be created by adding data points with NaN as value ({\ttfamily q\+Q\+Na\+N()} or {\ttfamily std\+::numeric\+\_\+limits$<$double$>$\+::quiet\+\_\+\+Na\+N()}) in between the two data points that shall be separated.\hypertarget{class_q_c_p_graph_qcpgraph-appearance}{}\subsection{Changing the appearance}\label{class_q_c_p_graph_qcpgraph-appearance}
+The appearance of the graph is mainly determined by the line style, scatter style, brush and pen of the graph (set\+Line\+Style, set\+Scatter\+Style, set\+Brush, set\+Pen).\hypertarget{class_q_c_p_graph_filling}{}\subsubsection{Filling under or between graphs}\label{class_q_c_p_graph_filling}
+\mbox{\hyperlink{class_q_c_p_graph}{Q\+C\+P\+Graph}} knows two types of fills\+: Normal graph fills towards the zero-\/value-\/line parallel to the key axis of the graph, and fills between two graphs, called channel fills. To enable a fill, just set a brush with set\+Brush which is neither Qt\+::\+No\+Brush nor fully transparent.
+
+By default, a normal fill towards the zero-\/value-\/line will be drawn. To set up a channel fill between this graph and another one, call set\+Channel\+Fill\+Graph with the other graph as parameter.
+
+\begin{DoxySeeAlso}{See also}
+Q\+Custom\+Plot\+::add\+Graph, Q\+Custom\+Plot\+::graph 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{qcustomplot_8cpp}{qcustomplot.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,23 @@
+\hypertarget{class_q_c_p_plottable_legend_item}{}\section{Q\+C\+P\+Plottable\+Legend\+Item Class Reference}
+\label{class_q_c_p_plottable_legend_item}\index{Q\+C\+P\+Plottable\+Legend\+Item@{Q\+C\+P\+Plottable\+Legend\+Item}}
+
+
+A legend item representing a plottable with an icon and the plottable name.  
+
+
+
+
+\subsection{Detailed Description}
+A legend item representing a plottable with an icon and the plottable name. 
+
+This is the standard legend item for plottables. It displays an icon of the plottable next to the plottable name. The icon is drawn by the respective plottable itself (Q\+C\+P\+Abstract\+Plottable\+::draw\+Legend\+Icon), and tries to give an intuitive symbol for the plottable. For example, the \mbox{\hyperlink{class_q_c_p_graph}{Q\+C\+P\+Graph}} draws a centered horizontal line and/or a single scatter point in the middle.
+
+Legend items of this type are always associated with one plottable (retrievable via the plottable() function and settable with the constructor). You may change the font of the plottable name with set\+Font. Icon padding and border pen is taken from the parent \mbox{\hyperlink{class_q_c_p_legend}{Q\+C\+P\+Legend}}, see Q\+C\+P\+Legend\+::set\+Icon\+Border\+Pen and Q\+C\+P\+Legend\+::set\+Icon\+Text\+Padding.
+
+The function Q\+C\+P\+Abstract\+Plottable\+::add\+To\+Legend/Q\+C\+P\+Abstract\+Plottable\+::remove\+From\+Legend creates/removes legend items of this type.
+
+Since \mbox{\hyperlink{class_q_c_p_legend}{Q\+C\+P\+Legend}} is based on \mbox{\hyperlink{class_q_c_p_layout_grid}{Q\+C\+P\+Layout\+Grid}}, a legend item itself is just a subclass of \mbox{\hyperlink{class_q_c_p_layout_element}{Q\+C\+P\+Layout\+Element}}. While it could be added to a legend (or any other layout) via the normal layout interface, \mbox{\hyperlink{class_q_c_p_legend}{Q\+C\+P\+Legend}} has specialized functions for handling legend items conveniently, see the documentation of \mbox{\hyperlink{class_q_c_p_legend}{Q\+C\+P\+Legend}}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{qcustomplot_8cpp}{qcustomplot.\+cpp}}\end{DoxyCompactItemize}

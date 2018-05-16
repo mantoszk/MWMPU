@@ -1,0 +1,23 @@
+\hypertarget{class_q_c_p_layout_inset}{}\section{Q\+C\+P\+Layout\+Inset Class Reference}
+\label{class_q_c_p_layout_inset}\index{Q\+C\+P\+Layout\+Inset@{Q\+C\+P\+Layout\+Inset}}
+
+
+A layout that places child elements aligned to the border or arbitrarily positioned.  
+
+
+
+
+\subsection{Detailed Description}
+A layout that places child elements aligned to the border or arbitrarily positioned. 
+
+Elements are placed either aligned to the border or at arbitrary position in the area of the layout. Which placement applies is controlled with the Inset\+Placement (set\+Inset\+Placement).
+
+Elements are added via add\+Element(\+Q\+C\+P\+Layout\+Element $\ast$element, Qt\+::\+Alignment alignment) or add\+Element(\+Q\+C\+P\+Layout\+Element $\ast$element, const Q\+Rect\+F \&rect). If the first method is used, the inset placement will default to ip\+Border\+Aligned and the element will be aligned according to the {\itshape alignment} parameter. The second method defaults to ip\+Free and allows placing elements at arbitrary position and size, defined by {\itshape rect}.
+
+The alignment or rect can be set via set\+Inset\+Alignment or set\+Inset\+Rect, respectively.
+
+This is the layout that every \mbox{\hyperlink{class_q_c_p_axis_rect}{Q\+C\+P\+Axis\+Rect}} has as Q\+C\+P\+Axis\+Rect\+::inset\+Layout. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{qcustomplot_8cpp}{qcustomplot.\+cpp}}\end{DoxyCompactItemize}

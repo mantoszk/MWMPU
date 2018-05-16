@@ -1,0 +1,399 @@
+\hypertarget{class_measurement_handler}{}\section{Measurement\+Handler Class Reference}
+\label{class_measurement_handler}\index{Measurement\+Handler@{Measurement\+Handler}}
+
+
+A class for storing data from sensors received from the microcontroller and handling necessary conversions.  
+
+
+
+
+{\ttfamily \#include $<$measurementhandler.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_measurement_handler_a80f0638e83958605b26eb39e4e8a49e4}{Measurement\+Handler}} ()
+\item 
+\mbox{\hyperlink{class_measurement_handler_ab1f1ce3908fc0d88e350727efbd2949a}{$\sim$\+Measurement\+Handler}} ()
+\item 
+Q\+Vector$<$ double $>$ $\ast$ \mbox{\hyperlink{class_measurement_handler_a202be23096eca6bd4362a9aa5552b4f1}{get\+Time}} () const
+\item 
+Q\+Vector$<$ double $>$ $\ast$ \mbox{\hyperlink{class_measurement_handler_a4dd297cf8cc08203264492496b4378ee}{get\+X\+Acc}} () const
+\item 
+Q\+Vector$<$ double $>$ $\ast$ \mbox{\hyperlink{class_measurement_handler_a1c7cc1cd1c7e6a1629ad62877e22bd00}{get\+Y\+Acc}} () const
+\item 
+Q\+Vector$<$ double $>$ $\ast$ \mbox{\hyperlink{class_measurement_handler_aa9429cbbd110d64168635e9325dcf487}{get\+Z\+Acc}} () const
+\item 
+Q\+Vector$<$ double $>$ $\ast$ \mbox{\hyperlink{class_measurement_handler_ae5930434d2c8d66ac124f996fa9fd12d}{get\+X\+Ang\+Vel}} () const
+\item 
+Q\+Vector$<$ double $>$ $\ast$ \mbox{\hyperlink{class_measurement_handler_ae2053ba8ad1924ff0ad7c2538da7a35e}{get\+Y\+Ang\+Vel}} () const
+\item 
+Q\+Vector$<$ double $>$ $\ast$ \mbox{\hyperlink{class_measurement_handler_a89631c6b8b3ba7c1aab620bdcf595896}{get\+Z\+Ang\+Vel}} () const
+\item 
+void \mbox{\hyperlink{class_measurement_handler_a95dad9123275dbb03f9cd01852e82df5}{push\+Time}} (double value)
+\item 
+void \mbox{\hyperlink{class_measurement_handler_a73435da23551d54e3db30467a0d7d82a}{push\+X\+Acc}} (double value)
+\item 
+void \mbox{\hyperlink{class_measurement_handler_a43008204cdec1e632d2da7d76b6351af}{push\+Y\+Acc}} (double value)
+\item 
+void \mbox{\hyperlink{class_measurement_handler_a6fea470ec1ca66864bf7f416dc878639}{push\+Z\+Acc}} (double value)
+\item 
+void \mbox{\hyperlink{class_measurement_handler_ad0cd4fa68261258a586ae193be1055ba}{push\+X\+Ang\+Vel}} (double value)
+\item 
+void \mbox{\hyperlink{class_measurement_handler_a51a85f65ef2ca40ad069d66d3a770a57}{push\+Y\+Ang\+Vel}} (double value)
+\item 
+void \mbox{\hyperlink{class_measurement_handler_a5155e86de3d5e138a3f510cbe9cc3932}{push\+Z\+Ang\+Vel}} (double value)
+\item 
+void \mbox{\hyperlink{class_measurement_handler_a1a88ac326f78ba4ee92f4ac16cf3d2dd}{calc\+Angle\+And\+Distance}} ()
+\begin{DoxyCompactList}\small\item\em Calculates angle \mbox{[}deg\mbox{]} and distance \mbox{[}cm\mbox{]}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_measurement_handler_a4287d2123c6307d6d91790efe03f57a2}{clear\+History\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Deletes angular velocity and linear acceleration data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_measurement_handler_a97180ca03e2cbf6735eae197493cb7e9}{clear\+Realtime\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Deletes rotation and distance data. \end{DoxyCompactList}\item 
+Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_measurement_handler_a16cda730675bd1c0523327c6fd6a1669}{get\+Acc\+Meas}} () const
+\item 
+Q\+Vector$<$ double $>$ \& \mbox{\hyperlink{class_measurement_handler_ab31bf9f532b402898b3df7f27301f4c1}{set\+Acc\+Meas}} ()
+\item 
+Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_measurement_handler_a80a29ba6bdd4aff53041f4c7f6ae90bd}{get\+Gyro\+Meas}} () const
+\item 
+Q\+Vector$<$ double $>$ \& \mbox{\hyperlink{class_measurement_handler_a56f38156d0bcbe80fe7a4f07f7df8c04}{set\+Gyro\+Meas}} ()
+\item 
+Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_measurement_handler_a95251b5abed0a716be546e4c58f48910}{get\+Angle}} () const
+\item 
+Q\+Vector$<$ double $>$ \& \mbox{\hyperlink{class_measurement_handler_a4ba0133931c03ce76c0778cce53f0036}{set\+Angle}} ()
+\item 
+Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_measurement_handler_a4d4422673f5deb300499051df34dec30}{get\+Distance}} () const
+\item 
+Q\+Vector$<$ double $>$ \& \mbox{\hyperlink{class_measurement_handler_aaefca8d2644ed80b6318c7014cde5a57}{set\+Distance}} ()
+\item 
+Q\+Vector$<$ Q\+Vector$<$ double $>$ $\ast$ $>$ \mbox{\hyperlink{class_measurement_handler_a18ae7fd0f8f2ed3e74e9a7cb87af92e3}{get\+Vector\+Of\+Acc\+Pointers}} () const
+\item 
+Q\+Vector$<$ Q\+Vector$<$ double $>$ $\ast$ $>$ \mbox{\hyperlink{class_measurement_handler_a15b2c74a4325c0ade1dd92f2b4afdabd}{get\+Vector\+Of\+Gyro\+Pointers}} () const
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Vector$<$ double $>$ $\ast$ \mbox{\hyperlink{class_measurement_handler_a7a996cf87f9f6672d20ed131c233b46d}{time}}
+\item 
+Q\+Vector$<$ double $>$ $\ast$ \mbox{\hyperlink{class_measurement_handler_ad4ea68ff7e50ebf22877bdcb4b59014c}{x\+Acc}}
+\item 
+Q\+Vector$<$ double $>$ $\ast$ \mbox{\hyperlink{class_measurement_handler_ad47e97b391be68ded5c9b0aaa6d8eb0e}{y\+Acc}}
+\item 
+Q\+Vector$<$ double $>$ $\ast$ \mbox{\hyperlink{class_measurement_handler_a733eb0086b7fcdb942a770a178fd3862}{z\+Acc}}
+\item 
+Q\+Vector$<$ double $>$ $\ast$ \mbox{\hyperlink{class_measurement_handler_a7204dfd635bc3ea6f90278c6794bd4b6}{x\+Ang\+Vel}}
+\item 
+Q\+Vector$<$ double $>$ $\ast$ \mbox{\hyperlink{class_measurement_handler_a070b01770bd61164f1b4672bea4f14dd}{y\+Ang\+Vel}}
+\item 
+Q\+Vector$<$ double $>$ $\ast$ \mbox{\hyperlink{class_measurement_handler_ac1b7d9eed922dccadd0381ce51b488a5}{z\+Ang\+Vel}}
+\item 
+Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_measurement_handler_abc15cc3967c7aad564b8b6b5101b9123}{acc\+Meas}}
+\item 
+Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_measurement_handler_a3e543a5cb746a2bed6edac66303d733b}{gyro\+Meas}}
+\item 
+Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_measurement_handler_a5107fd78f0e0b98517fb75d1fc5af906}{angle}}
+\item 
+Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_measurement_handler_a198dfa7b2a559fe07fc3a56aeab40f20}{distance}}
+\item 
+Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_measurement_handler_a4e1ab2116fcc94b5c6f03ede6c814176}{angleP}}
+\item 
+Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_measurement_handler_a28b1160039b46fd8cc55f1141bfd11b9}{distanceP}}
+\item 
+Q\+Vector$<$ Q\+Vector$<$ double $>$ $\ast$ $>$ \mbox{\hyperlink{class_measurement_handler_abd8f5d782e7f5196d3cc45801a938a03}{vector\+Of\+Acc\+Pointers}}
+\item 
+Q\+Vector$<$ Q\+Vector$<$ double $>$ $\ast$ $>$ \mbox{\hyperlink{class_measurement_handler_a07c61fa9e798a9ea0b94fa247f486d7b}{vector\+Of\+Gyro\+Pointers}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class for storing data from sensors received from the microcontroller and handling necessary conversions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_measurement_handler_a80f0638e83958605b26eb39e4e8a49e4}\label{class_measurement_handler_a80f0638e83958605b26eb39e4e8a49e4}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!Measurement\+Handler@{Measurement\+Handler}}
+\index{Measurement\+Handler@{Measurement\+Handler}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{Measurement\+Handler()}{MeasurementHandler()}}
+{\footnotesize\ttfamily Measurement\+Handler\+::\+Measurement\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_measurement_handler_ab1f1ce3908fc0d88e350727efbd2949a}\label{class_measurement_handler_ab1f1ce3908fc0d88e350727efbd2949a}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!````~Measurement\+Handler@{$\sim$\+Measurement\+Handler}}
+\index{````~Measurement\+Handler@{$\sim$\+Measurement\+Handler}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+Measurement\+Handler()}{~MeasurementHandler()}}
+{\footnotesize\ttfamily Measurement\+Handler\+::$\sim$\+Measurement\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_measurement_handler_a1a88ac326f78ba4ee92f4ac16cf3d2dd}\label{class_measurement_handler_a1a88ac326f78ba4ee92f4ac16cf3d2dd}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!calc\+Angle\+And\+Distance@{calc\+Angle\+And\+Distance}}
+\index{calc\+Angle\+And\+Distance@{calc\+Angle\+And\+Distance}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{calc\+Angle\+And\+Distance()}{calcAngleAndDistance()}}
+{\footnotesize\ttfamily void Measurement\+Handler\+::calc\+Angle\+And\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates angle \mbox{[}deg\mbox{]} and distance \mbox{[}cm\mbox{]}. 
+
+\mbox{\Hypertarget{class_measurement_handler_a4287d2123c6307d6d91790efe03f57a2}\label{class_measurement_handler_a4287d2123c6307d6d91790efe03f57a2}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!clear\+History\+Data@{clear\+History\+Data}}
+\index{clear\+History\+Data@{clear\+History\+Data}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{clear\+History\+Data()}{clearHistoryData()}}
+{\footnotesize\ttfamily void Measurement\+Handler\+::clear\+History\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deletes angular velocity and linear acceleration data. 
+
+\mbox{\Hypertarget{class_measurement_handler_a97180ca03e2cbf6735eae197493cb7e9}\label{class_measurement_handler_a97180ca03e2cbf6735eae197493cb7e9}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!clear\+Realtime\+Data@{clear\+Realtime\+Data}}
+\index{clear\+Realtime\+Data@{clear\+Realtime\+Data}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{clear\+Realtime\+Data()}{clearRealtimeData()}}
+{\footnotesize\ttfamily void Measurement\+Handler\+::clear\+Realtime\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deletes rotation and distance data. 
+
+\mbox{\Hypertarget{class_measurement_handler_a16cda730675bd1c0523327c6fd6a1669}\label{class_measurement_handler_a16cda730675bd1c0523327c6fd6a1669}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!get\+Acc\+Meas@{get\+Acc\+Meas}}
+\index{get\+Acc\+Meas@{get\+Acc\+Meas}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{get\+Acc\+Meas()}{getAccMeas()}}
+{\footnotesize\ttfamily Q\+Vector$<$ double $>$ Measurement\+Handler\+::get\+Acc\+Meas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_measurement_handler_a95251b5abed0a716be546e4c58f48910}\label{class_measurement_handler_a95251b5abed0a716be546e4c58f48910}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!get\+Angle@{get\+Angle}}
+\index{get\+Angle@{get\+Angle}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{get\+Angle()}{getAngle()}}
+{\footnotesize\ttfamily Q\+Vector$<$ double $>$ Measurement\+Handler\+::get\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_measurement_handler_a4d4422673f5deb300499051df34dec30}\label{class_measurement_handler_a4d4422673f5deb300499051df34dec30}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!get\+Distance@{get\+Distance}}
+\index{get\+Distance@{get\+Distance}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{get\+Distance()}{getDistance()}}
+{\footnotesize\ttfamily Q\+Vector$<$ double $>$ Measurement\+Handler\+::get\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_measurement_handler_a80a29ba6bdd4aff53041f4c7f6ae90bd}\label{class_measurement_handler_a80a29ba6bdd4aff53041f4c7f6ae90bd}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!get\+Gyro\+Meas@{get\+Gyro\+Meas}}
+\index{get\+Gyro\+Meas@{get\+Gyro\+Meas}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{get\+Gyro\+Meas()}{getGyroMeas()}}
+{\footnotesize\ttfamily Q\+Vector$<$ double $>$ Measurement\+Handler\+::get\+Gyro\+Meas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_measurement_handler_a202be23096eca6bd4362a9aa5552b4f1}\label{class_measurement_handler_a202be23096eca6bd4362a9aa5552b4f1}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!get\+Time@{get\+Time}}
+\index{get\+Time@{get\+Time}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{get\+Time()}{getTime()}}
+{\footnotesize\ttfamily Q\+Vector$<$ double $>$ $\ast$ Measurement\+Handler\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_measurement_handler_a18ae7fd0f8f2ed3e74e9a7cb87af92e3}\label{class_measurement_handler_a18ae7fd0f8f2ed3e74e9a7cb87af92e3}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!get\+Vector\+Of\+Acc\+Pointers@{get\+Vector\+Of\+Acc\+Pointers}}
+\index{get\+Vector\+Of\+Acc\+Pointers@{get\+Vector\+Of\+Acc\+Pointers}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{get\+Vector\+Of\+Acc\+Pointers()}{getVectorOfAccPointers()}}
+{\footnotesize\ttfamily Q\+Vector$<$ Q\+Vector$<$ double $>$ $\ast$ $>$ Measurement\+Handler\+::get\+Vector\+Of\+Acc\+Pointers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_measurement_handler_a15b2c74a4325c0ade1dd92f2b4afdabd}\label{class_measurement_handler_a15b2c74a4325c0ade1dd92f2b4afdabd}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!get\+Vector\+Of\+Gyro\+Pointers@{get\+Vector\+Of\+Gyro\+Pointers}}
+\index{get\+Vector\+Of\+Gyro\+Pointers@{get\+Vector\+Of\+Gyro\+Pointers}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{get\+Vector\+Of\+Gyro\+Pointers()}{getVectorOfGyroPointers()}}
+{\footnotesize\ttfamily Q\+Vector$<$ Q\+Vector$<$ double $>$ $\ast$ $>$ Measurement\+Handler\+::get\+Vector\+Of\+Gyro\+Pointers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_measurement_handler_a4dd297cf8cc08203264492496b4378ee}\label{class_measurement_handler_a4dd297cf8cc08203264492496b4378ee}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!get\+X\+Acc@{get\+X\+Acc}}
+\index{get\+X\+Acc@{get\+X\+Acc}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{get\+X\+Acc()}{getXAcc()}}
+{\footnotesize\ttfamily Q\+Vector$<$ double $>$ $\ast$ Measurement\+Handler\+::get\+X\+Acc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_measurement_handler_ae5930434d2c8d66ac124f996fa9fd12d}\label{class_measurement_handler_ae5930434d2c8d66ac124f996fa9fd12d}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!get\+X\+Ang\+Vel@{get\+X\+Ang\+Vel}}
+\index{get\+X\+Ang\+Vel@{get\+X\+Ang\+Vel}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{get\+X\+Ang\+Vel()}{getXAngVel()}}
+{\footnotesize\ttfamily Q\+Vector$<$ double $>$ $\ast$ Measurement\+Handler\+::get\+X\+Ang\+Vel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_measurement_handler_a1c7cc1cd1c7e6a1629ad62877e22bd00}\label{class_measurement_handler_a1c7cc1cd1c7e6a1629ad62877e22bd00}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!get\+Y\+Acc@{get\+Y\+Acc}}
+\index{get\+Y\+Acc@{get\+Y\+Acc}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{get\+Y\+Acc()}{getYAcc()}}
+{\footnotesize\ttfamily Q\+Vector$<$ double $>$ $\ast$ Measurement\+Handler\+::get\+Y\+Acc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_measurement_handler_ae2053ba8ad1924ff0ad7c2538da7a35e}\label{class_measurement_handler_ae2053ba8ad1924ff0ad7c2538da7a35e}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!get\+Y\+Ang\+Vel@{get\+Y\+Ang\+Vel}}
+\index{get\+Y\+Ang\+Vel@{get\+Y\+Ang\+Vel}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{get\+Y\+Ang\+Vel()}{getYAngVel()}}
+{\footnotesize\ttfamily Q\+Vector$<$ double $>$ $\ast$ Measurement\+Handler\+::get\+Y\+Ang\+Vel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_measurement_handler_aa9429cbbd110d64168635e9325dcf487}\label{class_measurement_handler_aa9429cbbd110d64168635e9325dcf487}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!get\+Z\+Acc@{get\+Z\+Acc}}
+\index{get\+Z\+Acc@{get\+Z\+Acc}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{get\+Z\+Acc()}{getZAcc()}}
+{\footnotesize\ttfamily Q\+Vector$<$ double $>$ $\ast$ Measurement\+Handler\+::get\+Z\+Acc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_measurement_handler_a89631c6b8b3ba7c1aab620bdcf595896}\label{class_measurement_handler_a89631c6b8b3ba7c1aab620bdcf595896}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!get\+Z\+Ang\+Vel@{get\+Z\+Ang\+Vel}}
+\index{get\+Z\+Ang\+Vel@{get\+Z\+Ang\+Vel}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{get\+Z\+Ang\+Vel()}{getZAngVel()}}
+{\footnotesize\ttfamily Q\+Vector$<$ double $>$ $\ast$ Measurement\+Handler\+::get\+Z\+Ang\+Vel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_measurement_handler_a95dad9123275dbb03f9cd01852e82df5}\label{class_measurement_handler_a95dad9123275dbb03f9cd01852e82df5}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!push\+Time@{push\+Time}}
+\index{push\+Time@{push\+Time}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{push\+Time()}{pushTime()}}
+{\footnotesize\ttfamily void Measurement\+Handler\+::push\+Time (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_measurement_handler_a73435da23551d54e3db30467a0d7d82a}\label{class_measurement_handler_a73435da23551d54e3db30467a0d7d82a}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!push\+X\+Acc@{push\+X\+Acc}}
+\index{push\+X\+Acc@{push\+X\+Acc}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{push\+X\+Acc()}{pushXAcc()}}
+{\footnotesize\ttfamily void Measurement\+Handler\+::push\+X\+Acc (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_measurement_handler_ad0cd4fa68261258a586ae193be1055ba}\label{class_measurement_handler_ad0cd4fa68261258a586ae193be1055ba}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!push\+X\+Ang\+Vel@{push\+X\+Ang\+Vel}}
+\index{push\+X\+Ang\+Vel@{push\+X\+Ang\+Vel}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{push\+X\+Ang\+Vel()}{pushXAngVel()}}
+{\footnotesize\ttfamily void Measurement\+Handler\+::push\+X\+Ang\+Vel (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_measurement_handler_a43008204cdec1e632d2da7d76b6351af}\label{class_measurement_handler_a43008204cdec1e632d2da7d76b6351af}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!push\+Y\+Acc@{push\+Y\+Acc}}
+\index{push\+Y\+Acc@{push\+Y\+Acc}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{push\+Y\+Acc()}{pushYAcc()}}
+{\footnotesize\ttfamily void Measurement\+Handler\+::push\+Y\+Acc (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_measurement_handler_a51a85f65ef2ca40ad069d66d3a770a57}\label{class_measurement_handler_a51a85f65ef2ca40ad069d66d3a770a57}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!push\+Y\+Ang\+Vel@{push\+Y\+Ang\+Vel}}
+\index{push\+Y\+Ang\+Vel@{push\+Y\+Ang\+Vel}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{push\+Y\+Ang\+Vel()}{pushYAngVel()}}
+{\footnotesize\ttfamily void Measurement\+Handler\+::push\+Y\+Ang\+Vel (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_measurement_handler_a6fea470ec1ca66864bf7f416dc878639}\label{class_measurement_handler_a6fea470ec1ca66864bf7f416dc878639}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!push\+Z\+Acc@{push\+Z\+Acc}}
+\index{push\+Z\+Acc@{push\+Z\+Acc}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{push\+Z\+Acc()}{pushZAcc()}}
+{\footnotesize\ttfamily void Measurement\+Handler\+::push\+Z\+Acc (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_measurement_handler_a5155e86de3d5e138a3f510cbe9cc3932}\label{class_measurement_handler_a5155e86de3d5e138a3f510cbe9cc3932}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!push\+Z\+Ang\+Vel@{push\+Z\+Ang\+Vel}}
+\index{push\+Z\+Ang\+Vel@{push\+Z\+Ang\+Vel}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{push\+Z\+Ang\+Vel()}{pushZAngVel()}}
+{\footnotesize\ttfamily void Measurement\+Handler\+::push\+Z\+Ang\+Vel (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_measurement_handler_ab31bf9f532b402898b3df7f27301f4c1}\label{class_measurement_handler_ab31bf9f532b402898b3df7f27301f4c1}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!set\+Acc\+Meas@{set\+Acc\+Meas}}
+\index{set\+Acc\+Meas@{set\+Acc\+Meas}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{set\+Acc\+Meas()}{setAccMeas()}}
+{\footnotesize\ttfamily Q\+Vector$<$ double $>$ \& Measurement\+Handler\+::set\+Acc\+Meas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_measurement_handler_a4ba0133931c03ce76c0778cce53f0036}\label{class_measurement_handler_a4ba0133931c03ce76c0778cce53f0036}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!set\+Angle@{set\+Angle}}
+\index{set\+Angle@{set\+Angle}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{set\+Angle()}{setAngle()}}
+{\footnotesize\ttfamily Q\+Vector$<$ double $>$ \& Measurement\+Handler\+::set\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_measurement_handler_aaefca8d2644ed80b6318c7014cde5a57}\label{class_measurement_handler_aaefca8d2644ed80b6318c7014cde5a57}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!set\+Distance@{set\+Distance}}
+\index{set\+Distance@{set\+Distance}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{set\+Distance()}{setDistance()}}
+{\footnotesize\ttfamily Q\+Vector$<$ double $>$ \& Measurement\+Handler\+::set\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_measurement_handler_a56f38156d0bcbe80fe7a4f07f7df8c04}\label{class_measurement_handler_a56f38156d0bcbe80fe7a4f07f7df8c04}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!set\+Gyro\+Meas@{set\+Gyro\+Meas}}
+\index{set\+Gyro\+Meas@{set\+Gyro\+Meas}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{set\+Gyro\+Meas()}{setGyroMeas()}}
+{\footnotesize\ttfamily Q\+Vector$<$ double $>$ \& Measurement\+Handler\+::set\+Gyro\+Meas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_measurement_handler_abc15cc3967c7aad564b8b6b5101b9123}\label{class_measurement_handler_abc15cc3967c7aad564b8b6b5101b9123}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!acc\+Meas@{acc\+Meas}}
+\index{acc\+Meas@{acc\+Meas}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{acc\+Meas}{accMeas}}
+{\footnotesize\ttfamily Q\+Vector$<$double$>$ Measurement\+Handler\+::acc\+Meas\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_measurement_handler_a5107fd78f0e0b98517fb75d1fc5af906}\label{class_measurement_handler_a5107fd78f0e0b98517fb75d1fc5af906}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!angle@{angle}}
+\index{angle@{angle}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{angle}{angle}}
+{\footnotesize\ttfamily Q\+Vector$<$double$>$ Measurement\+Handler\+::angle\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_measurement_handler_a4e1ab2116fcc94b5c6f03ede6c814176}\label{class_measurement_handler_a4e1ab2116fcc94b5c6f03ede6c814176}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!angleP@{angleP}}
+\index{angleP@{angleP}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{angleP}{angleP}}
+{\footnotesize\ttfamily Q\+Vector$<$double$>$ Measurement\+Handler\+::angleP\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_measurement_handler_a198dfa7b2a559fe07fc3a56aeab40f20}\label{class_measurement_handler_a198dfa7b2a559fe07fc3a56aeab40f20}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!distance@{distance}}
+\index{distance@{distance}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{distance}{distance}}
+{\footnotesize\ttfamily Q\+Vector$<$double$>$ Measurement\+Handler\+::distance\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_measurement_handler_a28b1160039b46fd8cc55f1141bfd11b9}\label{class_measurement_handler_a28b1160039b46fd8cc55f1141bfd11b9}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!distanceP@{distanceP}}
+\index{distanceP@{distanceP}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{distanceP}{distanceP}}
+{\footnotesize\ttfamily Q\+Vector$<$double$>$ Measurement\+Handler\+::distanceP\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_measurement_handler_a3e543a5cb746a2bed6edac66303d733b}\label{class_measurement_handler_a3e543a5cb746a2bed6edac66303d733b}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!gyro\+Meas@{gyro\+Meas}}
+\index{gyro\+Meas@{gyro\+Meas}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{gyro\+Meas}{gyroMeas}}
+{\footnotesize\ttfamily Q\+Vector$<$double$>$ Measurement\+Handler\+::gyro\+Meas\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_measurement_handler_a7a996cf87f9f6672d20ed131c233b46d}\label{class_measurement_handler_a7a996cf87f9f6672d20ed131c233b46d}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!time@{time}}
+\index{time@{time}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily Q\+Vector$<$double$>$$\ast$ Measurement\+Handler\+::time\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_measurement_handler_abd8f5d782e7f5196d3cc45801a938a03}\label{class_measurement_handler_abd8f5d782e7f5196d3cc45801a938a03}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!vector\+Of\+Acc\+Pointers@{vector\+Of\+Acc\+Pointers}}
+\index{vector\+Of\+Acc\+Pointers@{vector\+Of\+Acc\+Pointers}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{vector\+Of\+Acc\+Pointers}{vectorOfAccPointers}}
+{\footnotesize\ttfamily Q\+Vector$<$Q\+Vector$<$double$>$ $\ast$$>$ Measurement\+Handler\+::vector\+Of\+Acc\+Pointers\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_measurement_handler_a07c61fa9e798a9ea0b94fa247f486d7b}\label{class_measurement_handler_a07c61fa9e798a9ea0b94fa247f486d7b}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!vector\+Of\+Gyro\+Pointers@{vector\+Of\+Gyro\+Pointers}}
+\index{vector\+Of\+Gyro\+Pointers@{vector\+Of\+Gyro\+Pointers}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{vector\+Of\+Gyro\+Pointers}{vectorOfGyroPointers}}
+{\footnotesize\ttfamily Q\+Vector$<$Q\+Vector$<$double$>$ $\ast$$>$ Measurement\+Handler\+::vector\+Of\+Gyro\+Pointers\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_measurement_handler_ad4ea68ff7e50ebf22877bdcb4b59014c}\label{class_measurement_handler_ad4ea68ff7e50ebf22877bdcb4b59014c}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!x\+Acc@{x\+Acc}}
+\index{x\+Acc@{x\+Acc}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{x\+Acc}{xAcc}}
+{\footnotesize\ttfamily Q\+Vector$<$double$>$$\ast$ Measurement\+Handler\+::x\+Acc\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_measurement_handler_a7204dfd635bc3ea6f90278c6794bd4b6}\label{class_measurement_handler_a7204dfd635bc3ea6f90278c6794bd4b6}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!x\+Ang\+Vel@{x\+Ang\+Vel}}
+\index{x\+Ang\+Vel@{x\+Ang\+Vel}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{x\+Ang\+Vel}{xAngVel}}
+{\footnotesize\ttfamily Q\+Vector$<$double$>$$\ast$ Measurement\+Handler\+::x\+Ang\+Vel\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_measurement_handler_ad47e97b391be68ded5c9b0aaa6d8eb0e}\label{class_measurement_handler_ad47e97b391be68ded5c9b0aaa6d8eb0e}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!y\+Acc@{y\+Acc}}
+\index{y\+Acc@{y\+Acc}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{y\+Acc}{yAcc}}
+{\footnotesize\ttfamily Q\+Vector$<$double$>$ $\ast$ Measurement\+Handler\+::y\+Acc\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_measurement_handler_a070b01770bd61164f1b4672bea4f14dd}\label{class_measurement_handler_a070b01770bd61164f1b4672bea4f14dd}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!y\+Ang\+Vel@{y\+Ang\+Vel}}
+\index{y\+Ang\+Vel@{y\+Ang\+Vel}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{y\+Ang\+Vel}{yAngVel}}
+{\footnotesize\ttfamily Q\+Vector$<$double$>$ $\ast$ Measurement\+Handler\+::y\+Ang\+Vel\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_measurement_handler_a733eb0086b7fcdb942a770a178fd3862}\label{class_measurement_handler_a733eb0086b7fcdb942a770a178fd3862}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!z\+Acc@{z\+Acc}}
+\index{z\+Acc@{z\+Acc}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{z\+Acc}{zAcc}}
+{\footnotesize\ttfamily Q\+Vector$<$double$>$ $\ast$ Measurement\+Handler\+::z\+Acc\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_measurement_handler_ac1b7d9eed922dccadd0381ce51b488a5}\label{class_measurement_handler_ac1b7d9eed922dccadd0381ce51b488a5}} 
+\index{Measurement\+Handler@{Measurement\+Handler}!z\+Ang\+Vel@{z\+Ang\+Vel}}
+\index{z\+Ang\+Vel@{z\+Ang\+Vel}!Measurement\+Handler@{Measurement\+Handler}}
+\subsubsection{\texorpdfstring{z\+Ang\+Vel}{zAngVel}}
+{\footnotesize\ttfamily Q\+Vector$<$double$>$ $\ast$ Measurement\+Handler\+::z\+Ang\+Vel\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+h/\mbox{\hyperlink{measurementhandler_8h}{measurementhandler.\+h}}\item 
+cpp/\mbox{\hyperlink{measurementhandler_8cpp}{measurementhandler.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,42 @@
+\hypertarget{class_q_c_p_axis_ticker}{}\section{Q\+C\+P\+Axis\+Ticker Class Reference}
+\label{class_q_c_p_axis_ticker}\index{Q\+C\+P\+Axis\+Ticker@{Q\+C\+P\+Axis\+Ticker}}
+
+
+The base class tick generator used by \mbox{\hyperlink{class_q_c_p_axis}{Q\+C\+P\+Axis}} to create tick positions and tick labels.  
+
+
+
+
+\subsection{Detailed Description}
+The base class tick generator used by \mbox{\hyperlink{class_q_c_p_axis}{Q\+C\+P\+Axis}} to create tick positions and tick labels. 
+
+Each \mbox{\hyperlink{class_q_c_p_axis}{Q\+C\+P\+Axis}} has an internal \mbox{\hyperlink{class_q_c_p_axis_ticker}{Q\+C\+P\+Axis\+Ticker}} (or a subclass) in order to generate tick positions and tick labels for the current axis range. The ticker of an axis can be set via Q\+C\+P\+Axis\+::set\+Ticker. Since that method takes a {\ttfamily Q\+Shared\+Pointer$<$\+Q\+C\+P\+Axis\+Ticker$>$}, multiple axes can share the same ticker instance.
+
+This base class generates normal tick coordinates and numeric labels for linear axes. It picks a reasonable tick step (the separation between ticks) which results in readable tick labels. The number of ticks that should be approximately generated can be set via set\+Tick\+Count. Depending on the current tick step strategy (set\+Tick\+Step\+Strategy), the algorithm either sacrifices readability to better match the specified tick count (Q\+C\+P\+Axis\+Ticker\+::tss\+Meet\+Tick\+Count) or relaxes the tick count in favor of better tick steps (Q\+C\+P\+Axis\+Ticker\+::tss\+Readability), which is the default.
+
+The following more specialized axis ticker subclasses are available, see details in the respective class documentation\+:
+
+\begin{center} \tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\mbox{\hyperlink{class_q_c_p_axis_ticker_fixed}{Q\+C\+P\+Axis\+Ticker\+Fixed}}& \\\cline{1-2}
+\mbox{\hyperlink{class_q_c_p_axis_ticker_log}{Q\+C\+P\+Axis\+Ticker\+Log}}& \\\cline{1-2}
+\mbox{\hyperlink{class_q_c_p_axis_ticker_pi}{Q\+C\+P\+Axis\+Ticker\+Pi}}& \\\cline{1-2}
+\mbox{\hyperlink{class_q_c_p_axis_ticker_text}{Q\+C\+P\+Axis\+Ticker\+Text}}& \\\cline{1-2}
+\mbox{\hyperlink{class_q_c_p_axis_ticker_date_time}{Q\+C\+P\+Axis\+Ticker\+Date\+Time}}& \\\cline{1-2}
+\mbox{\hyperlink{class_q_c_p_axis_ticker_time}{Q\+C\+P\+Axis\+Ticker\+Time}}&  \\\cline{1-2}
+\end{longtabu}
+\end{center} \hypertarget{class_q_c_p_axis_ticker_axisticker-subclassing}{}\subsection{Creating own axis tickers}\label{class_q_c_p_axis_ticker_axisticker-subclassing}
+Creating own axis tickers can be achieved very easily by sublassing \mbox{\hyperlink{class_q_c_p_axis_ticker}{Q\+C\+P\+Axis\+Ticker}} and reimplementing some or all of the available virtual methods.
+
+In the simplest case you might wish to just generate different tick steps than the other tickers, so you only reimplement the method get\+Tick\+Step. If you additionally want control over the string that will be shown as tick label, reimplement get\+Tick\+Label.
+
+If you wish to have complete control, you can generate the tick vectors and tick label vectors yourself by reimplementing create\+Tick\+Vector and create\+Label\+Vector. The default implementations use the previously mentioned virtual methods get\+Tick\+Step and get\+Tick\+Label, but your reimplementations don\textquotesingle{}t necessarily need to do so. For example in the case of unequal tick steps, the method get\+Tick\+Step loses its usefulness and can be ignored.
+
+The sub tick count between major ticks can be controlled with get\+Sub\+Tick\+Count. Full sub tick placement control is obtained by reimplementing create\+Sub\+Tick\+Vector.
+
+See the documentation of all these virtual methods in \mbox{\hyperlink{class_q_c_p_axis_ticker}{Q\+C\+P\+Axis\+Ticker}} for detailed information about the parameters and expected return values. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/\mbox{\hyperlink{qcustomplot_8cpp}{qcustomplot.\+cpp}}\end{DoxyCompactItemize}

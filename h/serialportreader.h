@@ -12,6 +12,10 @@
 #include <QApplication>
 #include <QThread>
 
+/*!
+ * \brief A class wraps everything about receiving data from the microcontroller
+ */
+
 class SerialPortReader
 {
 private:
@@ -25,15 +29,61 @@ private:
 	QVector <double> accelerationX, accelerationY, accelerationZ;
 	QVector <double> angularVelocityX, angularVelocityY, angularVelocityZ;
 
+	/*!
+	 * \brief Checks if received data from connected device is valid
+	 * \return true if received data is valid
+	 */
+
 	bool goodChoice();
 public:
+
+	/*!
+	 * \brief Parametric constructor
+	 * \param nHandler - a pointer to the object where the data of the loaded object is to be saved
+	 */
 	SerialPortReader(MeasurementHandler *nHandler);
+
 	~SerialPortReader();
+
+	/*!
+	 * \brief A method to read one line of data from the device
+	 */
+
 	void readLine();
+
+	/*!
+	 * \brief A method used to obtain information about devices connected to a computer
+	 * \return the device names
+	 */
+
 	QVector<QSerialPortInfo> getInfo() const;
+
+	/*!
+	 * \brief A method to connect to the device
+	 * \param index - device's index
+	 * \return true if device is succesfully connected
+	 */
+
 	bool connect(quint32 index);
+
+	/*!
+	 * \brief A method to disconnect from the device
+	 * \return true if device is succesfully disconnected
+	 */
+
 	bool disconnect();
+
+	/*!
+	 * \brief A method to obtain the error code
+	 * \return error's code index
+	 */
+
 	quint32 getErrorCode() const;
+
+	/*!
+	 * \brief A method to remove error signatures
+	 */
+
 	void resetErrorCode();
 
 };
