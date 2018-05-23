@@ -36,8 +36,8 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QGridLayout *gridLayout;
-    QTabWidget *tabWidget;
-    QWidget *tab_5;
+    QTabWidget *OpenGLTab;
+    QWidget *connectionTab;
     QGridLayout *gridLayout_6;
     QVBoxLayout *verticalLayout_8;
     QSpacerItem *verticalSpacer;
@@ -57,51 +57,48 @@ public:
     QSpacerItem *horizontalSpacer_9;
     QSpacerItem *horizontalSpacer_13;
     QSpacerItem *verticalSpacer_2;
-    QWidget *tab;
-    QGridLayout *gridLayout_2;
-    QVBoxLayout *verticalLayout_6;
-    QHBoxLayout *horizontalLayout_8;
-    QHBoxLayout *horizontalLayout_7;
-    QVBoxLayout *verticalLayout_5;
+    QWidget *openGLTab;
+    QGridLayout *gridLayout_7;
+    QVBoxLayout *verticalLayout_9;
+    QHBoxLayout *horizontalLayout_14;
     OpenGLWidget *openGLWidget;
-    QVBoxLayout *verticalLayout;
+    QTabWidget *tabWidget;
+    QWidget *horizontalTab1;
+    QGridLayout *gridLayout_8;
+    QWidget *widget_2;
+    QGridLayout *gridLayout_10;
+    QHBoxLayout *horizontalLayout_15;
     QCustomPlot *angleGraph;
     QCustomPlot *distanceGraph;
-    QHBoxLayout *horizontalLayout;
-    QSpacerItem *horizontalSpacer;
-    QPushButton *calibrateButton;
-    QSpacerItem *horizontalSpacer_2;
-    QWidget *tab_4;
-    QGridLayout *gridLayout_5;
-    QVBoxLayout *verticalLayout_2;
-    QHBoxLayout *horizontalLayout_9;
-    OpenGLWidget *openGLWidget2;
-    QHBoxLayout *horizontalLayout_5;
+    QWidget *verticalTab1;
+    QGridLayout *gridLayout_9;
+    QWidget *widget_3;
+    QGridLayout *gridLayout_11;
+    QVBoxLayout *verticalLayout_10;
     QCustomPlot *angleGraph2;
     QCustomPlot *distanceGraph2;
-    QHBoxLayout *horizontalLayout_6;
-    QSpacerItem *horizontalSpacer_7;
-    QPushButton *calibrateButton2;
-    QSpacerItem *horizontalSpacer_8;
-    QWidget *tab_2;
-    QGridLayout *gridLayout_3;
-    QVBoxLayout *verticalLayout_4;
-    QHBoxLayout *horizontalLayout_3;
+    QHBoxLayout *horizontalLayout_13;
+    QSpacerItem *horizontalSpacer_14;
+    QPushButton *calibrateButton;
+    QSpacerItem *horizontalSpacer_15;
+    QWidget *diagramsTab;
+    QGridLayout *gridLayout_2;
+    QVBoxLayout *verticalLayout;
+    QTabWidget *tabWidget_2;
+    QWidget *horizontalTab2;
+    QGridLayout *gridLayout_5;
+    QHBoxLayout *horizontalLayout_5;
     QCustomPlot *accelerationGraph;
     QCustomPlot *angularVelocityGraph;
-    QHBoxLayout *horizontalLayout_4;
-    QSpacerItem *horizontalSpacer_3;
-    QPushButton *resetButton;
-    QSpacerItem *horizontalSpacer_4;
-    QWidget *tab_3;
-    QGridLayout *gridLayout_4;
-    QVBoxLayout *verticalLayout_3;
+    QWidget *verticalTab2;
+    QGridLayout *gridLayout_12;
+    QVBoxLayout *verticalLayout_2;
     QCustomPlot *accelerationGraph2;
     QCustomPlot *angularVelocityGraph2;
-    QHBoxLayout *horizontalLayout_2;
-    QSpacerItem *horizontalSpacer_5;
-    QPushButton *resetButton2;
-    QSpacerItem *horizontalSpacer_6;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *resetButton;
+    QSpacerItem *horizontalSpacer_2;
     QStatusBar *statusBar;
     QMenuBar *menuBar;
 
@@ -109,18 +106,18 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1200, 600);
+        MainWindow->resize(1280, 720);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        tabWidget = new QTabWidget(centralWidget);
-        tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tab_5 = new QWidget();
-        tab_5->setObjectName(QStringLiteral("tab_5"));
-        gridLayout_6 = new QGridLayout(tab_5);
+        OpenGLTab = new QTabWidget(centralWidget);
+        OpenGLTab->setObjectName(QStringLiteral("OpenGLTab"));
+        connectionTab = new QWidget();
+        connectionTab->setObjectName(QStringLiteral("connectionTab"));
+        gridLayout_6 = new QGridLayout(connectionTab);
         gridLayout_6->setSpacing(6);
         gridLayout_6->setContentsMargins(11, 11, 11, 11);
         gridLayout_6->setObjectName(QStringLiteral("gridLayout_6"));
@@ -148,14 +145,14 @@ public:
 
         horizontalLayout_11->addItem(horizontalSpacer_11);
 
-        label = new QLabel(tab_5);
+        label = new QLabel(connectionTab);
         label->setObjectName(QStringLiteral("label"));
         label->setTextFormat(Qt::RichText);
         label->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_11->addWidget(label);
 
-        comboBox = new QComboBox(tab_5);
+        comboBox = new QComboBox(connectionTab);
         comboBox->setObjectName(QStringLiteral("comboBox"));
         comboBox->setLayoutDirection(Qt::LeftToRight);
         comboBox->setMaxVisibleItems(5);
@@ -163,7 +160,7 @@ public:
 
         horizontalLayout_11->addWidget(comboBox);
 
-        autoButton = new QPushButton(tab_5);
+        autoButton = new QPushButton(connectionTab);
         autoButton->setObjectName(QStringLiteral("autoButton"));
 
         horizontalLayout_11->addWidget(autoButton);
@@ -182,12 +179,12 @@ public:
 
         horizontalLayout_10->addItem(horizontalSpacer_10);
 
-        connectButton = new QPushButton(tab_5);
+        connectButton = new QPushButton(connectionTab);
         connectButton->setObjectName(QStringLiteral("connectButton"));
 
         horizontalLayout_10->addWidget(connectButton);
 
-        disconnectButton = new QPushButton(tab_5);
+        disconnectButton = new QPushButton(connectionTab);
         disconnectButton->setObjectName(QStringLiteral("disconnectButton"));
 
         horizontalLayout_10->addWidget(disconnectButton);
@@ -216,61 +213,183 @@ public:
 
         gridLayout_6->addLayout(verticalLayout_8, 0, 0, 1, 1);
 
-        tabWidget->addTab(tab_5, QString());
-        tab = new QWidget();
-        tab->setObjectName(QStringLiteral("tab"));
-        gridLayout_2 = new QGridLayout(tab);
-        gridLayout_2->setSpacing(6);
-        gridLayout_2->setContentsMargins(11, 11, 11, 11);
-        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
-        verticalLayout_6 = new QVBoxLayout();
-        verticalLayout_6->setSpacing(6);
-        verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
-        horizontalLayout_8 = new QHBoxLayout();
-        horizontalLayout_8->setSpacing(6);
-        horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
-        horizontalLayout_7 = new QHBoxLayout();
-        horizontalLayout_7->setSpacing(6);
-        horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
-        verticalLayout_5 = new QVBoxLayout();
-        verticalLayout_5->setSpacing(6);
-        verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
-        openGLWidget = new OpenGLWidget(tab);
+        OpenGLTab->addTab(connectionTab, QString());
+        openGLTab = new QWidget();
+        openGLTab->setObjectName(QStringLiteral("openGLTab"));
+        gridLayout_7 = new QGridLayout(openGLTab);
+        gridLayout_7->setSpacing(6);
+        gridLayout_7->setContentsMargins(11, 11, 11, 11);
+        gridLayout_7->setObjectName(QStringLiteral("gridLayout_7"));
+        verticalLayout_9 = new QVBoxLayout();
+        verticalLayout_9->setSpacing(6);
+        verticalLayout_9->setObjectName(QStringLiteral("verticalLayout_9"));
+        horizontalLayout_14 = new QHBoxLayout();
+        horizontalLayout_14->setSpacing(6);
+        horizontalLayout_14->setObjectName(QStringLiteral("horizontalLayout_14"));
+        openGLWidget = new OpenGLWidget(openGLTab);
         openGLWidget->setObjectName(QStringLiteral("openGLWidget"));
+
+        horizontalLayout_14->addWidget(openGLWidget);
+
+        tabWidget = new QTabWidget(openGLTab);
+        tabWidget->setObjectName(QStringLiteral("tabWidget"));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(openGLWidget->sizePolicy().hasHeightForWidth());
-        openGLWidget->setSizePolicy(sizePolicy);
-        openGLWidget->setBaseSize(QSize(0, 0));
-        openGLWidget->setLayoutDirection(Qt::LeftToRight);
+        sizePolicy.setHeightForWidth(tabWidget->sizePolicy().hasHeightForWidth());
+        tabWidget->setSizePolicy(sizePolicy);
+        horizontalTab1 = new QWidget();
+        horizontalTab1->setObjectName(QStringLiteral("horizontalTab1"));
+        gridLayout_8 = new QGridLayout(horizontalTab1);
+        gridLayout_8->setSpacing(6);
+        gridLayout_8->setContentsMargins(11, 11, 11, 11);
+        gridLayout_8->setObjectName(QStringLiteral("gridLayout_8"));
+        widget_2 = new QWidget(horizontalTab1);
+        widget_2->setObjectName(QStringLiteral("widget_2"));
+        gridLayout_10 = new QGridLayout(widget_2);
+        gridLayout_10->setSpacing(6);
+        gridLayout_10->setContentsMargins(11, 11, 11, 11);
+        gridLayout_10->setObjectName(QStringLiteral("gridLayout_10"));
+        horizontalLayout_15 = new QHBoxLayout();
+        horizontalLayout_15->setSpacing(6);
+        horizontalLayout_15->setObjectName(QStringLiteral("horizontalLayout_15"));
+        angleGraph = new QCustomPlot(widget_2);
+        angleGraph->setObjectName(QStringLiteral("angleGraph"));
 
-        verticalLayout_5->addWidget(openGLWidget);
+        horizontalLayout_15->addWidget(angleGraph);
+
+        distanceGraph = new QCustomPlot(widget_2);
+        distanceGraph->setObjectName(QStringLiteral("distanceGraph"));
+
+        horizontalLayout_15->addWidget(distanceGraph);
 
 
-        horizontalLayout_7->addLayout(verticalLayout_5);
+        gridLayout_10->addLayout(horizontalLayout_15, 0, 0, 1, 1);
 
 
-        horizontalLayout_8->addLayout(horizontalLayout_7);
+        gridLayout_8->addWidget(widget_2, 0, 0, 1, 1);
 
+        tabWidget->addTab(horizontalTab1, QString());
+        verticalTab1 = new QWidget();
+        verticalTab1->setObjectName(QStringLiteral("verticalTab1"));
+        gridLayout_9 = new QGridLayout(verticalTab1);
+        gridLayout_9->setSpacing(6);
+        gridLayout_9->setContentsMargins(11, 11, 11, 11);
+        gridLayout_9->setObjectName(QStringLiteral("gridLayout_9"));
+        widget_3 = new QWidget(verticalTab1);
+        widget_3->setObjectName(QStringLiteral("widget_3"));
+        gridLayout_11 = new QGridLayout(widget_3);
+        gridLayout_11->setSpacing(6);
+        gridLayout_11->setContentsMargins(11, 11, 11, 11);
+        gridLayout_11->setObjectName(QStringLiteral("gridLayout_11"));
+        verticalLayout_10 = new QVBoxLayout();
+        verticalLayout_10->setSpacing(6);
+        verticalLayout_10->setObjectName(QStringLiteral("verticalLayout_10"));
+        angleGraph2 = new QCustomPlot(widget_3);
+        angleGraph2->setObjectName(QStringLiteral("angleGraph2"));
+
+        verticalLayout_10->addWidget(angleGraph2);
+
+        distanceGraph2 = new QCustomPlot(widget_3);
+        distanceGraph2->setObjectName(QStringLiteral("distanceGraph2"));
+
+        verticalLayout_10->addWidget(distanceGraph2);
+
+
+        gridLayout_11->addLayout(verticalLayout_10, 0, 0, 1, 1);
+
+
+        gridLayout_9->addWidget(widget_3, 0, 0, 1, 1);
+
+        tabWidget->addTab(verticalTab1, QString());
+
+        horizontalLayout_14->addWidget(tabWidget);
+
+
+        verticalLayout_9->addLayout(horizontalLayout_14);
+
+        horizontalLayout_13 = new QHBoxLayout();
+        horizontalLayout_13->setSpacing(6);
+        horizontalLayout_13->setObjectName(QStringLiteral("horizontalLayout_13"));
+        horizontalSpacer_14 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_13->addItem(horizontalSpacer_14);
+
+        calibrateButton = new QPushButton(openGLTab);
+        calibrateButton->setObjectName(QStringLiteral("calibrateButton"));
+
+        horizontalLayout_13->addWidget(calibrateButton);
+
+        horizontalSpacer_15 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_13->addItem(horizontalSpacer_15);
+
+
+        verticalLayout_9->addLayout(horizontalLayout_13);
+
+
+        gridLayout_7->addLayout(verticalLayout_9, 0, 0, 1, 1);
+
+        OpenGLTab->addTab(openGLTab, QString());
+        diagramsTab = new QWidget();
+        diagramsTab->setObjectName(QStringLiteral("diagramsTab"));
+        gridLayout_2 = new QGridLayout(diagramsTab);
+        gridLayout_2->setSpacing(6);
+        gridLayout_2->setContentsMargins(11, 11, 11, 11);
+        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         verticalLayout = new QVBoxLayout();
         verticalLayout->setSpacing(6);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        angleGraph = new QCustomPlot(tab);
-        angleGraph->setObjectName(QStringLiteral("angleGraph"));
+        tabWidget_2 = new QTabWidget(diagramsTab);
+        tabWidget_2->setObjectName(QStringLiteral("tabWidget_2"));
+        horizontalTab2 = new QWidget();
+        horizontalTab2->setObjectName(QStringLiteral("horizontalTab2"));
+        gridLayout_5 = new QGridLayout(horizontalTab2);
+        gridLayout_5->setSpacing(6);
+        gridLayout_5->setContentsMargins(11, 11, 11, 11);
+        gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setSpacing(6);
+        horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
+        accelerationGraph = new QCustomPlot(horizontalTab2);
+        accelerationGraph->setObjectName(QStringLiteral("accelerationGraph"));
 
-        verticalLayout->addWidget(angleGraph);
+        horizontalLayout_5->addWidget(accelerationGraph);
 
-        distanceGraph = new QCustomPlot(tab);
-        distanceGraph->setObjectName(QStringLiteral("distanceGraph"));
+        angularVelocityGraph = new QCustomPlot(horizontalTab2);
+        angularVelocityGraph->setObjectName(QStringLiteral("angularVelocityGraph"));
 
-        verticalLayout->addWidget(distanceGraph);
-
-
-        horizontalLayout_8->addLayout(verticalLayout);
+        horizontalLayout_5->addWidget(angularVelocityGraph);
 
 
-        verticalLayout_6->addLayout(horizontalLayout_8);
+        gridLayout_5->addLayout(horizontalLayout_5, 0, 0, 1, 1);
+
+        tabWidget_2->addTab(horizontalTab2, QString());
+        verticalTab2 = new QWidget();
+        verticalTab2->setObjectName(QStringLiteral("verticalTab2"));
+        gridLayout_12 = new QGridLayout(verticalTab2);
+        gridLayout_12->setSpacing(6);
+        gridLayout_12->setContentsMargins(11, 11, 11, 11);
+        gridLayout_12->setObjectName(QStringLiteral("gridLayout_12"));
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        accelerationGraph2 = new QCustomPlot(verticalTab2);
+        accelerationGraph2->setObjectName(QStringLiteral("accelerationGraph2"));
+
+        verticalLayout_2->addWidget(accelerationGraph2);
+
+        angularVelocityGraph2 = new QCustomPlot(verticalTab2);
+        angularVelocityGraph2->setObjectName(QStringLiteral("angularVelocityGraph2"));
+
+        verticalLayout_2->addWidget(angularVelocityGraph2);
+
+
+        gridLayout_12->addLayout(verticalLayout_2, 0, 0, 1, 1);
+
+        tabWidget_2->addTab(verticalTab2, QString());
+
+        verticalLayout->addWidget(tabWidget_2);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
@@ -279,173 +398,24 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        calibrateButton = new QPushButton(tab);
-        calibrateButton->setObjectName(QStringLiteral("calibrateButton"));
+        resetButton = new QPushButton(diagramsTab);
+        resetButton->setObjectName(QStringLiteral("resetButton"));
 
-        horizontalLayout->addWidget(calibrateButton);
+        horizontalLayout->addWidget(resetButton);
 
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer_2);
 
 
-        verticalLayout_6->addLayout(horizontalLayout);
+        verticalLayout->addLayout(horizontalLayout);
 
 
-        gridLayout_2->addLayout(verticalLayout_6, 0, 0, 1, 1);
+        gridLayout_2->addLayout(verticalLayout, 0, 0, 1, 1);
 
-        tabWidget->addTab(tab, QString());
-        tab_4 = new QWidget();
-        tab_4->setObjectName(QStringLiteral("tab_4"));
-        gridLayout_5 = new QGridLayout(tab_4);
-        gridLayout_5->setSpacing(6);
-        gridLayout_5->setContentsMargins(11, 11, 11, 11);
-        gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setSpacing(6);
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        horizontalLayout_9 = new QHBoxLayout();
-        horizontalLayout_9->setSpacing(6);
-        horizontalLayout_9->setObjectName(QStringLiteral("horizontalLayout_9"));
-        openGLWidget2 = new OpenGLWidget(tab_4);
-        openGLWidget2->setObjectName(QStringLiteral("openGLWidget2"));
+        OpenGLTab->addTab(diagramsTab, QString());
 
-        horizontalLayout_9->addWidget(openGLWidget2);
-
-        horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setSpacing(6);
-        horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
-        angleGraph2 = new QCustomPlot(tab_4);
-        angleGraph2->setObjectName(QStringLiteral("angleGraph2"));
-
-        horizontalLayout_5->addWidget(angleGraph2);
-
-        distanceGraph2 = new QCustomPlot(tab_4);
-        distanceGraph2->setObjectName(QStringLiteral("distanceGraph2"));
-
-        horizontalLayout_5->addWidget(distanceGraph2);
-
-
-        horizontalLayout_9->addLayout(horizontalLayout_5);
-
-
-        verticalLayout_2->addLayout(horizontalLayout_9);
-
-        horizontalLayout_6 = new QHBoxLayout();
-        horizontalLayout_6->setSpacing(6);
-        horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
-        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_6->addItem(horizontalSpacer_7);
-
-        calibrateButton2 = new QPushButton(tab_4);
-        calibrateButton2->setObjectName(QStringLiteral("calibrateButton2"));
-
-        horizontalLayout_6->addWidget(calibrateButton2);
-
-        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_6->addItem(horizontalSpacer_8);
-
-
-        verticalLayout_2->addLayout(horizontalLayout_6);
-
-
-        gridLayout_5->addLayout(verticalLayout_2, 0, 0, 1, 1);
-
-        tabWidget->addTab(tab_4, QString());
-        tab_2 = new QWidget();
-        tab_2->setObjectName(QStringLiteral("tab_2"));
-        gridLayout_3 = new QGridLayout(tab_2);
-        gridLayout_3->setSpacing(6);
-        gridLayout_3->setContentsMargins(11, 11, 11, 11);
-        gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
-        verticalLayout_4 = new QVBoxLayout();
-        verticalLayout_4->setSpacing(6);
-        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setSpacing(6);
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        accelerationGraph = new QCustomPlot(tab_2);
-        accelerationGraph->setObjectName(QStringLiteral("accelerationGraph"));
-
-        horizontalLayout_3->addWidget(accelerationGraph);
-
-        angularVelocityGraph = new QCustomPlot(tab_2);
-        angularVelocityGraph->setObjectName(QStringLiteral("angularVelocityGraph"));
-
-        horizontalLayout_3->addWidget(angularVelocityGraph);
-
-
-        verticalLayout_4->addLayout(horizontalLayout_3);
-
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setSpacing(6);
-        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_4->addItem(horizontalSpacer_3);
-
-        resetButton = new QPushButton(tab_2);
-        resetButton->setObjectName(QStringLiteral("resetButton"));
-
-        horizontalLayout_4->addWidget(resetButton);
-
-        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_4->addItem(horizontalSpacer_4);
-
-
-        verticalLayout_4->addLayout(horizontalLayout_4);
-
-
-        gridLayout_3->addLayout(verticalLayout_4, 0, 0, 1, 1);
-
-        tabWidget->addTab(tab_2, QString());
-        tab_3 = new QWidget();
-        tab_3->setObjectName(QStringLiteral("tab_3"));
-        gridLayout_4 = new QGridLayout(tab_3);
-        gridLayout_4->setSpacing(6);
-        gridLayout_4->setContentsMargins(11, 11, 11, 11);
-        gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setSpacing(6);
-        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
-        accelerationGraph2 = new QCustomPlot(tab_3);
-        accelerationGraph2->setObjectName(QStringLiteral("accelerationGraph2"));
-
-        verticalLayout_3->addWidget(accelerationGraph2);
-
-        angularVelocityGraph2 = new QCustomPlot(tab_3);
-        angularVelocityGraph2->setObjectName(QStringLiteral("angularVelocityGraph2"));
-
-        verticalLayout_3->addWidget(angularVelocityGraph2);
-
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setSpacing(6);
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_2->addItem(horizontalSpacer_5);
-
-        resetButton2 = new QPushButton(tab_3);
-        resetButton2->setObjectName(QStringLiteral("resetButton2"));
-
-        horizontalLayout_2->addWidget(resetButton2);
-
-        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_2->addItem(horizontalSpacer_6);
-
-
-        verticalLayout_3->addLayout(horizontalLayout_2);
-
-
-        gridLayout_4->addLayout(verticalLayout_3, 0, 0, 1, 1);
-
-        tabWidget->addTab(tab_3, QString());
-
-        gridLayout->addWidget(tabWidget, 0, 1, 1, 1);
+        gridLayout->addWidget(OpenGLTab, 0, 1, 1, 1);
 
         MainWindow->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(MainWindow);
@@ -454,12 +424,14 @@ public:
         MainWindow->setStatusBar(statusBar);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1200, 21));
+        menuBar->setGeometry(QRect(0, 0, 1280, 21));
         MainWindow->setMenuBar(menuBar);
 
         retranslateUi(MainWindow);
 
+        OpenGLTab->setCurrentIndex(0);
         tabWidget->setCurrentIndex(0);
+        tabWidget_2->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -472,15 +444,15 @@ public:
         autoButton->setText(QApplication::translate("MainWindow", "Auto", nullptr));
         connectButton->setText(QApplication::translate("MainWindow", "Connect", nullptr));
         disconnectButton->setText(QApplication::translate("MainWindow", "Disconnect", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_5), QApplication::translate("MainWindow", "Device", nullptr));
+        OpenGLTab->setTabText(OpenGLTab->indexOf(connectionTab), QApplication::translate("MainWindow", "Connection", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(horizontalTab1), QApplication::translate("MainWindow", "Horizontal", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(verticalTab1), QApplication::translate("MainWindow", "Vertical", nullptr));
         calibrateButton->setText(QApplication::translate("MainWindow", "Calibrate", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "OpenGL horizontal", nullptr));
-        calibrateButton2->setText(QApplication::translate("MainWindow", "Calibrate", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("MainWindow", "OpenGL vertical", nullptr));
+        OpenGLTab->setTabText(OpenGLTab->indexOf(openGLTab), QApplication::translate("MainWindow", "OpenGL", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(horizontalTab2), QApplication::translate("MainWindow", "Horizontal", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(verticalTab2), QApplication::translate("MainWindow", "Vertical", nullptr));
         resetButton->setText(QApplication::translate("MainWindow", "Reset", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Diagrams horizontal", nullptr));
-        resetButton2->setText(QApplication::translate("MainWindow", "Reset", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow", "Diagrams vertical", nullptr));
+        OpenGLTab->setTabText(OpenGLTab->indexOf(diagramsTab), QApplication::translate("MainWindow", "Diagrams", nullptr));
     } // retranslateUi
 
 };

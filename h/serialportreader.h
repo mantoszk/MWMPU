@@ -59,7 +59,7 @@ public:
 	QVector<QSerialPortInfo> getInfo() const;
 
 	/*!
-	 * \brief A method to connect to the device
+	 * \brief A method to connect to the device via serial port
 	 * \param index - device's index
 	 * \return true if device is succesfully connected
 	 */
@@ -67,7 +67,7 @@ public:
 	bool connect(quint32 index);
 
 	/*!
-	 * \brief A method to disconnect from the device
+	 * \brief A method to disconnect device from serial port
 	 * \return true if device is succesfully disconnected
 	 */
 

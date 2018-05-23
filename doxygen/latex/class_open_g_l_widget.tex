@@ -1,4 +1,4 @@
-\hypertarget{class_open_g_l_widget}{}\section{Open\+G\+L\+Widget Class Reference}
+\section{Open\+G\+L\+Widget Class Reference}
 \label{class_open_g_l_widget}\index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
 
 
@@ -18,44 +18,44 @@ Inheritance diagram for Open\+G\+L\+Widget\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_open_g_l_widget_a110146940a976f19017d2747c93e0390}{Open\+G\+L\+Widget}} (Q\+Widget $\ast$parent=nullptr)
+\textbf{ Open\+G\+L\+Widget} (Q\+Widget $\ast$parent=nullptr)
 \item 
-\mbox{\hyperlink{class_open_g_l_widget_a293847f6a7e6c40344a1acfca3e9eb51}{$\sim$\+Open\+G\+L\+Widget}} ()
+\textbf{ $\sim$\+Open\+G\+L\+Widget} ()
 \item 
-void \mbox{\hyperlink{class_open_g_l_widget_a7082dfc8237267697116a5fc03bd9a1e}{update\+Rotation}} (const Q\+Vector$<$ double $>$ n\+Rotation)
-\begin{DoxyCompactList}\small\item\em A method used to update the angular position of a rendered object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_open_g_l_widget_a2170acd0e1f140dbf1771af9bf063c34}{update\+Distance}} (const Q\+Vector$<$ double $>$ n\+Distance)
+void \textbf{ update\+Rotation} (const Q\+Vector$<$ double $>$ n\+Rotation)
+\begin{DoxyCompactList}\small\item\em A method used to update the angular position of rendered object. \end{DoxyCompactList}\item 
+void \textbf{ update\+Distance} (const Q\+Vector$<$ double $>$ n\+Distance)
 \begin{DoxyCompactList}\small\item\em A method for updating the distance of a rendered object from the center of the coordinate system. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_open_g_l_widget_a4baa372aec232a8d6c153cdef540dc11}{initialize\+GL}} () override
-\begin{DoxyCompactList}\small\item\em Prepares shaders, model and its textures for rendering. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_open_g_l_widget_a1bdb72bca1dda9243983c71c8a3e0157}{resize\+GL}} (int width, int height) override
+void \textbf{ initialize\+GL} () override
+\begin{DoxyCompactList}\small\item\em Prepares shaders, model and it\textquotesingle{}s textures for rendering. \end{DoxyCompactList}\item 
+void \textbf{ resize\+GL} (int width, int height) override
 \begin{DoxyCompactList}\small\item\em Resizes widget. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_open_g_l_widget_a86df33a6b58b77588ffb1c110fcf2932}{paint\+GL}} () override
+void \textbf{ paint\+GL} () override
 \begin{DoxyCompactList}\small\item\em Draws scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_open_g_l_widget_ae8a75e2562bae0ea90f590f0a6ddadcc}{create\+Object}} ()
+void \textbf{ create\+Object} ()
 \begin{DoxyCompactList}\small\item\em Sends the coordinates of the vertices and UV\textquotesingle{}s of the object to the buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Q\+Color \mbox{\hyperlink{class_open_g_l_widget_a281ac75f22a1b4ca526be0768447fa8c}{bg\+Color}}
+Q\+Color \textbf{ bg\+Color}
 \item 
-Q\+Open\+G\+L\+Shader\+Program $\ast$ \mbox{\hyperlink{class_open_g_l_widget_a79e5c10681b015f7fb1e7ce1b047fa8b}{program}}
+Q\+Open\+G\+L\+Shader\+Program $\ast$ \textbf{ program}
 \item 
-Q\+Open\+G\+L\+Buffer \mbox{\hyperlink{class_open_g_l_widget_a4b64b78f67c6da7e90cae7a4b34b5dce}{vbo}}
+Q\+Open\+G\+L\+Buffer \textbf{ vbo}
 \item 
-Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_open_g_l_widget_a3c1459d5d1e0eebd6a0eaf2e075caa1d}{rotation}}
+Q\+Vector$<$ double $>$ \textbf{ rotation}
 \item 
-Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_open_g_l_widget_a6afe31b5d089a60d2f5e3e7178a7730a}{distance}}
+Q\+Vector$<$ double $>$ \textbf{ distance}
 \item 
-\mbox{\hyperlink{class_wireframe_model}{Wireframe\+Model}} $\ast$ \mbox{\hyperlink{class_open_g_l_widget_aa6e18f70c42656b3d8aa60f69eb761c2}{model}}
+\textbf{ Wireframe\+Model} $\ast$ \textbf{ model}
 \item 
-Q\+Open\+G\+L\+Texture $\ast$ \mbox{\hyperlink{class_open_g_l_widget_afb76f6d9354bb49993c10e6fb6da7349}{texture}}
+Q\+Open\+G\+L\+Texture $\ast$ \textbf{ texture}
 \end{DoxyCompactItemize}
 
 
@@ -63,55 +63,55 @@ Q\+Open\+G\+L\+Texture $\ast$ \mbox{\hyperlink{class_open_g_l_widget_afb76f6d935
 A class that creates the Open\+GL window for rendering the Arduino model in real time. 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_open_g_l_widget_a110146940a976f19017d2747c93e0390}\label{class_open_g_l_widget_a110146940a976f19017d2747c93e0390}} 
+\mbox{\label{class_open_g_l_widget_a110146940a976f19017d2747c93e0390}} 
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
-\subsubsection{\texorpdfstring{Open\+G\+L\+Widget()}{OpenGLWidget()}}
+\subsubsection{Open\+G\+L\+Widget()}
 {\footnotesize\ttfamily Open\+G\+L\+Widget\+::\+Open\+G\+L\+Widget (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
-\mbox{\Hypertarget{class_open_g_l_widget_a293847f6a7e6c40344a1acfca3e9eb51}\label{class_open_g_l_widget_a293847f6a7e6c40344a1acfca3e9eb51}} 
+\mbox{\label{class_open_g_l_widget_a293847f6a7e6c40344a1acfca3e9eb51}} 
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!````~Open\+G\+L\+Widget@{$\sim$\+Open\+G\+L\+Widget}}
 \index{````~Open\+G\+L\+Widget@{$\sim$\+Open\+G\+L\+Widget}!Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
-\subsubsection{\texorpdfstring{$\sim$\+Open\+G\+L\+Widget()}{~OpenGLWidget()}}
+\subsubsection{$\sim$\+Open\+G\+L\+Widget()}
 {\footnotesize\ttfamily Open\+G\+L\+Widget\+::$\sim$\+Open\+G\+L\+Widget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_open_g_l_widget_ae8a75e2562bae0ea90f590f0a6ddadcc}\label{class_open_g_l_widget_ae8a75e2562bae0ea90f590f0a6ddadcc}} 
+\mbox{\label{class_open_g_l_widget_ae8a75e2562bae0ea90f590f0a6ddadcc}} 
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!create\+Object@{create\+Object}}
 \index{create\+Object@{create\+Object}!Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
-\subsubsection{\texorpdfstring{create\+Object()}{createObject()}}
+\subsubsection{create\+Object()}
 {\footnotesize\ttfamily void Open\+G\+L\+Widget\+::create\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Sends the coordinates of the vertices and UV\textquotesingle{}s of the object to the buffer. 
 
-\mbox{\Hypertarget{class_open_g_l_widget_a4baa372aec232a8d6c153cdef540dc11}\label{class_open_g_l_widget_a4baa372aec232a8d6c153cdef540dc11}} 
+\mbox{\label{class_open_g_l_widget_a4baa372aec232a8d6c153cdef540dc11}} 
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!initialize\+GL@{initialize\+GL}}
 \index{initialize\+GL@{initialize\+GL}!Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
-\subsubsection{\texorpdfstring{initialize\+G\+L()}{initializeGL()}}
+\subsubsection{initialize\+G\+L()}
 {\footnotesize\ttfamily void Open\+G\+L\+Widget\+::initialize\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
 
 
 
-Prepares shaders, model and its textures for rendering. 
+Prepares shaders, model and it\textquotesingle{}s textures for rendering. 
 
-\mbox{\Hypertarget{class_open_g_l_widget_a86df33a6b58b77588ffb1c110fcf2932}\label{class_open_g_l_widget_a86df33a6b58b77588ffb1c110fcf2932}} 
+\mbox{\label{class_open_g_l_widget_a86df33a6b58b77588ffb1c110fcf2932}} 
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!paint\+GL@{paint\+GL}}
 \index{paint\+GL@{paint\+GL}!Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
-\subsubsection{\texorpdfstring{paint\+G\+L()}{paintGL()}}
+\subsubsection{paint\+G\+L()}
 {\footnotesize\ttfamily void Open\+G\+L\+Widget\+::paint\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
 
 
 
 Draws scene. 
 
-\mbox{\Hypertarget{class_open_g_l_widget_a1bdb72bca1dda9243983c71c8a3e0157}\label{class_open_g_l_widget_a1bdb72bca1dda9243983c71c8a3e0157}} 
+\mbox{\label{class_open_g_l_widget_a1bdb72bca1dda9243983c71c8a3e0157}} 
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!resize\+GL@{resize\+GL}}
 \index{resize\+GL@{resize\+GL}!Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
-\subsubsection{\texorpdfstring{resize\+G\+L()}{resizeGL()}}
+\subsubsection{resize\+G\+L()}
 {\footnotesize\ttfamily void Open\+G\+L\+Widget\+::resize\+GL (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
 
 
@@ -125,10 +125,10 @@ Resizes widget.
 {\em height} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_open_g_l_widget_a2170acd0e1f140dbf1771af9bf063c34}\label{class_open_g_l_widget_a2170acd0e1f140dbf1771af9bf063c34}} 
+\mbox{\label{class_open_g_l_widget_a2170acd0e1f140dbf1771af9bf063c34}} 
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!update\+Distance@{update\+Distance}}
 \index{update\+Distance@{update\+Distance}!Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
-\subsubsection{\texorpdfstring{update\+Distance()}{updateDistance()}}
+\subsubsection{update\+Distance()}
 {\footnotesize\ttfamily void Open\+G\+L\+Widget\+::update\+Distance (\begin{DoxyParamCaption}\item[{const Q\+Vector$<$ double $>$}]{n\+Distance }\end{DoxyParamCaption})}
 
 
@@ -137,72 +137,72 @@ A method for updating the distance of a rendered object from the center of the c
 
 
 \begin{DoxyParams}{Parameters}
-{\em n\+Distance} & -\/ xyz distance values \\
+{\em n\+Distance} & -\/ x, y, z distance values \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_open_g_l_widget_a7082dfc8237267697116a5fc03bd9a1e}\label{class_open_g_l_widget_a7082dfc8237267697116a5fc03bd9a1e}} 
+\mbox{\label{class_open_g_l_widget_a7082dfc8237267697116a5fc03bd9a1e}} 
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!update\+Rotation@{update\+Rotation}}
 \index{update\+Rotation@{update\+Rotation}!Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
-\subsubsection{\texorpdfstring{update\+Rotation()}{updateRotation()}}
+\subsubsection{update\+Rotation()}
 {\footnotesize\ttfamily void Open\+G\+L\+Widget\+::update\+Rotation (\begin{DoxyParamCaption}\item[{const Q\+Vector$<$ double $>$}]{n\+Rotation }\end{DoxyParamCaption})}
 
 
 
-A method used to update the angular position of a rendered object. 
+A method used to update the angular position of rendered object. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em n\+Rotation} & -\/ xyz angular position values \\
+{\em n\+Rotation} & -\/ x, y, z angular position values \\
 \hline
 \end{DoxyParams}
 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{class_open_g_l_widget_a281ac75f22a1b4ca526be0768447fa8c}\label{class_open_g_l_widget_a281ac75f22a1b4ca526be0768447fa8c}} 
+\mbox{\label{class_open_g_l_widget_a281ac75f22a1b4ca526be0768447fa8c}} 
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!bg\+Color@{bg\+Color}}
 \index{bg\+Color@{bg\+Color}!Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
-\subsubsection{\texorpdfstring{bg\+Color}{bgColor}}
+\subsubsection{bg\+Color}
 {\footnotesize\ttfamily Q\+Color Open\+G\+L\+Widget\+::bg\+Color\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_open_g_l_widget_a6afe31b5d089a60d2f5e3e7178a7730a}\label{class_open_g_l_widget_a6afe31b5d089a60d2f5e3e7178a7730a}} 
+\mbox{\label{class_open_g_l_widget_a6afe31b5d089a60d2f5e3e7178a7730a}} 
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!distance@{distance}}
 \index{distance@{distance}!Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
-\subsubsection{\texorpdfstring{distance}{distance}}
+\subsubsection{distance}
 {\footnotesize\ttfamily Q\+Vector$<$double$>$ Open\+G\+L\+Widget\+::distance\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_open_g_l_widget_aa6e18f70c42656b3d8aa60f69eb761c2}\label{class_open_g_l_widget_aa6e18f70c42656b3d8aa60f69eb761c2}} 
+\mbox{\label{class_open_g_l_widget_aa6e18f70c42656b3d8aa60f69eb761c2}} 
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!model@{model}}
 \index{model@{model}!Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
-\subsubsection{\texorpdfstring{model}{model}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_wireframe_model}{Wireframe\+Model}}$\ast$ Open\+G\+L\+Widget\+::model\hspace{0.3cm}{\ttfamily [private]}}
+\subsubsection{model}
+{\footnotesize\ttfamily \textbf{ Wireframe\+Model}$\ast$ Open\+G\+L\+Widget\+::model\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_open_g_l_widget_a79e5c10681b015f7fb1e7ce1b047fa8b}\label{class_open_g_l_widget_a79e5c10681b015f7fb1e7ce1b047fa8b}} 
+\mbox{\label{class_open_g_l_widget_a79e5c10681b015f7fb1e7ce1b047fa8b}} 
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!program@{program}}
 \index{program@{program}!Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
-\subsubsection{\texorpdfstring{program}{program}}
+\subsubsection{program}
 {\footnotesize\ttfamily Q\+Open\+G\+L\+Shader\+Program$\ast$ Open\+G\+L\+Widget\+::program\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_open_g_l_widget_a3c1459d5d1e0eebd6a0eaf2e075caa1d}\label{class_open_g_l_widget_a3c1459d5d1e0eebd6a0eaf2e075caa1d}} 
+\mbox{\label{class_open_g_l_widget_a3c1459d5d1e0eebd6a0eaf2e075caa1d}} 
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!rotation@{rotation}}
 \index{rotation@{rotation}!Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
-\subsubsection{\texorpdfstring{rotation}{rotation}}
+\subsubsection{rotation}
 {\footnotesize\ttfamily Q\+Vector$<$double$>$ Open\+G\+L\+Widget\+::rotation\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_open_g_l_widget_afb76f6d9354bb49993c10e6fb6da7349}\label{class_open_g_l_widget_afb76f6d9354bb49993c10e6fb6da7349}} 
+\mbox{\label{class_open_g_l_widget_afb76f6d9354bb49993c10e6fb6da7349}} 
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!texture@{texture}}
 \index{texture@{texture}!Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
-\subsubsection{\texorpdfstring{texture}{texture}}
+\subsubsection{texture}
 {\footnotesize\ttfamily Q\+Open\+G\+L\+Texture$\ast$ Open\+G\+L\+Widget\+::texture\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_open_g_l_widget_a4b64b78f67c6da7e90cae7a4b34b5dce}\label{class_open_g_l_widget_a4b64b78f67c6da7e90cae7a4b34b5dce}} 
+\mbox{\label{class_open_g_l_widget_a4b64b78f67c6da7e90cae7a4b34b5dce}} 
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!vbo@{vbo}}
 \index{vbo@{vbo}!Open\+G\+L\+Widget@{Open\+G\+L\+Widget}}
-\subsubsection{\texorpdfstring{vbo}{vbo}}
+\subsubsection{vbo}
 {\footnotesize\ttfamily Q\+Open\+G\+L\+Buffer Open\+G\+L\+Widget\+::vbo\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-h/\mbox{\hyperlink{openglwidget_8h}{openglwidget.\+h}}\item 
-cpp/\mbox{\hyperlink{openglwidget_8cpp}{openglwidget.\+cpp}}\end{DoxyCompactItemize}
+h/\textbf{ openglwidget.\+h}\item 
+cpp/\textbf{ openglwidget.\+cpp}\end{DoxyCompactItemize}

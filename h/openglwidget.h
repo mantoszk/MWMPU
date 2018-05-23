@@ -24,15 +24,15 @@ public:
 	~OpenGLWidget();
 
 	/*!
-	 * \brief A method used to update the angular position of a rendered object
-	 * \param nRotation - xyz angular position values
+	 * \brief A method used to update the angular position of rendered object
+	 * \param nRotation - x, y, z angular position values
 	 */
 
 	void updateRotation(const QVector <double> nRotation);
 
 	/*!
 	 * \brief A method for updating the distance of a rendered object from the center of the coordinate system
-	 * \param nDistance - xyz distance values
+	 * \param nDistance - x, y, z distance values
 	 */
 
 	void updateDistance(const QVector <double> nDistance);
@@ -40,7 +40,7 @@ public:
 protected:
 
 	/*!
-	 * \brief Prepares shaders, model and its textures for rendering
+	 * \brief Prepares shaders, model and it's textures for rendering
 	 */
 	void initializeGL() override;
 

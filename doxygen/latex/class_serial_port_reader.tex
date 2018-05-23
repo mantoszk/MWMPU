@@ -1,4 +1,4 @@
-\hypertarget{class_serial_port_reader}{}\section{Serial\+Port\+Reader Class Reference}
+\section{Serial\+Port\+Reader Class Reference}
 \label{class_serial_port_reader}\index{Serial\+Port\+Reader@{Serial\+Port\+Reader}}
 
 
@@ -12,53 +12,53 @@ A class wraps everything about receiving data from the microcontroller.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_serial_port_reader_aef65d0e76f65204aaa57ecfc144c827d}{Serial\+Port\+Reader}} (\mbox{\hyperlink{class_measurement_handler}{Measurement\+Handler}} $\ast$n\+Handler)
+\textbf{ Serial\+Port\+Reader} (\textbf{ Measurement\+Handler} $\ast$n\+Handler)
 \begin{DoxyCompactList}\small\item\em Parametric constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_serial_port_reader_a7f01c445adf0d64d8acd67cd4fcd3b21}{$\sim$\+Serial\+Port\+Reader}} ()
+\textbf{ $\sim$\+Serial\+Port\+Reader} ()
 \item 
-void \mbox{\hyperlink{class_serial_port_reader_afb9bdbade338b204f487f2c0d4535911}{read\+Line}} ()
+void \textbf{ read\+Line} ()
 \begin{DoxyCompactList}\small\item\em A method to read one line of data from the device. \end{DoxyCompactList}\item 
-Q\+Vector$<$ Q\+Serial\+Port\+Info $>$ \mbox{\hyperlink{class_serial_port_reader_a5a919fb6b06f5505de1aababcde045f6}{get\+Info}} () const
+Q\+Vector$<$ Q\+Serial\+Port\+Info $>$ \textbf{ get\+Info} () const
 \begin{DoxyCompactList}\small\item\em A method used to obtain information about devices connected to a computer. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_serial_port_reader_ad00028795b4f33ffb0a97cd76726c4fd}{connect}} (quint32 index)
-\begin{DoxyCompactList}\small\item\em A method to connect to the device. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_serial_port_reader_a40d30745fd700e05d534b38c4ba4939b}{disconnect}} ()
-\begin{DoxyCompactList}\small\item\em A method to disconnect from the device. \end{DoxyCompactList}\item 
-quint32 \mbox{\hyperlink{class_serial_port_reader_a33a6f505ebf902bf3a3f64970c6a7cec}{get\+Error\+Code}} () const
+bool \textbf{ connect} (quint32 index)
+\begin{DoxyCompactList}\small\item\em A method to connect to the device via serial port. \end{DoxyCompactList}\item 
+bool \textbf{ disconnect} ()
+\begin{DoxyCompactList}\small\item\em A method to disconnect device from serial port. \end{DoxyCompactList}\item 
+quint32 \textbf{ get\+Error\+Code} () const
 \begin{DoxyCompactList}\small\item\em A method to obtain the error code. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_serial_port_reader_a03d89e1219ecadd67bad6a56ac6dfee2}{reset\+Error\+Code}} ()
+void \textbf{ reset\+Error\+Code} ()
 \begin{DoxyCompactList}\small\item\em A method to remove error signatures. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{class_serial_port_reader_aba5b7292f941e824467f5b1134f7f15f}{good\+Choice}} ()
+bool \textbf{ good\+Choice} ()
 \begin{DoxyCompactList}\small\item\em Checks if received data from connected device is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_measurement_handler}{Measurement\+Handler}} $\ast$ \mbox{\hyperlink{class_serial_port_reader_a2ee8eead177a8d309115708a4ca354d0}{m\+Handler}}
+\textbf{ Measurement\+Handler} $\ast$ \textbf{ m\+Handler}
 \item 
-Q\+Serial\+Port $\ast$ \mbox{\hyperlink{class_serial_port_reader_a07a8c1715274118e7886f671f287c3ec}{m\+\_\+serial\+Port}}
+Q\+Serial\+Port $\ast$ \textbf{ m\+\_\+serial\+Port}
 \item 
-Q\+Vector$<$ Q\+Serial\+Port\+Info $>$ \mbox{\hyperlink{class_serial_port_reader_a2c2207d575acd7adc3746e514a00e819}{m\+\_\+info}}
+Q\+Vector$<$ Q\+Serial\+Port\+Info $>$ \textbf{ m\+\_\+info}
 \item 
-bool \mbox{\hyperlink{class_serial_port_reader_a944ec89d2b0aa1a27e873c77cfbaf355}{is\+Open}} = false
+bool \textbf{ is\+Open} = false
 \item 
-quint32 \mbox{\hyperlink{class_serial_port_reader_a40153d2e5ce2b54838b9ba25c2316340}{error\+Code}} = 0
+quint32 \textbf{ error\+Code} = 0
 \item 
-Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_serial_port_reader_ac023d7fa3c67e9e9d3d20e73249312c5}{time}}
+Q\+Vector$<$ double $>$ \textbf{ time}
 \item 
-Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_serial_port_reader_a2224bf8c59a93b8a5ef77eace260c34c}{accelerationX}}
+Q\+Vector$<$ double $>$ \textbf{ accelerationX}
 \item 
-Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_serial_port_reader_a86769450ee3907fe92dc9714f7982f26}{accelerationY}}
+Q\+Vector$<$ double $>$ \textbf{ accelerationY}
 \item 
-Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_serial_port_reader_aa500a86c782f296ca529f0f4d5145366}{accelerationZ}}
+Q\+Vector$<$ double $>$ \textbf{ accelerationZ}
 \item 
-Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_serial_port_reader_aeab041942a6e6178814f08315a5d73ea}{angular\+VelocityX}}
+Q\+Vector$<$ double $>$ \textbf{ angular\+VelocityX}
 \item 
-Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_serial_port_reader_a5c33041effc3f958c039aceb5741c7f0}{angular\+VelocityY}}
+Q\+Vector$<$ double $>$ \textbf{ angular\+VelocityY}
 \item 
-Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_serial_port_reader_a906e4e7d144d9a105fc8d4f31fcf40e9}{angular\+VelocityZ}}
+Q\+Vector$<$ double $>$ \textbf{ angular\+VelocityZ}
 \end{DoxyCompactItemize}
 
 
@@ -66,11 +66,11 @@ Q\+Vector$<$ double $>$ \mbox{\hyperlink{class_serial_port_reader_a906e4e7d144d9
 A class wraps everything about receiving data from the microcontroller. 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_serial_port_reader_aef65d0e76f65204aaa57ecfc144c827d}\label{class_serial_port_reader_aef65d0e76f65204aaa57ecfc144c827d}} 
+\mbox{\label{class_serial_port_reader_aef65d0e76f65204aaa57ecfc144c827d}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{Serial\+Port\+Reader()}{SerialPortReader()}}
-{\footnotesize\ttfamily Serial\+Port\+Reader\+::\+Serial\+Port\+Reader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_measurement_handler}{Measurement\+Handler}} $\ast$}]{n\+Handler }\end{DoxyParamCaption})}
+\subsubsection{Serial\+Port\+Reader()}
+{\footnotesize\ttfamily Serial\+Port\+Reader\+::\+Serial\+Port\+Reader (\begin{DoxyParamCaption}\item[{\textbf{ Measurement\+Handler} $\ast$}]{n\+Handler }\end{DoxyParamCaption})}
 
 
 
@@ -81,24 +81,24 @@ Parametric constructor.
 {\em n\+Handler} & -\/ a pointer to the object where the data of the loaded object is to be saved \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_serial_port_reader_a7f01c445adf0d64d8acd67cd4fcd3b21}\label{class_serial_port_reader_a7f01c445adf0d64d8acd67cd4fcd3b21}} 
+\mbox{\label{class_serial_port_reader_a7f01c445adf0d64d8acd67cd4fcd3b21}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!````~Serial\+Port\+Reader@{$\sim$\+Serial\+Port\+Reader}}
 \index{````~Serial\+Port\+Reader@{$\sim$\+Serial\+Port\+Reader}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{$\sim$\+Serial\+Port\+Reader()}{~SerialPortReader()}}
+\subsubsection{$\sim$\+Serial\+Port\+Reader()}
 {\footnotesize\ttfamily Serial\+Port\+Reader\+::$\sim$\+Serial\+Port\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_serial_port_reader_ad00028795b4f33ffb0a97cd76726c4fd}\label{class_serial_port_reader_ad00028795b4f33ffb0a97cd76726c4fd}} 
+\mbox{\label{class_serial_port_reader_ad00028795b4f33ffb0a97cd76726c4fd}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!connect@{connect}}
 \index{connect@{connect}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{connect()}{connect()}}
+\subsubsection{connect()}
 {\footnotesize\ttfamily bool Serial\+Port\+Reader\+::connect (\begin{DoxyParamCaption}\item[{quint32}]{index }\end{DoxyParamCaption})}
 
 
 
-A method to connect to the device. 
+A method to connect to the device via serial port. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -108,23 +108,23 @@ A method to connect to the device.
 \begin{DoxyReturn}{Returns}
 true if device is succesfully connected 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_serial_port_reader_a40d30745fd700e05d534b38c4ba4939b}\label{class_serial_port_reader_a40d30745fd700e05d534b38c4ba4939b}} 
+\mbox{\label{class_serial_port_reader_a40d30745fd700e05d534b38c4ba4939b}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!disconnect@{disconnect}}
 \index{disconnect@{disconnect}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+\subsubsection{disconnect()}
 {\footnotesize\ttfamily bool Serial\+Port\+Reader\+::disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-A method to disconnect from the device. 
+A method to disconnect device from serial port. 
 
 \begin{DoxyReturn}{Returns}
 true if device is succesfully disconnected 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_serial_port_reader_a33a6f505ebf902bf3a3f64970c6a7cec}\label{class_serial_port_reader_a33a6f505ebf902bf3a3f64970c6a7cec}} 
+\mbox{\label{class_serial_port_reader_a33a6f505ebf902bf3a3f64970c6a7cec}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!get\+Error\+Code@{get\+Error\+Code}}
 \index{get\+Error\+Code@{get\+Error\+Code}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{get\+Error\+Code()}{getErrorCode()}}
+\subsubsection{get\+Error\+Code()}
 {\footnotesize\ttfamily quint32 Serial\+Port\+Reader\+::get\+Error\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -134,10 +134,10 @@ A method to obtain the error code.
 \begin{DoxyReturn}{Returns}
 error\textquotesingle{}s code index 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_serial_port_reader_a5a919fb6b06f5505de1aababcde045f6}\label{class_serial_port_reader_a5a919fb6b06f5505de1aababcde045f6}} 
+\mbox{\label{class_serial_port_reader_a5a919fb6b06f5505de1aababcde045f6}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!get\+Info@{get\+Info}}
 \index{get\+Info@{get\+Info}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{get\+Info()}{getInfo()}}
+\subsubsection{get\+Info()}
 {\footnotesize\ttfamily Q\+Vector$<$ Q\+Serial\+Port\+Info $>$ Serial\+Port\+Reader\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -147,10 +147,10 @@ A method used to obtain information about devices connected to a computer.
 \begin{DoxyReturn}{Returns}
 the device names 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_serial_port_reader_aba5b7292f941e824467f5b1134f7f15f}\label{class_serial_port_reader_aba5b7292f941e824467f5b1134f7f15f}} 
+\mbox{\label{class_serial_port_reader_aba5b7292f941e824467f5b1134f7f15f}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!good\+Choice@{good\+Choice}}
 \index{good\+Choice@{good\+Choice}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{good\+Choice()}{goodChoice()}}
+\subsubsection{good\+Choice()}
 {\footnotesize\ttfamily bool Serial\+Port\+Reader\+::good\+Choice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
@@ -160,20 +160,20 @@ Checks if received data from connected device is valid.
 \begin{DoxyReturn}{Returns}
 true if received data is valid 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_serial_port_reader_afb9bdbade338b204f487f2c0d4535911}\label{class_serial_port_reader_afb9bdbade338b204f487f2c0d4535911}} 
+\mbox{\label{class_serial_port_reader_afb9bdbade338b204f487f2c0d4535911}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!read\+Line@{read\+Line}}
 \index{read\+Line@{read\+Line}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{read\+Line()}{readLine()}}
+\subsubsection{read\+Line()}
 {\footnotesize\ttfamily void Serial\+Port\+Reader\+::read\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 A method to read one line of data from the device. 
 
-\mbox{\Hypertarget{class_serial_port_reader_a03d89e1219ecadd67bad6a56ac6dfee2}\label{class_serial_port_reader_a03d89e1219ecadd67bad6a56ac6dfee2}} 
+\mbox{\label{class_serial_port_reader_a03d89e1219ecadd67bad6a56ac6dfee2}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!reset\+Error\+Code@{reset\+Error\+Code}}
 \index{reset\+Error\+Code@{reset\+Error\+Code}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{reset\+Error\+Code()}{resetErrorCode()}}
+\subsubsection{reset\+Error\+Code()}
 {\footnotesize\ttfamily void Serial\+Port\+Reader\+::reset\+Error\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -183,81 +183,81 @@ A method to remove error signatures.
 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{class_serial_port_reader_a2224bf8c59a93b8a5ef77eace260c34c}\label{class_serial_port_reader_a2224bf8c59a93b8a5ef77eace260c34c}} 
+\mbox{\label{class_serial_port_reader_a2224bf8c59a93b8a5ef77eace260c34c}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!accelerationX@{accelerationX}}
 \index{accelerationX@{accelerationX}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{accelerationX}{accelerationX}}
+\subsubsection{accelerationX}
 {\footnotesize\ttfamily Q\+Vector$<$double$>$ Serial\+Port\+Reader\+::accelerationX\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_serial_port_reader_a86769450ee3907fe92dc9714f7982f26}\label{class_serial_port_reader_a86769450ee3907fe92dc9714f7982f26}} 
+\mbox{\label{class_serial_port_reader_a86769450ee3907fe92dc9714f7982f26}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!accelerationY@{accelerationY}}
 \index{accelerationY@{accelerationY}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{accelerationY}{accelerationY}}
+\subsubsection{accelerationY}
 {\footnotesize\ttfamily Q\+Vector$<$double$>$ Serial\+Port\+Reader\+::accelerationY\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_serial_port_reader_aa500a86c782f296ca529f0f4d5145366}\label{class_serial_port_reader_aa500a86c782f296ca529f0f4d5145366}} 
+\mbox{\label{class_serial_port_reader_aa500a86c782f296ca529f0f4d5145366}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!accelerationZ@{accelerationZ}}
 \index{accelerationZ@{accelerationZ}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{accelerationZ}{accelerationZ}}
+\subsubsection{accelerationZ}
 {\footnotesize\ttfamily Q\+Vector$<$double$>$ Serial\+Port\+Reader\+::accelerationZ\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_serial_port_reader_aeab041942a6e6178814f08315a5d73ea}\label{class_serial_port_reader_aeab041942a6e6178814f08315a5d73ea}} 
+\mbox{\label{class_serial_port_reader_aeab041942a6e6178814f08315a5d73ea}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!angular\+VelocityX@{angular\+VelocityX}}
 \index{angular\+VelocityX@{angular\+VelocityX}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{angular\+VelocityX}{angularVelocityX}}
+\subsubsection{angular\+VelocityX}
 {\footnotesize\ttfamily Q\+Vector$<$double$>$ Serial\+Port\+Reader\+::angular\+VelocityX\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_serial_port_reader_a5c33041effc3f958c039aceb5741c7f0}\label{class_serial_port_reader_a5c33041effc3f958c039aceb5741c7f0}} 
+\mbox{\label{class_serial_port_reader_a5c33041effc3f958c039aceb5741c7f0}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!angular\+VelocityY@{angular\+VelocityY}}
 \index{angular\+VelocityY@{angular\+VelocityY}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{angular\+VelocityY}{angularVelocityY}}
+\subsubsection{angular\+VelocityY}
 {\footnotesize\ttfamily Q\+Vector$<$double$>$ Serial\+Port\+Reader\+::angular\+VelocityY\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_serial_port_reader_a906e4e7d144d9a105fc8d4f31fcf40e9}\label{class_serial_port_reader_a906e4e7d144d9a105fc8d4f31fcf40e9}} 
+\mbox{\label{class_serial_port_reader_a906e4e7d144d9a105fc8d4f31fcf40e9}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!angular\+VelocityZ@{angular\+VelocityZ}}
 \index{angular\+VelocityZ@{angular\+VelocityZ}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{angular\+VelocityZ}{angularVelocityZ}}
+\subsubsection{angular\+VelocityZ}
 {\footnotesize\ttfamily Q\+Vector$<$double$>$ Serial\+Port\+Reader\+::angular\+VelocityZ\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_serial_port_reader_a40153d2e5ce2b54838b9ba25c2316340}\label{class_serial_port_reader_a40153d2e5ce2b54838b9ba25c2316340}} 
+\mbox{\label{class_serial_port_reader_a40153d2e5ce2b54838b9ba25c2316340}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!error\+Code@{error\+Code}}
 \index{error\+Code@{error\+Code}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{error\+Code}{errorCode}}
+\subsubsection{error\+Code}
 {\footnotesize\ttfamily quint32 Serial\+Port\+Reader\+::error\+Code = 0\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_serial_port_reader_a944ec89d2b0aa1a27e873c77cfbaf355}\label{class_serial_port_reader_a944ec89d2b0aa1a27e873c77cfbaf355}} 
+\mbox{\label{class_serial_port_reader_a944ec89d2b0aa1a27e873c77cfbaf355}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!is\+Open@{is\+Open}}
 \index{is\+Open@{is\+Open}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{is\+Open}{isOpen}}
+\subsubsection{is\+Open}
 {\footnotesize\ttfamily bool Serial\+Port\+Reader\+::is\+Open = false\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_serial_port_reader_a2c2207d575acd7adc3746e514a00e819}\label{class_serial_port_reader_a2c2207d575acd7adc3746e514a00e819}} 
+\mbox{\label{class_serial_port_reader_a2c2207d575acd7adc3746e514a00e819}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!m\+\_\+info@{m\+\_\+info}}
 \index{m\+\_\+info@{m\+\_\+info}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{m\+\_\+info}{m\_info}}
+\subsubsection{m\+\_\+info}
 {\footnotesize\ttfamily Q\+Vector$<$Q\+Serial\+Port\+Info$>$ Serial\+Port\+Reader\+::m\+\_\+info\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_serial_port_reader_a07a8c1715274118e7886f671f287c3ec}\label{class_serial_port_reader_a07a8c1715274118e7886f671f287c3ec}} 
+\mbox{\label{class_serial_port_reader_a07a8c1715274118e7886f671f287c3ec}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!m\+\_\+serial\+Port@{m\+\_\+serial\+Port}}
 \index{m\+\_\+serial\+Port@{m\+\_\+serial\+Port}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{m\+\_\+serial\+Port}{m\_serialPort}}
+\subsubsection{m\+\_\+serial\+Port}
 {\footnotesize\ttfamily Q\+Serial\+Port$\ast$ Serial\+Port\+Reader\+::m\+\_\+serial\+Port\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_serial_port_reader_a2ee8eead177a8d309115708a4ca354d0}\label{class_serial_port_reader_a2ee8eead177a8d309115708a4ca354d0}} 
+\mbox{\label{class_serial_port_reader_a2ee8eead177a8d309115708a4ca354d0}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!m\+Handler@{m\+Handler}}
 \index{m\+Handler@{m\+Handler}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{m\+Handler}{mHandler}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_measurement_handler}{Measurement\+Handler}}$\ast$ Serial\+Port\+Reader\+::m\+Handler\hspace{0.3cm}{\ttfamily [private]}}
+\subsubsection{m\+Handler}
+{\footnotesize\ttfamily \textbf{ Measurement\+Handler}$\ast$ Serial\+Port\+Reader\+::m\+Handler\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_serial_port_reader_ac023d7fa3c67e9e9d3d20e73249312c5}\label{class_serial_port_reader_ac023d7fa3c67e9e9d3d20e73249312c5}} 
+\mbox{\label{class_serial_port_reader_ac023d7fa3c67e9e9d3d20e73249312c5}} 
 \index{Serial\+Port\+Reader@{Serial\+Port\+Reader}!time@{time}}
 \index{time@{time}!Serial\+Port\+Reader@{Serial\+Port\+Reader}}
-\subsubsection{\texorpdfstring{time}{time}}
+\subsubsection{time}
 {\footnotesize\ttfamily Q\+Vector$<$double$>$ Serial\+Port\+Reader\+::time\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-h/\mbox{\hyperlink{serialportreader_8h}{serialportreader.\+h}}\item 
-cpp/\mbox{\hyperlink{serialportreader_8cpp}{serialportreader.\+cpp}}\end{DoxyCompactItemize}
+h/\textbf{ serialportreader.\+h}\item 
+cpp/\textbf{ serialportreader.\+cpp}\end{DoxyCompactItemize}

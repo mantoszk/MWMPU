@@ -1,4 +1,4 @@
-\hypertarget{class_main_window}{}\section{Main\+Window Class Reference}
+\section{Main\+Window Class Reference}
 \label{class_main_window}\index{Main\+Window@{Main\+Window}}
 
 
@@ -18,88 +18,88 @@ Inheritance diagram for Main\+Window\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (Q\+Widget $\ast$parent=nullptr)
+\textbf{ Main\+Window} (Q\+Widget $\ast$parent=nullptr)
 \item 
-\mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\+Main\+Window}} ()
+\textbf{ $\sim$\+Main\+Window} ()
 \end{DoxyCompactItemize}
 \subsection*{Private Slots}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_main_window_a680f2fc34bd2147a3a675060aca0fbc6}{on\+Reset\+Button\+Clicked}} ()
-\begin{DoxyCompactList}\small\item\em Enters Reset button event. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_main_window_ac895c6f8aae08ca6debe77314d640936}{on\+Calibrate\+Button\+Clicked}} ()
-\begin{DoxyCompactList}\small\item\em Enters Calibrate button event. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_main_window_a92ea4484e5fd9b2d41fe08d2aef4c459}{event\+Loop}} ()
+void \textbf{ on\+Reset\+Button\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em Enters Reset button event -\/ deletes stored angular velocity and acceleration data (erases charts data) \end{DoxyCompactList}\item 
+void \textbf{ on\+Calibrate\+Button\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em Enters Calibrate button event -\/ deletes temporary stored angle and distance data (erases bar graph data) and sets open\+GL object to starting coordinates. \end{DoxyCompactList}\item 
+void \textbf{ event\+Loop} ()
 \begin{DoxyCompactList}\small\item\em Repeats events such as\+: reading from serial port, updating rotation and distance values and updating charts. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_main_window_aa23e4e2f222120878dc47b594292bb8c}{close\+App\+Event}} ()
-\begin{DoxyCompactList}\small\item\em Closes application. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_main_window_a3546900c922ca780ef575dd9aa8f9906}{on\+Connect\+Button\+Clicked}} ()
-\begin{DoxyCompactList}\small\item\em Connects to the device using serial connection. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_main_window_a0a8956278b58c085e0ff06d2edcd739c}{on\+Auto\+Button\+Clicked}} ()
-\begin{DoxyCompactList}\small\item\em Automatically looks for proper device. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_main_window_a15190e6af528cd13ddbe387800531ba4}{on\+Disconnect\+Button\+Clicked}} ()
+void \textbf{ close\+App\+Event} ()
+\begin{DoxyCompactList}\small\item\em Closes main application. \end{DoxyCompactList}\item 
+void \textbf{ on\+Connect\+Button\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em Connects to the device using serial connection (checks whether it has connected to the right device) \end{DoxyCompactList}\item 
+void \textbf{ on\+Auto\+Button\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em Automatically looks for proper device to connect to. \end{DoxyCompactList}\item 
+void \textbf{ on\+Disconnect\+Button\+Clicked} ()
 \begin{DoxyCompactList}\small\item\em Disconnects from the device. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_main_window_ac7fc0a361faba82837af50f2dd1b4ef4}{write\+To\+Status\+Bar}} ()
-\begin{DoxyCompactList}\small\item\em Updates status bar text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \textbf{ write\+To\+Status\+Bar} ()
+\begin{DoxyCompactList}\small\item\em Updates status bar text (which means setting correct messages) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_main_window_a9a1bad7a80ca8e1c5075d80143957754}{set\+Graphs\+Properties}} ()
-\begin{DoxyCompactList}\small\item\em Sets graphs properties like bg and fg colors and amount of plots. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_main_window_aa7a185d6aecfa15957d6fbfa0c42330b}{generate\+Bar\+Graph}} (Q\+Custom\+Plot $\ast$pointer, const Q\+Vector$<$ double $>$ \&data, const quint32 \&\mbox{\hyperlink{class_main_window_a390ce6d302bff7952eee7d92a6cf3da3}{plots\+Amount}}, const Q\+Vector$<$ Q\+String $>$ \&labels, const Q\+Color \&\mbox{\hyperlink{class_main_window_a4a1005daadc7447af6907c57b54e41ab}{bg\+Color}}, const Q\+Color \&\mbox{\hyperlink{class_main_window_a1f5455abfb51d7c4733bfad76ac60606}{fg\+Color}})
+void \textbf{ set\+Graphs\+Properties} ()
+\begin{DoxyCompactList}\small\item\em Sets graphs properties like background and foreground colors and amount of plots (which means 1 to maximum 3 of plots on one chart) \end{DoxyCompactList}\item 
+void \textbf{ generate\+Bar\+Graph} (Q\+Custom\+Plot $\ast$pointer, const Q\+Vector$<$ double $>$ \&data, const quint32 \&\textbf{ plots\+Amount}, const Q\+Vector$<$ Q\+String $>$ \&labels, const Q\+Color \&\textbf{ bg\+Color}, const Q\+Color \&\textbf{ fg\+Color})
 \begin{DoxyCompactList}\small\item\em Generates bar graph. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_main_window_a1e61f5c68914afa9a1054cbb9982cf17}{update\+Bar\+Graph}} (Q\+Custom\+Plot $\ast$pointer, const Q\+Vector$<$ double $>$ \&data, const quint32 \&\mbox{\hyperlink{class_main_window_a390ce6d302bff7952eee7d92a6cf3da3}{plots\+Amount}}, const Q\+Vector$<$ Q\+String $>$ \&labels, const Q\+Color \&\mbox{\hyperlink{class_main_window_a4a1005daadc7447af6907c57b54e41ab}{bg\+Color}}, const Q\+Color \&\mbox{\hyperlink{class_main_window_a1f5455abfb51d7c4733bfad76ac60606}{fg\+Color}})
+void \textbf{ update\+Bar\+Graph} (Q\+Custom\+Plot $\ast$pointer, const Q\+Vector$<$ double $>$ \&data, const quint32 \&\textbf{ plots\+Amount}, const Q\+Vector$<$ Q\+String $>$ \&labels, const Q\+Color \&\textbf{ bg\+Color}, const Q\+Color \&\textbf{ fg\+Color})
 \begin{DoxyCompactList}\small\item\em Updated bar graph. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_main_window_a2f9acdc998f6f84d2b14d7feda97133c}{generate\+Linear\+Graph}} (Q\+Custom\+Plot $\ast$pointer, const quint32 \&\mbox{\hyperlink{class_main_window_a390ce6d302bff7952eee7d92a6cf3da3}{plots\+Amount}}, const Q\+Vector$<$ Q\+String $>$ \&labels, const Q\+Vector$<$ Q\+String $>$ \&\mbox{\hyperlink{class_main_window_a80e2a1a6949dc004e0729bdb133497dd}{legend}}, const Q\+Vector$<$ Q\+Color $>$ \&\mbox{\hyperlink{class_main_window_af05a0194c683ce9a5abb789e636494da}{plot\+Colors}}, const Q\+Color \&\mbox{\hyperlink{class_main_window_a4a1005daadc7447af6907c57b54e41ab}{bg\+Color}}, const Q\+Color \&\mbox{\hyperlink{class_main_window_a1f5455abfb51d7c4733bfad76ac60606}{fg\+Color}})
+void \textbf{ generate\+Linear\+Graph} (Q\+Custom\+Plot $\ast$pointer, const quint32 \&\textbf{ plots\+Amount}, const Q\+Vector$<$ Q\+String $>$ \&labels, const Q\+Vector$<$ Q\+String $>$ \&\textbf{ legend}, const Q\+Vector$<$ Q\+Color $>$ \&\textbf{ plot\+Colors}, const Q\+Color \&\textbf{ bg\+Color}, const Q\+Color \&\textbf{ fg\+Color})
 \begin{DoxyCompactList}\small\item\em Generates linear graph. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_main_window_a26aa34275169fb8830c03b47e97ff0ea}{update\+Linear\+Graph}} (Q\+Custom\+Plot $\ast$pointer, const Q\+Vector$<$ Q\+Vector$<$ double $>$ $\ast$$>$ pointers, const quint32 \&\mbox{\hyperlink{class_main_window_a390ce6d302bff7952eee7d92a6cf3da3}{plots\+Amount}})
+void \textbf{ update\+Linear\+Graph} (Q\+Custom\+Plot $\ast$pointer, const Q\+Vector$<$ Q\+Vector$<$ double $>$ $\ast$$>$ pointers, const quint32 \&\textbf{ plots\+Amount})
 \begin{DoxyCompactList}\small\item\em Updated linear graph. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_main_window_ab7febfbc2493e928eea3beba33b4b6bb}{clear\+History\+Plots}} ()
-\begin{DoxyCompactList}\small\item\em Clears measurements history data. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_main_window_ae9a461c9fd369552f0e8871ec8f8f191}{clear\+Realtime\+Plots}} ()
-\begin{DoxyCompactList}\small\item\em Clears real time data. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_main_window_ad5f5900379db4ae670ad541da8f55384}{set\+Combo\+Box}} ()
-\begin{DoxyCompactList}\small\item\em Sets combo box. \end{DoxyCompactList}\item 
-Q\+String \mbox{\hyperlink{class_main_window_a5c8dccfe7131cf3c08ff9cbb9ff642d4}{get\+Error\+Text}} (const quint32 error\+Code) const
+void \textbf{ clear\+History\+Plots} ()
+\begin{DoxyCompactList}\small\item\em Deletes stored angular velocity and acceleration data (erases charts data) \end{DoxyCompactList}\item 
+void \textbf{ clear\+Realtime\+Plots} ()
+\begin{DoxyCompactList}\small\item\em Deletes temporary stored angle and distance data (erases bar graph data) \end{DoxyCompactList}\item 
+void \textbf{ set\+Combo\+Box} ()
+\begin{DoxyCompactList}\small\item\em Adds available devices to combo\+Box menu. \end{DoxyCompactList}\item 
+Q\+String \textbf{ get\+Error\+Text} (const quint32 error\+Code) const
 \begin{DoxyCompactList}\small\item\em Returns specific error\textquotesingle{}s text based on error\textquotesingle{}s code. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_main_window_a366da6a45407c523f570ca9e4f4b40a4}{show\+Message}} ()
+void \textbf{ show\+Message} ()
 \begin{DoxyCompactList}\small\item\em Shows message on status bar based on arduino. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_main_window_a365152de4a1878ab0087816da6a9431a}{show\+Message}} (const quint32 error\+Code)
+void \textbf{ show\+Message} (const quint32 error\+Code)
 \begin{DoxyCompactList}\small\item\em Shows message on status bar based on error\textquotesingle{}s code. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_measurement_handler}{Measurement\+Handler}} $\ast$ \mbox{\hyperlink{class_main_window_a6a921ce08975d864ff158f36760802a8}{transform}}
+\textbf{ Measurement\+Handler} $\ast$ \textbf{ transform}
 \item 
-\mbox{\hyperlink{class_serial_port_reader}{Serial\+Port\+Reader}} $\ast$ \mbox{\hyperlink{class_main_window_aba5a40e0587b38a584b92583600373f6}{arduino}}
+\textbf{ Serial\+Port\+Reader} $\ast$ \textbf{ arduino}
 \item 
-Ui\+::\+Main\+Window $\ast$ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}
+Ui\+::\+Main\+Window $\ast$ \textbf{ ui}
 \item 
-Q\+Timer \mbox{\hyperlink{class_main_window_a623ca812f462c5bc27daf8a94cff59d1}{loop\+Timer}}
+Q\+Timer \textbf{ loop\+Timer}
 \item 
-Q\+Timer \mbox{\hyperlink{class_main_window_af66c315b651ade2e54045edb68c51c86}{status\+Bar\+Timer}}
+Q\+Timer \textbf{ status\+Bar\+Timer}
 \item 
-Q\+Vector$<$ Q\+String $>$ \mbox{\hyperlink{class_main_window_a9243762b319de95b998df3e36934d6ef}{labels1}}
+Q\+Vector$<$ Q\+String $>$ \textbf{ labels1}
 \item 
-Q\+Vector$<$ Q\+String $>$ \mbox{\hyperlink{class_main_window_a81d3e91905b239abfc54858b2954b7f7}{labels2}}
+Q\+Vector$<$ Q\+String $>$ \textbf{ labels2}
 \item 
-Q\+Vector$<$ Q\+String $>$ \mbox{\hyperlink{class_main_window_ab9b1318826e6722ec4a5dd99cd0ae353}{labels3}}
+Q\+Vector$<$ Q\+String $>$ \textbf{ labels3}
 \item 
-Q\+Vector$<$ Q\+String $>$ \mbox{\hyperlink{class_main_window_a513d5d910d4ece239f1a25d6240869ce}{labels4}}
+Q\+Vector$<$ Q\+String $>$ \textbf{ labels4}
 \item 
-Q\+Vector$<$ Q\+String $>$ \mbox{\hyperlink{class_main_window_a80e2a1a6949dc004e0729bdb133497dd}{legend}}
+Q\+Vector$<$ Q\+String $>$ \textbf{ legend}
 \item 
-Q\+Vector$<$ Q\+Color $>$ \mbox{\hyperlink{class_main_window_af05a0194c683ce9a5abb789e636494da}{plot\+Colors}}
+Q\+Vector$<$ Q\+Color $>$ \textbf{ plot\+Colors}
 \item 
-Q\+Color \mbox{\hyperlink{class_main_window_a4a1005daadc7447af6907c57b54e41ab}{bg\+Color}}
+Q\+Color \textbf{ bg\+Color}
 \item 
-Q\+Color \mbox{\hyperlink{class_main_window_a1f5455abfb51d7c4733bfad76ac60606}{fg\+Color}}
+Q\+Color \textbf{ fg\+Color}
 \item 
-quint32 \mbox{\hyperlink{class_main_window_a390ce6d302bff7952eee7d92a6cf3da3}{plots\+Amount}}
+quint32 \textbf{ plots\+Amount}
 \item 
-double \mbox{\hyperlink{class_main_window_a79199e3cec2bb50434f184cc762bce2e}{max\+Y\+Axis\+Value}}
+double \textbf{ max\+Y\+Axis\+Value}
 \item 
-double \mbox{\hyperlink{class_main_window_a5cbbcacb99514a12d6743ebb45836f12}{max\+Y\+Axis\+Value2}}
+double \textbf{ max\+Y\+Axis\+Value2}
 \end{DoxyCompactItemize}
 
 
@@ -107,65 +107,65 @@ double \mbox{\hyperlink{class_main_window_a5cbbcacb99514a12d6743ebb45836f12}{max
 A class that supports the user interface and a module that generates charts. 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\label{class_main_window_a996c5a2b6f77944776856f08ec30858d}} 
+\mbox{\label{class_main_window_a996c5a2b6f77944776856f08ec30858d}} 
 \index{Main\+Window@{Main\+Window}!Main\+Window@{Main\+Window}}
 \index{Main\+Window@{Main\+Window}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{Main\+Window()}{MainWindow()}}
+\subsubsection{Main\+Window()}
 {\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
-\mbox{\Hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}} 
+\mbox{\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}} 
 \index{Main\+Window@{Main\+Window}!````~Main\+Window@{$\sim$\+Main\+Window}}
 \index{````~Main\+Window@{$\sim$\+Main\+Window}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{$\sim$\+Main\+Window()}{~MainWindow()}}
+\subsubsection{$\sim$\+Main\+Window()}
 {\footnotesize\ttfamily Main\+Window\+::$\sim$\+Main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_main_window_ab7febfbc2493e928eea3beba33b4b6bb}\label{class_main_window_ab7febfbc2493e928eea3beba33b4b6bb}} 
+\mbox{\label{class_main_window_ab7febfbc2493e928eea3beba33b4b6bb}} 
 \index{Main\+Window@{Main\+Window}!clear\+History\+Plots@{clear\+History\+Plots}}
 \index{clear\+History\+Plots@{clear\+History\+Plots}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{clear\+History\+Plots()}{clearHistoryPlots()}}
+\subsubsection{clear\+History\+Plots()}
 {\footnotesize\ttfamily void Main\+Window\+::clear\+History\+Plots (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Clears measurements history data. 
+Deletes stored angular velocity and acceleration data (erases charts data) 
 
-\mbox{\Hypertarget{class_main_window_ae9a461c9fd369552f0e8871ec8f8f191}\label{class_main_window_ae9a461c9fd369552f0e8871ec8f8f191}} 
+\mbox{\label{class_main_window_ae9a461c9fd369552f0e8871ec8f8f191}} 
 \index{Main\+Window@{Main\+Window}!clear\+Realtime\+Plots@{clear\+Realtime\+Plots}}
 \index{clear\+Realtime\+Plots@{clear\+Realtime\+Plots}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{clear\+Realtime\+Plots()}{clearRealtimePlots()}}
+\subsubsection{clear\+Realtime\+Plots()}
 {\footnotesize\ttfamily void Main\+Window\+::clear\+Realtime\+Plots (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Clears real time data. 
+Deletes temporary stored angle and distance data (erases bar graph data) 
 
-\mbox{\Hypertarget{class_main_window_aa23e4e2f222120878dc47b594292bb8c}\label{class_main_window_aa23e4e2f222120878dc47b594292bb8c}} 
+\mbox{\label{class_main_window_aa23e4e2f222120878dc47b594292bb8c}} 
 \index{Main\+Window@{Main\+Window}!close\+App\+Event@{close\+App\+Event}}
 \index{close\+App\+Event@{close\+App\+Event}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{close\+App\+Event}{closeAppEvent}}
+\subsubsection{close\+App\+Event}
 {\footnotesize\ttfamily void Main\+Window\+::close\+App\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
 
 
 
-Closes application. 
+Closes main application. 
 
-\mbox{\Hypertarget{class_main_window_a92ea4484e5fd9b2d41fe08d2aef4c459}\label{class_main_window_a92ea4484e5fd9b2d41fe08d2aef4c459}} 
+\mbox{\label{class_main_window_a92ea4484e5fd9b2d41fe08d2aef4c459}} 
 \index{Main\+Window@{Main\+Window}!event\+Loop@{event\+Loop}}
 \index{event\+Loop@{event\+Loop}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{event\+Loop}{eventLoop}}
+\subsubsection{event\+Loop}
 {\footnotesize\ttfamily void Main\+Window\+::event\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
 
 
 
 Repeats events such as\+: reading from serial port, updating rotation and distance values and updating charts. 
 
-\mbox{\Hypertarget{class_main_window_aa7a185d6aecfa15957d6fbfa0c42330b}\label{class_main_window_aa7a185d6aecfa15957d6fbfa0c42330b}} 
+\mbox{\label{class_main_window_aa7a185d6aecfa15957d6fbfa0c42330b}} 
 \index{Main\+Window@{Main\+Window}!generate\+Bar\+Graph@{generate\+Bar\+Graph}}
 \index{generate\+Bar\+Graph@{generate\+Bar\+Graph}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{generate\+Bar\+Graph()}{generateBarGraph()}}
+\subsubsection{generate\+Bar\+Graph()}
 {\footnotesize\ttfamily void Main\+Window\+::generate\+Bar\+Graph (\begin{DoxyParamCaption}\item[{Q\+Custom\+Plot $\ast$}]{pointer,  }\item[{const Q\+Vector$<$ double $>$ \&}]{data,  }\item[{const quint32 \&}]{plots\+Amount,  }\item[{const Q\+Vector$<$ Q\+String $>$ \&}]{labels,  }\item[{const Q\+Color \&}]{bg\+Color,  }\item[{const Q\+Color \&}]{fg\+Color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
@@ -174,23 +174,23 @@ Generates bar graph.
 
 
 \begin{DoxyParams}{Parameters}
-{\em pointer} & -\/ pointer to target widget \\
+{\em pointer} & -\/ pointer to target qt\+Widget \\
 \hline
-{\em data} & -\/ data to plot \\
+{\em data} & -\/ data to plot (current data) \\
 \hline
-{\em plots\+Amount} & -\/ plots amount \\
+{\em plots\+Amount} & -\/ plots amount (1 to maximum 3 of plots), 1 -\/ only x axis plot, 2 -\/ x and y axis plots, 3 -\/ x, y and z axis plots \\
 \hline
-{\em labels} & -\/ labels for axes \\
+{\em labels} & -\/ labels for axes (which means labels for chart\textquotesingle{}s horizontal and vertical axes) \\
 \hline
 {\em bg\+Color} & -\/ background color \\
 \hline
-{\em fg\+Color} & -\/ foreground color \\
+{\em fg\+Color} & -\/ foreground color (text color) \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_main_window_a2f9acdc998f6f84d2b14d7feda97133c}\label{class_main_window_a2f9acdc998f6f84d2b14d7feda97133c}} 
+\mbox{\label{class_main_window_a2f9acdc998f6f84d2b14d7feda97133c}} 
 \index{Main\+Window@{Main\+Window}!generate\+Linear\+Graph@{generate\+Linear\+Graph}}
 \index{generate\+Linear\+Graph@{generate\+Linear\+Graph}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{generate\+Linear\+Graph()}{generateLinearGraph()}}
+\subsubsection{generate\+Linear\+Graph()}
 {\footnotesize\ttfamily void Main\+Window\+::generate\+Linear\+Graph (\begin{DoxyParamCaption}\item[{Q\+Custom\+Plot $\ast$}]{pointer,  }\item[{const quint32 \&}]{plots\+Amount,  }\item[{const Q\+Vector$<$ Q\+String $>$ \&}]{labels,  }\item[{const Q\+Vector$<$ Q\+String $>$ \&}]{legend,  }\item[{const Q\+Vector$<$ Q\+Color $>$ \&}]{plot\+Colors,  }\item[{const Q\+Color \&}]{bg\+Color,  }\item[{const Q\+Color \&}]{fg\+Color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
@@ -199,25 +199,25 @@ Generates linear graph.
 
 
 \begin{DoxyParams}{Parameters}
-{\em pointer} & -\/ pointer to target widget \\
+{\em pointer} & -\/ pointer to target qt\+Widget \\
 \hline
-{\em plots\+Amount} & -\/ plots amount \\
+{\em plots\+Amount} & -\/ plots amount (1 to maximum 3 of plots), 1 -\/ only x axis plot, 2 -\/ x and y axis plots, 3 -\/ x, y and z axis plots \\
 \hline
-{\em labels} & -\/ labels for axes \\
+{\em labels} & -\/ labels for axes (which means labels for chart\textquotesingle{}s horizontal and vertical axes) \\
 \hline
-{\em legend} & -\/ legend\textquotesingle{}s text \\
+{\em legend} & -\/ legend\textquotesingle{}s text (text for describing plots on chart) \\
 \hline
 {\em plot\+Colors} & -\/ plot\textquotesingle{}s colors \\
 \hline
 {\em bg\+Color} & -\/ background color \\
 \hline
-{\em fg\+Color} & -\/ foreground color \\
+{\em fg\+Color} & -\/ foreground color (text color) \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_main_window_a5c8dccfe7131cf3c08ff9cbb9ff642d4}\label{class_main_window_a5c8dccfe7131cf3c08ff9cbb9ff642d4}} 
+\mbox{\label{class_main_window_a5c8dccfe7131cf3c08ff9cbb9ff642d4}} 
 \index{Main\+Window@{Main\+Window}!get\+Error\+Text@{get\+Error\+Text}}
 \index{get\+Error\+Text@{get\+Error\+Text}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{get\+Error\+Text()}{getErrorText()}}
+\subsubsection{get\+Error\+Text()}
 {\footnotesize\ttfamily Q\+String Main\+Window\+::get\+Error\+Text (\begin{DoxyParamCaption}\item[{const quint32}]{error\+Code }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 
@@ -232,90 +232,90 @@ Returns specific error\textquotesingle{}s text based on error\textquotesingle{}s
 \begin{DoxyReturn}{Returns}
 Error\textquotesingle{}s text 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_main_window_a0a8956278b58c085e0ff06d2edcd739c}\label{class_main_window_a0a8956278b58c085e0ff06d2edcd739c}} 
+\mbox{\label{class_main_window_a0a8956278b58c085e0ff06d2edcd739c}} 
 \index{Main\+Window@{Main\+Window}!on\+Auto\+Button\+Clicked@{on\+Auto\+Button\+Clicked}}
 \index{on\+Auto\+Button\+Clicked@{on\+Auto\+Button\+Clicked}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{on\+Auto\+Button\+Clicked}{onAutoButtonClicked}}
+\subsubsection{on\+Auto\+Button\+Clicked}
 {\footnotesize\ttfamily void Main\+Window\+::on\+Auto\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
 
 
 
-Automatically looks for proper device. 
+Automatically looks for proper device to connect to. 
 
-\mbox{\Hypertarget{class_main_window_ac895c6f8aae08ca6debe77314d640936}\label{class_main_window_ac895c6f8aae08ca6debe77314d640936}} 
+\mbox{\label{class_main_window_ac895c6f8aae08ca6debe77314d640936}} 
 \index{Main\+Window@{Main\+Window}!on\+Calibrate\+Button\+Clicked@{on\+Calibrate\+Button\+Clicked}}
 \index{on\+Calibrate\+Button\+Clicked@{on\+Calibrate\+Button\+Clicked}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{on\+Calibrate\+Button\+Clicked}{onCalibrateButtonClicked}}
+\subsubsection{on\+Calibrate\+Button\+Clicked}
 {\footnotesize\ttfamily void Main\+Window\+::on\+Calibrate\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
 
 
 
-Enters Calibrate button event. 
+Enters Calibrate button event -\/ deletes temporary stored angle and distance data (erases bar graph data) and sets open\+GL object to starting coordinates. 
 
-\mbox{\Hypertarget{class_main_window_a3546900c922ca780ef575dd9aa8f9906}\label{class_main_window_a3546900c922ca780ef575dd9aa8f9906}} 
+\mbox{\label{class_main_window_a3546900c922ca780ef575dd9aa8f9906}} 
 \index{Main\+Window@{Main\+Window}!on\+Connect\+Button\+Clicked@{on\+Connect\+Button\+Clicked}}
 \index{on\+Connect\+Button\+Clicked@{on\+Connect\+Button\+Clicked}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{on\+Connect\+Button\+Clicked}{onConnectButtonClicked}}
+\subsubsection{on\+Connect\+Button\+Clicked}
 {\footnotesize\ttfamily void Main\+Window\+::on\+Connect\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
 
 
 
-Connects to the device using serial connection. 
+Connects to the device using serial connection (checks whether it has connected to the right device) 
 
-\mbox{\Hypertarget{class_main_window_a15190e6af528cd13ddbe387800531ba4}\label{class_main_window_a15190e6af528cd13ddbe387800531ba4}} 
+\mbox{\label{class_main_window_a15190e6af528cd13ddbe387800531ba4}} 
 \index{Main\+Window@{Main\+Window}!on\+Disconnect\+Button\+Clicked@{on\+Disconnect\+Button\+Clicked}}
 \index{on\+Disconnect\+Button\+Clicked@{on\+Disconnect\+Button\+Clicked}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{on\+Disconnect\+Button\+Clicked}{onDisconnectButtonClicked}}
+\subsubsection{on\+Disconnect\+Button\+Clicked}
 {\footnotesize\ttfamily void Main\+Window\+::on\+Disconnect\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
 
 
 
 Disconnects from the device. 
 
-\mbox{\Hypertarget{class_main_window_a680f2fc34bd2147a3a675060aca0fbc6}\label{class_main_window_a680f2fc34bd2147a3a675060aca0fbc6}} 
+\mbox{\label{class_main_window_a680f2fc34bd2147a3a675060aca0fbc6}} 
 \index{Main\+Window@{Main\+Window}!on\+Reset\+Button\+Clicked@{on\+Reset\+Button\+Clicked}}
 \index{on\+Reset\+Button\+Clicked@{on\+Reset\+Button\+Clicked}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{on\+Reset\+Button\+Clicked}{onResetButtonClicked}}
+\subsubsection{on\+Reset\+Button\+Clicked}
 {\footnotesize\ttfamily void Main\+Window\+::on\+Reset\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
 
 
 
-Enters Reset button event. 
+Enters Reset button event -\/ deletes stored angular velocity and acceleration data (erases charts data) 
 
-\mbox{\Hypertarget{class_main_window_ad5f5900379db4ae670ad541da8f55384}\label{class_main_window_ad5f5900379db4ae670ad541da8f55384}} 
+\mbox{\label{class_main_window_ad5f5900379db4ae670ad541da8f55384}} 
 \index{Main\+Window@{Main\+Window}!set\+Combo\+Box@{set\+Combo\+Box}}
 \index{set\+Combo\+Box@{set\+Combo\+Box}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{set\+Combo\+Box()}{setComboBox()}}
+\subsubsection{set\+Combo\+Box()}
 {\footnotesize\ttfamily void Main\+Window\+::set\+Combo\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Sets combo box. 
+Adds available devices to combo\+Box menu. 
 
-\mbox{\Hypertarget{class_main_window_a9a1bad7a80ca8e1c5075d80143957754}\label{class_main_window_a9a1bad7a80ca8e1c5075d80143957754}} 
+\mbox{\label{class_main_window_a9a1bad7a80ca8e1c5075d80143957754}} 
 \index{Main\+Window@{Main\+Window}!set\+Graphs\+Properties@{set\+Graphs\+Properties}}
 \index{set\+Graphs\+Properties@{set\+Graphs\+Properties}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{set\+Graphs\+Properties()}{setGraphsProperties()}}
+\subsubsection{set\+Graphs\+Properties()}
 {\footnotesize\ttfamily void Main\+Window\+::set\+Graphs\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Sets graphs properties like bg and fg colors and amount of plots. 
+Sets graphs properties like background and foreground colors and amount of plots (which means 1 to maximum 3 of plots on one chart) 
 
-\mbox{\Hypertarget{class_main_window_a366da6a45407c523f570ca9e4f4b40a4}\label{class_main_window_a366da6a45407c523f570ca9e4f4b40a4}} 
+\mbox{\label{class_main_window_a366da6a45407c523f570ca9e4f4b40a4}} 
 \index{Main\+Window@{Main\+Window}!show\+Message@{show\+Message}}
 \index{show\+Message@{show\+Message}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{show\+Message()}{showMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\subsubsection{show\+Message()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void Main\+Window\+::show\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Shows message on status bar based on arduino. 
 
-\mbox{\Hypertarget{class_main_window_a365152de4a1878ab0087816da6a9431a}\label{class_main_window_a365152de4a1878ab0087816da6a9431a}} 
+\mbox{\label{class_main_window_a365152de4a1878ab0087816da6a9431a}} 
 \index{Main\+Window@{Main\+Window}!show\+Message@{show\+Message}}
 \index{show\+Message@{show\+Message}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{show\+Message()}{showMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\subsubsection{show\+Message()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void Main\+Window\+::show\+Message (\begin{DoxyParamCaption}\item[{const quint32}]{error\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
@@ -327,10 +327,10 @@ Shows message on status bar based on error\textquotesingle{}s code.
 {\em error\+Code} & -\/ error\textquotesingle{}s code \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_main_window_a1e61f5c68914afa9a1054cbb9982cf17}\label{class_main_window_a1e61f5c68914afa9a1054cbb9982cf17}} 
+\mbox{\label{class_main_window_a1e61f5c68914afa9a1054cbb9982cf17}} 
 \index{Main\+Window@{Main\+Window}!update\+Bar\+Graph@{update\+Bar\+Graph}}
 \index{update\+Bar\+Graph@{update\+Bar\+Graph}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{update\+Bar\+Graph()}{updateBarGraph()}}
+\subsubsection{update\+Bar\+Graph()}
 {\footnotesize\ttfamily void Main\+Window\+::update\+Bar\+Graph (\begin{DoxyParamCaption}\item[{Q\+Custom\+Plot $\ast$}]{pointer,  }\item[{const Q\+Vector$<$ double $>$ \&}]{data,  }\item[{const quint32 \&}]{plots\+Amount,  }\item[{const Q\+Vector$<$ Q\+String $>$ \&}]{labels,  }\item[{const Q\+Color \&}]{bg\+Color,  }\item[{const Q\+Color \&}]{fg\+Color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
@@ -339,23 +339,23 @@ Updated bar graph.
 
 
 \begin{DoxyParams}{Parameters}
-{\em pointer} & -\/ pointer to target widget \\
+{\em pointer} & -\/ pointer to target qt\+Widget \\
 \hline
-{\em data} & -\/ data to plot \\
+{\em data} & -\/ data to plot (current data) \\
 \hline
-{\em plots\+Amount} & -\/ plots amount \\
+{\em plots\+Amount} & -\/ plots amount (1 to maximum 3 of plots), 1 -\/ only x axis plot, 2 -\/ x and y axis plots, 3 -\/ x, y and z axis plots \\
 \hline
-{\em labels} & -\/ labels for axes \\
+{\em labels} & -\/ labels for axes (which means labels for chart\textquotesingle{}s horizontal and vertical axes) \\
 \hline
 {\em bg\+Color} & -\/ background color \\
 \hline
-{\em fg\+Color} & -\/ foreground color \\
+{\em fg\+Color} & -\/ foreground color (text color) \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_main_window_a26aa34275169fb8830c03b47e97ff0ea}\label{class_main_window_a26aa34275169fb8830c03b47e97ff0ea}} 
+\mbox{\label{class_main_window_a26aa34275169fb8830c03b47e97ff0ea}} 
 \index{Main\+Window@{Main\+Window}!update\+Linear\+Graph@{update\+Linear\+Graph}}
 \index{update\+Linear\+Graph@{update\+Linear\+Graph}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{update\+Linear\+Graph()}{updateLinearGraph()}}
+\subsubsection{update\+Linear\+Graph()}
 {\footnotesize\ttfamily void Main\+Window\+::update\+Linear\+Graph (\begin{DoxyParamCaption}\item[{Q\+Custom\+Plot $\ast$}]{pointer,  }\item[{const Q\+Vector$<$ Q\+Vector$<$ double $>$ $\ast$$>$}]{pointers,  }\item[{const quint32 \&}]{plots\+Amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
@@ -364,125 +364,125 @@ Updated linear graph.
 
 
 \begin{DoxyParams}{Parameters}
-{\em pointer} & -\/ pointer to target widget \\
+{\em pointer} & -\/ pointer to target qt\+Widget \\
 \hline
-{\em pointers} & -\/ pointers to time and data containers \\
+{\em pointers} & -\/ pointers to data received from microcontroller -\/ with history \\
 \hline
-{\em plots\+Amount} & -\/ plots amount \\
+{\em plots\+Amount} & -\/ plots amount (1 to maximum 3 of plots), 1 -\/ only x axis plot, 2 -\/ x and y axis plots, 3 -\/ x, y and z axis plots \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_main_window_ac7fc0a361faba82837af50f2dd1b4ef4}\label{class_main_window_ac7fc0a361faba82837af50f2dd1b4ef4}} 
+\mbox{\label{class_main_window_ac7fc0a361faba82837af50f2dd1b4ef4}} 
 \index{Main\+Window@{Main\+Window}!write\+To\+Status\+Bar@{write\+To\+Status\+Bar}}
 \index{write\+To\+Status\+Bar@{write\+To\+Status\+Bar}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{write\+To\+Status\+Bar}{writeToStatusBar}}
+\subsubsection{write\+To\+Status\+Bar}
 {\footnotesize\ttfamily void Main\+Window\+::write\+To\+Status\+Bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
 
 
 
-Updates status bar text. 
+Updates status bar text (which means setting correct messages) 
 
 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{class_main_window_aba5a40e0587b38a584b92583600373f6}\label{class_main_window_aba5a40e0587b38a584b92583600373f6}} 
+\mbox{\label{class_main_window_aba5a40e0587b38a584b92583600373f6}} 
 \index{Main\+Window@{Main\+Window}!arduino@{arduino}}
 \index{arduino@{arduino}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{arduino}{arduino}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_serial_port_reader}{Serial\+Port\+Reader}}$\ast$ Main\+Window\+::arduino\hspace{0.3cm}{\ttfamily [private]}}
+\subsubsection{arduino}
+{\footnotesize\ttfamily \textbf{ Serial\+Port\+Reader}$\ast$ Main\+Window\+::arduino\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_main_window_a4a1005daadc7447af6907c57b54e41ab}\label{class_main_window_a4a1005daadc7447af6907c57b54e41ab}} 
+\mbox{\label{class_main_window_a4a1005daadc7447af6907c57b54e41ab}} 
 \index{Main\+Window@{Main\+Window}!bg\+Color@{bg\+Color}}
 \index{bg\+Color@{bg\+Color}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{bg\+Color}{bgColor}}
+\subsubsection{bg\+Color}
 {\footnotesize\ttfamily Q\+Color Main\+Window\+::bg\+Color\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_main_window_a1f5455abfb51d7c4733bfad76ac60606}\label{class_main_window_a1f5455abfb51d7c4733bfad76ac60606}} 
+\mbox{\label{class_main_window_a1f5455abfb51d7c4733bfad76ac60606}} 
 \index{Main\+Window@{Main\+Window}!fg\+Color@{fg\+Color}}
 \index{fg\+Color@{fg\+Color}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{fg\+Color}{fgColor}}
+\subsubsection{fg\+Color}
 {\footnotesize\ttfamily Q\+Color Main\+Window\+::fg\+Color\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_main_window_a9243762b319de95b998df3e36934d6ef}\label{class_main_window_a9243762b319de95b998df3e36934d6ef}} 
+\mbox{\label{class_main_window_a9243762b319de95b998df3e36934d6ef}} 
 \index{Main\+Window@{Main\+Window}!labels1@{labels1}}
 \index{labels1@{labels1}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{labels1}{labels1}}
+\subsubsection{labels1}
 {\footnotesize\ttfamily Q\+Vector$<$Q\+String$>$ Main\+Window\+::labels1\hspace{0.3cm}{\ttfamily [private]}}
 
-acceleration chart labels \mbox{\Hypertarget{class_main_window_a81d3e91905b239abfc54858b2954b7f7}\label{class_main_window_a81d3e91905b239abfc54858b2954b7f7}} 
+acceleration chart\textquotesingle{}s labels \mbox{\label{class_main_window_a81d3e91905b239abfc54858b2954b7f7}} 
 \index{Main\+Window@{Main\+Window}!labels2@{labels2}}
 \index{labels2@{labels2}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{labels2}{labels2}}
+\subsubsection{labels2}
 {\footnotesize\ttfamily Q\+Vector$<$Q\+String$>$ Main\+Window\+::labels2\hspace{0.3cm}{\ttfamily [private]}}
 
-angular velcity chart labels \mbox{\Hypertarget{class_main_window_ab9b1318826e6722ec4a5dd99cd0ae353}\label{class_main_window_ab9b1318826e6722ec4a5dd99cd0ae353}} 
+angular velcity chart\textquotesingle{}s labels \mbox{\label{class_main_window_ab9b1318826e6722ec4a5dd99cd0ae353}} 
 \index{Main\+Window@{Main\+Window}!labels3@{labels3}}
 \index{labels3@{labels3}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{labels3}{labels3}}
+\subsubsection{labels3}
 {\footnotesize\ttfamily Q\+Vector$<$Q\+String$>$ Main\+Window\+::labels3\hspace{0.3cm}{\ttfamily [private]}}
 
-angle chart labels \mbox{\Hypertarget{class_main_window_a513d5d910d4ece239f1a25d6240869ce}\label{class_main_window_a513d5d910d4ece239f1a25d6240869ce}} 
+angle chart\textquotesingle{}s labels \mbox{\label{class_main_window_a513d5d910d4ece239f1a25d6240869ce}} 
 \index{Main\+Window@{Main\+Window}!labels4@{labels4}}
 \index{labels4@{labels4}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{labels4}{labels4}}
+\subsubsection{labels4}
 {\footnotesize\ttfamily Q\+Vector$<$Q\+String$>$ Main\+Window\+::labels4\hspace{0.3cm}{\ttfamily [private]}}
 
-distance chart labels \mbox{\Hypertarget{class_main_window_a80e2a1a6949dc004e0729bdb133497dd}\label{class_main_window_a80e2a1a6949dc004e0729bdb133497dd}} 
+distance chart\textquotesingle{}s labels \mbox{\label{class_main_window_a80e2a1a6949dc004e0729bdb133497dd}} 
 \index{Main\+Window@{Main\+Window}!legend@{legend}}
 \index{legend@{legend}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{legend}{legend}}
+\subsubsection{legend}
 {\footnotesize\ttfamily Q\+Vector$<$Q\+String$>$ Main\+Window\+::legend\hspace{0.3cm}{\ttfamily [private]}}
 
-legend\textquotesingle{}s text for linear graphs \mbox{\Hypertarget{class_main_window_a623ca812f462c5bc27daf8a94cff59d1}\label{class_main_window_a623ca812f462c5bc27daf8a94cff59d1}} 
+legend\textquotesingle{}s text for linear graphs \mbox{\label{class_main_window_a623ca812f462c5bc27daf8a94cff59d1}} 
 \index{Main\+Window@{Main\+Window}!loop\+Timer@{loop\+Timer}}
 \index{loop\+Timer@{loop\+Timer}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{loop\+Timer}{loopTimer}}
+\subsubsection{loop\+Timer}
 {\footnotesize\ttfamily Q\+Timer Main\+Window\+::loop\+Timer\hspace{0.3cm}{\ttfamily [private]}}
 
-timer that sets plots refresh frequency \mbox{\Hypertarget{class_main_window_a79199e3cec2bb50434f184cc762bce2e}\label{class_main_window_a79199e3cec2bb50434f184cc762bce2e}} 
+timer that sets plots refresh frequency \mbox{\label{class_main_window_a79199e3cec2bb50434f184cc762bce2e}} 
 \index{Main\+Window@{Main\+Window}!max\+Y\+Axis\+Value@{max\+Y\+Axis\+Value}}
 \index{max\+Y\+Axis\+Value@{max\+Y\+Axis\+Value}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{max\+Y\+Axis\+Value}{maxYAxisValue}}
+\subsubsection{max\+Y\+Axis\+Value}
 {\footnotesize\ttfamily double Main\+Window\+::max\+Y\+Axis\+Value\hspace{0.3cm}{\ttfamily [private]}}
 
-minimal bar graph value showed on vertical axis for angle graph \mbox{\Hypertarget{class_main_window_a5cbbcacb99514a12d6743ebb45836f12}\label{class_main_window_a5cbbcacb99514a12d6743ebb45836f12}} 
+minimal bar graph value showed on vertical axis for angle graph \mbox{\label{class_main_window_a5cbbcacb99514a12d6743ebb45836f12}} 
 \index{Main\+Window@{Main\+Window}!max\+Y\+Axis\+Value2@{max\+Y\+Axis\+Value2}}
 \index{max\+Y\+Axis\+Value2@{max\+Y\+Axis\+Value2}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{max\+Y\+Axis\+Value2}{maxYAxisValue2}}
+\subsubsection{max\+Y\+Axis\+Value2}
 {\footnotesize\ttfamily double Main\+Window\+::max\+Y\+Axis\+Value2\hspace{0.3cm}{\ttfamily [private]}}
 
-minimal bar graph value showed on vertical axis for distance graph \mbox{\Hypertarget{class_main_window_af05a0194c683ce9a5abb789e636494da}\label{class_main_window_af05a0194c683ce9a5abb789e636494da}} 
+minimal bar graph value showed on vertical axis for distance graph \mbox{\label{class_main_window_af05a0194c683ce9a5abb789e636494da}} 
 \index{Main\+Window@{Main\+Window}!plot\+Colors@{plot\+Colors}}
 \index{plot\+Colors@{plot\+Colors}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{plot\+Colors}{plotColors}}
+\subsubsection{plot\+Colors}
 {\footnotesize\ttfamily Q\+Vector$<$Q\+Color$>$ Main\+Window\+::plot\+Colors\hspace{0.3cm}{\ttfamily [private]}}
 
-plot\textquotesingle{}s color for linear graphs \mbox{\Hypertarget{class_main_window_a390ce6d302bff7952eee7d92a6cf3da3}\label{class_main_window_a390ce6d302bff7952eee7d92a6cf3da3}} 
+plot\textquotesingle{}s color for linear graphs \mbox{\label{class_main_window_a390ce6d302bff7952eee7d92a6cf3da3}} 
 \index{Main\+Window@{Main\+Window}!plots\+Amount@{plots\+Amount}}
 \index{plots\+Amount@{plots\+Amount}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{plots\+Amount}{plotsAmount}}
+\subsubsection{plots\+Amount}
 {\footnotesize\ttfamily quint32 Main\+Window\+::plots\+Amount\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_main_window_af66c315b651ade2e54045edb68c51c86}\label{class_main_window_af66c315b651ade2e54045edb68c51c86}} 
+\mbox{\label{class_main_window_af66c315b651ade2e54045edb68c51c86}} 
 \index{Main\+Window@{Main\+Window}!status\+Bar\+Timer@{status\+Bar\+Timer}}
 \index{status\+Bar\+Timer@{status\+Bar\+Timer}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{status\+Bar\+Timer}{statusBarTimer}}
+\subsubsection{status\+Bar\+Timer}
 {\footnotesize\ttfamily Q\+Timer Main\+Window\+::status\+Bar\+Timer\hspace{0.3cm}{\ttfamily [private]}}
 
-timer that sets how long will be status bar communicates displayed \mbox{\Hypertarget{class_main_window_a6a921ce08975d864ff158f36760802a8}\label{class_main_window_a6a921ce08975d864ff158f36760802a8}} 
+timer that sets how long will be status bar message displayed \mbox{\label{class_main_window_a6a921ce08975d864ff158f36760802a8}} 
 \index{Main\+Window@{Main\+Window}!transform@{transform}}
 \index{transform@{transform}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{transform}{transform}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_measurement_handler}{Measurement\+Handler}}$\ast$ Main\+Window\+::transform\hspace{0.3cm}{\ttfamily [private]}}
+\subsubsection{transform}
+{\footnotesize\ttfamily \textbf{ Measurement\+Handler}$\ast$ Main\+Window\+::transform\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}\label{class_main_window_a35466a70ed47252a0191168126a352a5}} 
+\mbox{\label{class_main_window_a35466a70ed47252a0191168126a352a5}} 
 \index{Main\+Window@{Main\+Window}!ui@{ui}}
 \index{ui@{ui}!Main\+Window@{Main\+Window}}
-\subsubsection{\texorpdfstring{ui}{ui}}
+\subsubsection{ui}
 {\footnotesize\ttfamily Ui\+::\+Main\+Window$\ast$ Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-h/\mbox{\hyperlink{mainwindow_8h}{mainwindow.\+h}}\item 
-cpp/\mbox{\hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}}\end{DoxyCompactItemize}
+h/\textbf{ mainwindow.\+h}\item 
+cpp/\textbf{ mainwindow.\+cpp}\end{DoxyCompactItemize}

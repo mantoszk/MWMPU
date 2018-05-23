@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +54,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('openglwidget_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +85,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_c3a3ee36a1e03ad614258ece27f46d29.html">h</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">openglwidget.h</div>  </div>
@@ -81,19 +101,23 @@ $(function() {
 <div class="ttc" id="class_open_g_l_widget_html_a293847f6a7e6c40344a1acfca3e9eb51"><div class="ttname"><a href="class_open_g_l_widget.html#a293847f6a7e6c40344a1acfca3e9eb51">OpenGLWidget::~OpenGLWidget</a></div><div class="ttdeci">~OpenGLWidget()</div><div class="ttdef"><b>Definition:</b> openglwidget.cpp:13</div></div>
 <div class="ttc" id="class_open_g_l_widget_html_a4b64b78f67c6da7e90cae7a4b34b5dce"><div class="ttname"><a href="class_open_g_l_widget.html#a4b64b78f67c6da7e90cae7a4b34b5dce">OpenGLWidget::vbo</a></div><div class="ttdeci">QOpenGLBuffer vbo</div><div class="ttdef"><b>Definition:</b> openglwidget.h:70</div></div>
 <div class="ttc" id="class_open_g_l_widget_html_a86df33a6b58b77588ffb1c110fcf2932"><div class="ttname"><a href="class_open_g_l_widget.html#a86df33a6b58b77588ffb1c110fcf2932">OpenGLWidget::paintGL</a></div><div class="ttdeci">void paintGL() override</div><div class="ttdoc">Draws scene. </div><div class="ttdef"><b>Definition:</b> openglwidget.cpp:73</div></div>
-<div class="ttc" id="class_open_g_l_widget_html_a4baa372aec232a8d6c153cdef540dc11"><div class="ttname"><a href="class_open_g_l_widget.html#a4baa372aec232a8d6c153cdef540dc11">OpenGLWidget::initializeGL</a></div><div class="ttdeci">void initializeGL() override</div><div class="ttdoc">Prepares shaders, model and its textures for rendering. </div><div class="ttdef"><b>Definition:</b> openglwidget.cpp:35</div></div>
-<div class="ttc" id="class_open_g_l_widget_html_a7082dfc8237267697116a5fc03bd9a1e"><div class="ttname"><a href="class_open_g_l_widget.html#a7082dfc8237267697116a5fc03bd9a1e">OpenGLWidget::updateRotation</a></div><div class="ttdeci">void updateRotation(const QVector&lt; double &gt; nRotation)</div><div class="ttdoc">A method used to update the angular position of a rendered object. </div><div class="ttdef"><b>Definition:</b> openglwidget.cpp:25</div></div>
+<div class="ttc" id="class_open_g_l_widget_html_a4baa372aec232a8d6c153cdef540dc11"><div class="ttname"><a href="class_open_g_l_widget.html#a4baa372aec232a8d6c153cdef540dc11">OpenGLWidget::initializeGL</a></div><div class="ttdeci">void initializeGL() override</div><div class="ttdoc">Prepares shaders, model and it&amp;#39;s textures for rendering. </div><div class="ttdef"><b>Definition:</b> openglwidget.cpp:35</div></div>
+<div class="ttc" id="class_open_g_l_widget_html_a7082dfc8237267697116a5fc03bd9a1e"><div class="ttname"><a href="class_open_g_l_widget.html#a7082dfc8237267697116a5fc03bd9a1e">OpenGLWidget::updateRotation</a></div><div class="ttdeci">void updateRotation(const QVector&lt; double &gt; nRotation)</div><div class="ttdoc">A method used to update the angular position of rendered object. </div><div class="ttdef"><b>Definition:</b> openglwidget.cpp:25</div></div>
 <div class="ttc" id="class_open_g_l_widget_html_a79e5c10681b015f7fb1e7ce1b047fa8b"><div class="ttname"><a href="class_open_g_l_widget.html#a79e5c10681b015f7fb1e7ce1b047fa8b">OpenGLWidget::program</a></div><div class="ttdeci">QOpenGLShaderProgram * program</div><div class="ttdef"><b>Definition:</b> openglwidget.h:69</div></div>
 <div class="ttc" id="class_wireframe_model_html"><div class="ttname"><a href="class_wireframe_model.html">WireframeModel</a></div><div class="ttdoc">A class that loads data from a file and stores it for rendering using OpenGL. </div><div class="ttdef"><b>Definition:</b> wireframemodel.h:16</div></div>
 <div class="ttc" id="class_open_g_l_widget_html_a110146940a976f19017d2747c93e0390"><div class="ttname"><a href="class_open_g_l_widget.html#a110146940a976f19017d2747c93e0390">OpenGLWidget::OpenGLWidget</a></div><div class="ttdeci">OpenGLWidget(QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition:</b> openglwidget.cpp:6</div></div>
 <div class="ttc" id="class_open_g_l_widget_html_aa6e18f70c42656b3d8aa60f69eb761c2"><div class="ttname"><a href="class_open_g_l_widget.html#aa6e18f70c42656b3d8aa60f69eb761c2">OpenGLWidget::model</a></div><div class="ttdeci">WireframeModel * model</div><div class="ttdef"><b>Definition:</b> openglwidget.h:73</div></div>
 <div class="ttc" id="class_open_g_l_widget_html_a281ac75f22a1b4ca526be0768447fa8c"><div class="ttname"><a href="class_open_g_l_widget.html#a281ac75f22a1b4ca526be0768447fa8c">OpenGLWidget::bgColor</a></div><div class="ttdeci">QColor bgColor</div><div class="ttdef"><b>Definition:</b> openglwidget.h:68</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_c3a3ee36a1e03ad614258ece27f46d29.html">h</a></li><li class="navelem"><a class="el" href="openglwidget_8h.html">openglwidget.h</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>
