@@ -7,7 +7,7 @@ var class_serial_port_reader =
     [ "getErrorCode", "class_serial_port_reader.html#a33a6f505ebf902bf3a3f64970c6a7cec", null ],
     [ "getInfo", "class_serial_port_reader.html#a5a919fb6b06f5505de1aababcde045f6", null ],
     [ "goodChoice", "class_serial_port_reader.html#aba5b7292f941e824467f5b1134f7f15f", null ],
-    [ "readLine", "class_serial_port_reader.html#afb9bdbade338b204f487f2c0d4535911", null ],
+    [ "readLine", "class_serial_port_reader.html#a87132b40be9ec8d709def769e14bbf6a", null ],
     [ "resetErrorCode", "class_serial_port_reader.html#a03d89e1219ecadd67bad6a56ac6dfee2", null ],
     [ "accelerationX", "class_serial_port_reader.html#a2224bf8c59a93b8a5ef77eace260c34c", null ],
     [ "accelerationY", "class_serial_port_reader.html#a86769450ee3907fe92dc9714f7982f26", null ],

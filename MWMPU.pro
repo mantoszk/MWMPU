@@ -38,7 +38,8 @@ HEADERS += \
     h/openglwidget.h \
     h/qcustomplot.h \
     h/serialportreader.h \
-    h/wireframemodel.h
+    h/wireframemodel.h \
+    h/ledindicator.h
 
 SOURCES += \
     cpp/main.cpp \
@@ -47,7 +48,8 @@ SOURCES += \
     cpp/openglwidget.cpp \
     cpp/qcustomplot.cpp \
     cpp/serialportreader.cpp \
-    cpp/wireframemodel.cpp
+    cpp/wireframemodel.cpp \
+    cpp/ledindicator.cpp
 
 RESOURCES += \
     MWMPU.qrc

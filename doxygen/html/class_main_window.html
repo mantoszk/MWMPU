@@ -170,6 +170,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:ad5f5900379db4ae670ad541da8f55384"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ad5f5900379db4ae670ad541da8f55384">setComboBox</a> ()</td></tr>
 <tr class="memdesc:ad5f5900379db4ae670ad541da8f55384"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds available devices to comboBox menu.  <a href="#ad5f5900379db4ae670ad541da8f55384">More...</a><br /></td></tr>
 <tr class="separator:ad5f5900379db4ae670ad541da8f55384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33a37ae494ab281b466579ee54c6f642"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a33a37ae494ab281b466579ee54c6f642">setLEDs</a> ()</td></tr>
+<tr class="memdesc:a33a37ae494ab281b466579ee54c6f642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets LED colors and size.  <a href="#a33a37ae494ab281b466579ee54c6f642">More...</a><br /></td></tr>
+<tr class="separator:a33a37ae494ab281b466579ee54c6f642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c8dccfe7131cf3c08ff9cbb9ff642d4"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a5c8dccfe7131cf3c08ff9cbb9ff642d4">getErrorText</a> (const quint32 errorCode) const</td></tr>
 <tr class="memdesc:a5c8dccfe7131cf3c08ff9cbb9ff642d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns specific error's text based on error's code.  <a href="#a5c8dccfe7131cf3c08ff9cbb9ff642d4">More...</a><br /></td></tr>
 <tr class="separator:a5c8dccfe7131cf3c08ff9cbb9ff642d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -431,12 +434,12 @@ Private Attributes</h2></td></tr>
 <p>Generates bar graph. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pointer</td><td>- pointer to target qtWidget </td></tr>
-    <tr><td class="paramname">data</td><td>- data to plot (current data) </td></tr>
-    <tr><td class="paramname">plotsAmount</td><td>- plots amount (1 to maximum 3 of plots), 1 - only x axis plot, 2 - x and y axis plots, 3 - x, y and z axis plots </td></tr>
-    <tr><td class="paramname">labels</td><td>- labels for axes (which means labels for chart's horizontal and vertical axes) </td></tr>
-    <tr><td class="paramname">bgColor</td><td>- background color </td></tr>
-    <tr><td class="paramname">fgColor</td><td>- foreground color (text color) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pointer</td><td>- pointer to target qtWidget </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>- data to plot (current data) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">plotsAmount</td><td>- plots amount (1 to maximum 3 of plots), 1 - only x axis plot, 2 - x and y axis plots, 3 - x, y and z axis plots </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">labels</td><td>- labels for axes (which means labels for chart's horizontal and vertical axes) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bgColor</td><td>- background color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fgColor</td><td>- foreground color (text color) </td></tr>
   </table>
   </dd>
 </dl>
@@ -510,13 +513,13 @@ Private Attributes</h2></td></tr>
 <p>Generates linear graph. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pointer</td><td>- pointer to target qtWidget </td></tr>
-    <tr><td class="paramname">plotsAmount</td><td>- plots amount (1 to maximum 3 of plots), 1 - only x axis plot, 2 - x and y axis plots, 3 - x, y and z axis plots </td></tr>
-    <tr><td class="paramname">labels</td><td>- labels for axes (which means labels for chart's horizontal and vertical axes) </td></tr>
-    <tr><td class="paramname">legend</td><td>- legend's text (text for describing plots on chart) </td></tr>
-    <tr><td class="paramname">plotColors</td><td>- plot's colors </td></tr>
-    <tr><td class="paramname">bgColor</td><td>- background color </td></tr>
-    <tr><td class="paramname">fgColor</td><td>- foreground color (text color) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pointer</td><td>- pointer to target qtWidget </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">plotsAmount</td><td>- plots amount (1 to maximum 3 of plots), 1 - only x axis plot, 2 - x and y axis plots, 3 - x, y and z axis plots </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">labels</td><td>- labels for axes (which means labels for chart's horizontal and vertical axes) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">legend</td><td>- legend's text (text for describing plots on chart) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">plotColors</td><td>- plot's colors </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bgColor</td><td>- background color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fgColor</td><td>- foreground color (text color) </td></tr>
   </table>
   </dd>
 </dl>
@@ -550,7 +553,7 @@ Private Attributes</h2></td></tr>
 <p>Returns specific error's text based on error's code. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">errorCode</td><td>- error's code </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">errorCode</td><td>- error's code </td></tr>
   </table>
   </dd>
 </dl>
@@ -747,6 +750,33 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a33a37ae494ab281b466579ee54c6f642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33a37ae494ab281b466579ee54c6f642">&#9670;&nbsp;</a></span>setLEDs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::setLEDs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets LED colors and size. </p>
+
+</div>
+</div>
 <a id="a366da6a45407c523f570ca9e4f4b40a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a366da6a45407c523f570ca9e4f4b40a4">&#9670;&nbsp;</a></span>showMessage() <span class="overload">[1/2]</span></h2>
 
@@ -801,7 +831,7 @@ Private Attributes</h2></td></tr>
 <p>Shows message on status bar based on error's code. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">errorCode</td><td>- error's code </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">errorCode</td><td>- error's code </td></tr>
   </table>
   </dd>
 </dl>
@@ -869,12 +899,12 @@ Private Attributes</h2></td></tr>
 <p>Updated bar graph. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pointer</td><td>- pointer to target qtWidget </td></tr>
-    <tr><td class="paramname">data</td><td>- data to plot (current data) </td></tr>
-    <tr><td class="paramname">plotsAmount</td><td>- plots amount (1 to maximum 3 of plots), 1 - only x axis plot, 2 - x and y axis plots, 3 - x, y and z axis plots </td></tr>
-    <tr><td class="paramname">labels</td><td>- labels for axes (which means labels for chart's horizontal and vertical axes) </td></tr>
-    <tr><td class="paramname">bgColor</td><td>- background color </td></tr>
-    <tr><td class="paramname">fgColor</td><td>- foreground color (text color) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pointer</td><td>- pointer to target qtWidget </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>- data to plot (current data) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">plotsAmount</td><td>- plots amount (1 to maximum 3 of plots), 1 - only x axis plot, 2 - x and y axis plots, 3 - x, y and z axis plots </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">labels</td><td>- labels for axes (which means labels for chart's horizontal and vertical axes) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bgColor</td><td>- background color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fgColor</td><td>- foreground color (text color) </td></tr>
   </table>
   </dd>
 </dl>
@@ -924,9 +954,9 @@ Private Attributes</h2></td></tr>
 <p>Updated linear graph. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pointer</td><td>- pointer to target qtWidget </td></tr>
-    <tr><td class="paramname">pointers</td><td>- pointers to data received from microcontroller - with history </td></tr>
-    <tr><td class="paramname">plotsAmount</td><td>- plots amount (1 to maximum 3 of plots), 1 - only x axis plot, 2 - x and y axis plots, 3 - x, y and z axis plots </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pointer</td><td>- pointer to target qtWidget </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pointers</td><td>- pointers to data received from microcontroller - with history </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">plotsAmount</td><td>- plots amount (1 to maximum 3 of plots), 1 - only x axis plot, 2 - x and y axis plots, 3 - x, y and z axis plots </td></tr>
   </table>
   </dd>
 </dl>

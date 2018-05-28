@@ -108,9 +108,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aef65d0e76f65204aaa57ecfc144c827d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f01c445adf0d64d8acd67cd4fcd3b21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serial_port_reader.html#a7f01c445adf0d64d8acd67cd4fcd3b21">~SerialPortReader</a> ()</td></tr>
 <tr class="separator:a7f01c445adf0d64d8acd67cd4fcd3b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb9bdbade338b204f487f2c0d4535911"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serial_port_reader.html#afb9bdbade338b204f487f2c0d4535911">readLine</a> ()</td></tr>
-<tr class="memdesc:afb9bdbade338b204f487f2c0d4535911"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method to read one line of data from the device.  <a href="#afb9bdbade338b204f487f2c0d4535911">More...</a><br /></td></tr>
-<tr class="separator:afb9bdbade338b204f487f2c0d4535911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87132b40be9ec8d709def769e14bbf6a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serial_port_reader.html#a87132b40be9ec8d709def769e14bbf6a">readLine</a> ()</td></tr>
+<tr class="memdesc:a87132b40be9ec8d709def769e14bbf6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">readLine  <a href="#a87132b40be9ec8d709def769e14bbf6a">More...</a><br /></td></tr>
+<tr class="separator:a87132b40be9ec8d709def769e14bbf6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a919fb6b06f5505de1aababcde045f6"><td class="memItemLeft" align="right" valign="top">QVector&lt; QSerialPortInfo &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serial_port_reader.html#a5a919fb6b06f5505de1aababcde045f6">getInfo</a> () const</td></tr>
 <tr class="memdesc:a5a919fb6b06f5505de1aababcde045f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method used to obtain information about devices connected to a computer.  <a href="#a5a919fb6b06f5505de1aababcde045f6">More...</a><br /></td></tr>
 <tr class="separator:a5a919fb6b06f5505de1aababcde045f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,7 +182,7 @@ Private Attributes</h2></td></tr>
 <p>Parametric constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nHandler</td><td>- a pointer to the object where the data of the loaded object is to be saved </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nHandler</td><td>- a pointer to the object where the data of the loaded object is to be saved </td></tr>
   </table>
   </dd>
 </dl>
@@ -226,7 +226,7 @@ Private Attributes</h2></td></tr>
 <p>A method to connect to the device via serial port. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>- device's index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>- device's index </td></tr>
   </table>
   </dd>
 </dl>
@@ -322,14 +322,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="afb9bdbade338b204f487f2c0d4535911"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb9bdbade338b204f487f2c0d4535911">&#9670;&nbsp;</a></span>readLine()</h2>
+<a id="a87132b40be9ec8d709def769e14bbf6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87132b40be9ec8d709def769e14bbf6a">&#9670;&nbsp;</a></span>readLine()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SerialPortReader::readLine </td>
+          <td class="memname">bool SerialPortReader::readLine </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -337,7 +337,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>A method to read one line of data from the device. </p>
+<p>readLine </p>
+<dl class="section return"><dt>Returns</dt><dd>true if readLine is succesfull </dd></dl>
 
 </div>
 </div>

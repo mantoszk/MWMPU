@@ -39,17 +39,18 @@ public:
 
 	/*!
 	 * \brief Parametric constructor
-	 * \param nHandler - a pointer to the object where the data of the loaded object is to be saved
+	 * \param[in] nHandler - a pointer to the object where the data of the loaded object is to be saved
 	 */
 	SerialPortReader(MeasurementHandler *nHandler);
 
 	~SerialPortReader();
 
 	/*!
-	 * \brief A method to read one line of data from the device
+	 * \brief readLine
+	 * \return true if readLine is succesfull
 	 */
 
-	void readLine();
+	bool readLine();
 
 	/*!
 	 * \brief A method used to obtain information about devices connected to a computer
@@ -60,7 +61,7 @@ public:
 
 	/*!
 	 * \brief A method to connect to the device via serial port
-	 * \param index - device's index
+	 * \param[in] index - device's index
 	 * \return true if device is succesfully connected
 	 */
 

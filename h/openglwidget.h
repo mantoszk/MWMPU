@@ -25,14 +25,14 @@ public:
 
 	/*!
 	 * \brief A method used to update the angular position of rendered object
-	 * \param nRotation - x, y, z angular position values
+	 * \param[in] nRotation - x, y, z angular position values
 	 */
 
 	void updateRotation(const QVector <double> nRotation);
 
 	/*!
 	 * \brief A method for updating the distance of a rendered object from the center of the coordinate system
-	 * \param nDistance - x, y, z distance values
+	 * \param[in] nDistance - x, y, z distance values
 	 */
 
 	void updateDistance(const QVector <double> nDistance);
@@ -40,14 +40,14 @@ public:
 protected:
 
 	/*!
-	 * \brief Prepares shaders, model and it's textures for rendering
+	 * \brief[in] Prepares shaders, model and it's textures for rendering
 	 */
 	void initializeGL() override;
 
 	/*!
 	 * \brief Resizes widget
-	 * \param width
-	 * \param height
+	 * \param[in] width
+	 * \param[in] height
 	 */
 
 	void resizeGL(int width, int height) override;

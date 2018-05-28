@@ -16,6 +16,7 @@ var class_main_window =
     [ "onResetButtonClicked", "class_main_window.html#a680f2fc34bd2147a3a675060aca0fbc6", null ],
     [ "setComboBox", "class_main_window.html#ad5f5900379db4ae670ad541da8f55384", null ],
     [ "setGraphsProperties", "class_main_window.html#a9a1bad7a80ca8e1c5075d80143957754", null ],
+    [ "setLEDs", "class_main_window.html#a33a37ae494ab281b466579ee54c6f642", null ],
     [ "showMessage", "class_main_window.html#a366da6a45407c523f570ca9e4f4b40a4", null ],
     [ "showMessage", "class_main_window.html#a365152de4a1878ab0087816da6a9431a", null ],
     [ "updateBarGraph", "class_main_window.html#a1e61f5c68914afa9a1054cbb9982cf17", null ],

@@ -157,7 +157,7 @@ SerialPortReader::~SerialPortReader()
 	}
 }
 
-void SerialPortReader::readLine()
+bool SerialPortReader::readLine()
 {
 	qint32 intResponse[6];
 	QByteArray serialData;
@@ -188,6 +188,10 @@ void SerialPortReader::readLine()
 						valuesList[i] = valuesList[i].simplified();
 					}
 				}
+			}
+			else
+			{
+				return false;
 			}
 		}
 
@@ -227,5 +231,9 @@ void SerialPortReader::readLine()
 		mHandler->pushXAngVel(mHandler->getGyroMeas()[0]);
 		mHandler->pushYAngVel(mHandler->getGyroMeas()[1]);
 		mHandler->pushZAngVel(mHandler->getGyroMeas()[2]);
+
+		return true;
 	}
+
+	return false;
 }

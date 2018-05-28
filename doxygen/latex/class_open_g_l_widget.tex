@@ -30,7 +30,7 @@ void \textbf{ update\+Distance} (const Q\+Vector$<$ double $>$ n\+Distance)
 \begin{DoxyCompactItemize}
 \item 
 void \textbf{ initialize\+GL} () override
-\begin{DoxyCompactList}\small\item\em Prepares shaders, model and it\textquotesingle{}s textures for rendering. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em [in] Prepares shaders, model and it\textquotesingle{}s textures for rendering \end{DoxyCompactList}\item 
 void \textbf{ resize\+GL} (int width, int height) override
 \begin{DoxyCompactList}\small\item\em Resizes widget. \end{DoxyCompactList}\item 
 void \textbf{ paint\+GL} () override
@@ -96,7 +96,7 @@ Sends the coordinates of the vertices and UV\textquotesingle{}s of the object to
 
 
 
-Prepares shaders, model and it\textquotesingle{}s textures for rendering. 
+[in] Prepares shaders, model and it\textquotesingle{}s textures for rendering 
 
 \mbox{\label{class_open_g_l_widget_a86df33a6b58b77588ffb1c110fcf2932}} 
 \index{Open\+G\+L\+Widget@{Open\+G\+L\+Widget}!paint\+GL@{paint\+GL}}
@@ -119,10 +119,10 @@ Draws scene.
 Resizes widget. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em width} & \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em width} & \\
 \hline
-{\em height} & \\
+\mbox{\tt in}  & {\em height} & \\
 \hline
 \end{DoxyParams}
 \mbox{\label{class_open_g_l_widget_a2170acd0e1f140dbf1771af9bf063c34}} 
@@ -136,8 +136,8 @@ Resizes widget.
 A method for updating the distance of a rendered object from the center of the coordinate system. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em n\+Distance} & -\/ x, y, z distance values \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n\+Distance} & -\/ x, y, z distance values \\
 \hline
 \end{DoxyParams}
 \mbox{\label{class_open_g_l_widget_a7082dfc8237267697116a5fc03bd9a1e}} 
@@ -151,8 +151,8 @@ A method for updating the distance of a rendered object from the center of the c
 A method used to update the angular position of rendered object. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em n\+Rotation} & -\/ x, y, z angular position values \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n\+Rotation} & -\/ x, y, z angular position values \\
 \hline
 \end{DoxyParams}
 

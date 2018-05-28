@@ -35,7 +35,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = MWMPU1.0.0
-DISTDIR = /home/mantoszk/qtcreator-workspace/MWMPU/gen/obj/MWMPU1.0.0
+DISTDIR = /home/mantoszk/repositories/MWMPU/gen/obj/MWMPU1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now
 LIBS          = $(SUBLIBS) -lQt5OpenGL -lQt5PrintSupport -lQt5Widgets -lQt5Gui -lQt5SerialPort -lQt5Core -lGL -lpthread 
@@ -56,10 +56,12 @@ SOURCES       = cpp/main.cpp \
 		cpp/openglwidget.cpp \
 		cpp/qcustomplot.cpp \
 		cpp/serialportreader.cpp \
-		cpp/wireframemodel.cpp qrc_MWMPU.cpp \
+		cpp/wireframemodel.cpp \
+		cpp/ledindicator.cpp qrc_MWMPU.cpp \
 		gen/moc/moc_mainwindow.cpp \
 		gen/moc/moc_openglwidget.cpp \
-		gen/moc/moc_qcustomplot.cpp
+		gen/moc/moc_qcustomplot.cpp \
+		gen/moc/moc_ledindicator.cpp
 OBJECTS       = gen/obj/main.o \
 		gen/obj/mainwindow.o \
 		gen/obj/measurementhandler.o \
@@ -67,10 +69,12 @@ OBJECTS       = gen/obj/main.o \
 		gen/obj/qcustomplot.o \
 		gen/obj/serialportreader.o \
 		gen/obj/wireframemodel.o \
+		gen/obj/ledindicator.o \
 		gen/obj/qrc_MWMPU.o \
 		gen/obj/moc_mainwindow.o \
 		gen/obj/moc_openglwidget.o \
-		gen/obj/moc_qcustomplot.o
+		gen/obj/moc_qcustomplot.o \
+		gen/obj/moc_ledindicator.o
 DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/common/unix.conf \
 		/usr/lib/qt/mkspecs/common/linux.conf \
@@ -266,13 +270,15 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		h/openglwidget.h \
 		h/qcustomplot.h \
 		h/serialportreader.h \
-		h/wireframemodel.h cpp/main.cpp \
+		h/wireframemodel.h \
+		h/ledindicator.h cpp/main.cpp \
 		cpp/mainwindow.cpp \
 		cpp/measurementhandler.cpp \
 		cpp/openglwidget.cpp \
 		cpp/qcustomplot.cpp \
 		cpp/serialportreader.cpp \
-		cpp/wireframemodel.cpp
+		cpp/wireframemodel.cpp \
+		cpp/ledindicator.cpp
 QMAKE_TARGET  = MWMPU
 DESTDIR       = 
 TARGET        = MWMPU
@@ -697,8 +703,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents MWMPU.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/qt/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents h/mainwindow.h h/measurementhandler.h h/openglwidget.h h/qcustomplot.h h/serialportreader.h h/wireframemodel.h $(DISTDIR)/
-	$(COPY_FILE) --parents cpp/main.cpp cpp/mainwindow.cpp cpp/measurementhandler.cpp cpp/openglwidget.cpp cpp/qcustomplot.cpp cpp/serialportreader.cpp cpp/wireframemodel.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents h/mainwindow.h h/measurementhandler.h h/openglwidget.h h/qcustomplot.h h/serialportreader.h h/wireframemodel.h h/ledindicator.h $(DISTDIR)/
+	$(COPY_FILE) --parents cpp/main.cpp cpp/mainwindow.cpp cpp/measurementhandler.cpp cpp/openglwidget.cpp cpp/qcustomplot.cpp cpp/serialportreader.cpp cpp/wireframemodel.cpp cpp/ledindicator.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ui/mainwindow.ui $(DISTDIR)/
 
 
@@ -741,27 +747,33 @@ compiler_moc_predefs_clean:
 gen/moc/moc_predefs.h: /usr/lib/qt/mkspecs/features/data/dummy.cpp
 	g++ -pipe -O2 -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fno-plt -std=gnu++11 -Wall -W -dM -E -o gen/moc/moc_predefs.h /usr/lib/qt/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: gen/moc/moc_mainwindow.cpp gen/moc/moc_openglwidget.cpp gen/moc/moc_qcustomplot.cpp
+compiler_moc_header_make_all: gen/moc/moc_mainwindow.cpp gen/moc/moc_openglwidget.cpp gen/moc/moc_qcustomplot.cpp gen/moc/moc_ledindicator.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) gen/moc/moc_mainwindow.cpp gen/moc/moc_openglwidget.cpp gen/moc/moc_qcustomplot.cpp
+	-$(DEL_FILE) gen/moc/moc_mainwindow.cpp gen/moc/moc_openglwidget.cpp gen/moc/moc_qcustomplot.cpp gen/moc/moc_ledindicator.cpp
 gen/moc/moc_mainwindow.cpp: h/qcustomplot.h \
+		h/ledindicator.h \
 		h/serialportreader.h \
 		h/measurementhandler.h \
 		h/mainwindow.h \
 		gen/moc/moc_predefs.h \
 		/usr/bin/moc
-	/usr/bin/moc $(DEFINES) --include gen/moc/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/mantoszk/qtcreator-workspace/MWMPU -I/home/mantoszk/qtcreator-workspace/MWMPU/h -I/usr/include/qt -I/usr/include/qt/QtOpenGL -I/usr/include/qt/QtPrintSupport -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtSerialPort -I/usr/include/qt/QtCore -I/usr/include/c++/7.3.1 -I/usr/include/c++/7.3.1/x86_64-pc-linux-gnu -I/usr/include/c++/7.3.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed -I/usr/include h/mainwindow.h -o gen/moc/moc_mainwindow.cpp
+	/usr/bin/moc $(DEFINES) --include gen/moc/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/mantoszk/repositories/MWMPU -I/home/mantoszk/repositories/MWMPU/h -I/usr/include/qt -I/usr/include/qt/QtOpenGL -I/usr/include/qt/QtPrintSupport -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtSerialPort -I/usr/include/qt/QtCore -I/usr/include/c++/7.3.1 -I/usr/include/c++/7.3.1/x86_64-pc-linux-gnu -I/usr/include/c++/7.3.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed -I/usr/include h/mainwindow.h -o gen/moc/moc_mainwindow.cpp
 
 gen/moc/moc_openglwidget.cpp: h/wireframemodel.h \
 		h/openglwidget.h \
 		gen/moc/moc_predefs.h \
 		/usr/bin/moc
-	/usr/bin/moc $(DEFINES) --include gen/moc/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/mantoszk/qtcreator-workspace/MWMPU -I/home/mantoszk/qtcreator-workspace/MWMPU/h -I/usr/include/qt -I/usr/include/qt/QtOpenGL -I/usr/include/qt/QtPrintSupport -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtSerialPort -I/usr/include/qt/QtCore -I/usr/include/c++/7.3.1 -I/usr/include/c++/7.3.1/x86_64-pc-linux-gnu -I/usr/include/c++/7.3.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed -I/usr/include h/openglwidget.h -o gen/moc/moc_openglwidget.cpp
+	/usr/bin/moc $(DEFINES) --include gen/moc/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/mantoszk/repositories/MWMPU -I/home/mantoszk/repositories/MWMPU/h -I/usr/include/qt -I/usr/include/qt/QtOpenGL -I/usr/include/qt/QtPrintSupport -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtSerialPort -I/usr/include/qt/QtCore -I/usr/include/c++/7.3.1 -I/usr/include/c++/7.3.1/x86_64-pc-linux-gnu -I/usr/include/c++/7.3.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed -I/usr/include h/openglwidget.h -o gen/moc/moc_openglwidget.cpp
 
 gen/moc/moc_qcustomplot.cpp: h/qcustomplot.h \
 		gen/moc/moc_predefs.h \
 		/usr/bin/moc
-	/usr/bin/moc $(DEFINES) --include gen/moc/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/mantoszk/qtcreator-workspace/MWMPU -I/home/mantoszk/qtcreator-workspace/MWMPU/h -I/usr/include/qt -I/usr/include/qt/QtOpenGL -I/usr/include/qt/QtPrintSupport -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtSerialPort -I/usr/include/qt/QtCore -I/usr/include/c++/7.3.1 -I/usr/include/c++/7.3.1/x86_64-pc-linux-gnu -I/usr/include/c++/7.3.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed -I/usr/include h/qcustomplot.h -o gen/moc/moc_qcustomplot.cpp
+	/usr/bin/moc $(DEFINES) --include gen/moc/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/mantoszk/repositories/MWMPU -I/home/mantoszk/repositories/MWMPU/h -I/usr/include/qt -I/usr/include/qt/QtOpenGL -I/usr/include/qt/QtPrintSupport -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtSerialPort -I/usr/include/qt/QtCore -I/usr/include/c++/7.3.1 -I/usr/include/c++/7.3.1/x86_64-pc-linux-gnu -I/usr/include/c++/7.3.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed -I/usr/include h/qcustomplot.h -o gen/moc/moc_qcustomplot.cpp
+
+gen/moc/moc_ledindicator.cpp: h/ledindicator.h \
+		gen/moc/moc_predefs.h \
+		/usr/bin/moc
+	/usr/bin/moc $(DEFINES) --include gen/moc/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/mantoszk/repositories/MWMPU -I/home/mantoszk/repositories/MWMPU/h -I/usr/include/qt -I/usr/include/qt/QtOpenGL -I/usr/include/qt/QtPrintSupport -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtSerialPort -I/usr/include/qt/QtCore -I/usr/include/c++/7.3.1 -I/usr/include/c++/7.3.1/x86_64-pc-linux-gnu -I/usr/include/c++/7.3.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed -I/usr/include h/ledindicator.h -o gen/moc/moc_ledindicator.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -774,6 +786,7 @@ gen/ui_c/ui_mainwindow.h: ui/mainwindow.ui \
 		/usr/bin/uic \
 		h/openglwidget.h \
 		h/qcustomplot.h \
+		h/ledindicator.h \
 		h/wireframemodel.h
 	/usr/bin/uic ui/mainwindow.ui -o gen/ui_c/ui_mainwindow.h
 
@@ -789,17 +802,17 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 
 gen/obj/main.o: cpp/main.cpp h/mainwindow.h \
 		h/qcustomplot.h \
+		h/ledindicator.h \
 		h/serialportreader.h \
 		h/measurementhandler.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gen/obj/main.o cpp/main.cpp
 
 gen/obj/mainwindow.o: cpp/mainwindow.cpp h/mainwindow.h \
 		h/qcustomplot.h \
+		h/ledindicator.h \
 		h/serialportreader.h \
 		h/measurementhandler.h \
-		gen/ui_c/ui_mainwindow.h \
-		h/openglwidget.h \
-		h/wireframemodel.h
+		gen/ui_c/ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gen/obj/mainwindow.o cpp/mainwindow.cpp
 
 gen/obj/measurementhandler.o: cpp/measurementhandler.cpp h/measurementhandler.h
@@ -819,6 +832,9 @@ gen/obj/serialportreader.o: cpp/serialportreader.cpp h/serialportreader.h \
 gen/obj/wireframemodel.o: cpp/wireframemodel.cpp h/wireframemodel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gen/obj/wireframemodel.o cpp/wireframemodel.cpp
 
+gen/obj/ledindicator.o: cpp/ledindicator.cpp h/ledindicator.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gen/obj/ledindicator.o cpp/ledindicator.cpp
+
 gen/obj/qrc_MWMPU.o: qrc_MWMPU.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gen/obj/qrc_MWMPU.o qrc_MWMPU.cpp
 
@@ -830,6 +846,9 @@ gen/obj/moc_openglwidget.o: gen/moc/moc_openglwidget.cpp
 
 gen/obj/moc_qcustomplot.o: gen/moc/moc_qcustomplot.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gen/obj/moc_qcustomplot.o gen/moc/moc_qcustomplot.cpp
+
+gen/obj/moc_ledindicator.o: gen/moc/moc_ledindicator.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gen/obj/moc_ledindicator.o gen/moc/moc_ledindicator.cpp
 
 ####### Install
 

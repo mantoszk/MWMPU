@@ -7,6 +7,7 @@
 #include <QColor>
 #include <QtMath>
 #include "qcustomplot.h"
+#include "ledindicator.h"
 #include "serialportreader.h"
 #include "measurementhandler.h"
 
@@ -105,46 +106,46 @@ private:
 
 	/*!
 	 * \brief Generates bar graph
-	 * \param pointer - pointer to target qtWidget
-	 * \param data - data to plot (current data)
-	 * \param plotsAmount - plots amount (1 to maximum 3 of plots), 1 - only x axis plot, 2 - x and y axis plots, 3 - x, y and z axis plots
-	 * \param labels - labels for axes (which means labels for chart's horizontal and vertical axes)
-	 * \param bgColor - background color
-	 * \param fgColor - foreground color (text color)
+	 * \param[in] pointer - pointer to target qtWidget
+	 * \param[in] data - data to plot (current data)
+	 * \param[in] plotsAmount - plots amount (1 to maximum 3 of plots), 1 - only x axis plot, 2 - x and y axis plots, 3 - x, y and z axis plots
+	 * \param[in] labels - labels for axes (which means labels for chart's horizontal and vertical axes)
+	 * \param[in] bgColor - background color
+	 * \param[in] fgColor - foreground color (text color)
 	 */
 
-	void generateBarGraph(QCustomPlot *pointer, const QVector <double> &data, const quint32 &plotsAmount, const QVector <QString> &labels, const QColor &bgColor, const QColor &fgColor);
+	void generateBarGraph(QCustomPlot *pointer,  const QVector <double> &data, const quint32 &plotsAmount, const QVector <QString> &labels , const QColor &bgColor , const QColor &fgColor);
 
 	/*!
 	 * \brief Updated bar graph
-	 * \param pointer - pointer to target qtWidget
-	 * \param data - data to plot (current data)
-	 * \param plotsAmount - plots amount (1 to maximum 3 of plots), 1 - only x axis plot, 2 - x and y axis plots, 3 - x, y and z axis plots
-	 * \param labels - labels for axes (which means labels for chart's horizontal and vertical axes)
-	 * \param bgColor - background color
-	 * \param fgColor - foreground color (text color)
+	 * \param[in] pointer - pointer to target qtWidget
+	 * \param[in] data - data to plot (current data)
+	 * \param[in] plotsAmount - plots amount (1 to maximum 3 of plots), 1 - only x axis plot, 2 - x and y axis plots, 3 - x, y and z axis plots
+	 * \param[in] labels - labels for axes (which means labels for chart's horizontal and vertical axes)
+	 * \param[in] bgColor - background color
+	 * \param[in] fgColor - foreground color (text color)
 	 */
 
-	void updateBarGraph(QCustomPlot *pointer, const QVector <double> &data, const quint32 &plotsAmount, const QVector <QString> &labels, const QColor &bgColor, const QColor &fgColor);
+	void updateBarGraph(QCustomPlot *pointer, const QVector <double> &data, const quint32 &plotsAmount , const QVector <QString> &labels, const QColor &bgColor, const QColor &fgColor);
 
 	/*!
 	 * \brief Generates linear graph
-	 * \param pointer - pointer to target qtWidget
-	 * \param plotsAmount - plots amount (1 to maximum 3 of plots), 1 - only x axis plot, 2 - x and y axis plots, 3 - x, y and z axis plots
-	 * \param labels - labels for axes (which means labels for chart's horizontal and vertical axes)
-	 * \param legend - legend's text (text for describing plots on chart)
-	 * \param plotColors - plot's colors
-	 * \param bgColor - background color
-	 * \param fgColor - foreground color (text color)
+	 * \param[in] pointer - pointer to target qtWidget
+	 * \param[in] plotsAmount - plots amount (1 to maximum 3 of plots), 1 - only x axis plot, 2 - x and y axis plots, 3 - x, y and z axis plots
+	 * \param[in] labels - labels for axes (which means labels for chart's horizontal and vertical axes)
+	 * \param[in] legend - legend's text (text for describing plots on chart)
+	 * \param[in] plotColors - plot's colors
+	 * \param[in] bgColor - background color
+	 * \param[in] fgColor - foreground color (text color)
 	 */
 
 	void generateLinearGraph(QCustomPlot *pointer, const quint32 &plotsAmount, const QVector <QString> &labels,  const QVector<QString> &legend, const QVector<QColor> &plotColors, const QColor &bgColor, const QColor &fgColor);
 
 	/*!
 	 * \brief Updated linear graph
-	 * \param pointer - pointer to target qtWidget
-	 * \param pointers - pointers to data received from microcontroller - with history
-	 * \param plotsAmount - plots amount (1 to maximum 3 of plots), 1 - only x axis plot, 2 - x and y axis plots, 3 - x, y and z axis plots
+	 * \param[in] pointer - pointer to target qtWidget
+	 * \param[in] pointers - pointers to data received from microcontroller - with history
+	 * \param[in] plotsAmount - plots amount (1 to maximum 3 of plots), 1 - only x axis plot, 2 - x and y axis plots, 3 - x, y and z axis plots
 	 */
 
 	void updateLinearGraph(QCustomPlot *pointer, const QVector<QVector<double> *> pointers, const quint32 &plotsAmount);
@@ -168,8 +169,14 @@ private:
 	void setComboBox();
 
 	/*!
+	 * \brief Sets LED colors and size
+	 */
+
+	void setLEDs();
+
+	/*!
 	 * \brief Returns specific error's text based on error's code
-	 * \param errorCode - error's code
+	 * \param[in] errorCode - error's code
 	 * \return Error's text
 	 */
 
@@ -183,7 +190,7 @@ private:
 
 	/*!
 	 * \brief Shows message on status bar based on error's code
-	 * \param errorCode - error's code
+	 * \param[in] errorCode - error's code
 	 */
 
 	void showMessage(const quint32 errorCode);

@@ -60,6 +60,8 @@ void \textbf{ clear\+Realtime\+Plots} ()
 \begin{DoxyCompactList}\small\item\em Deletes temporary stored angle and distance data (erases bar graph data) \end{DoxyCompactList}\item 
 void \textbf{ set\+Combo\+Box} ()
 \begin{DoxyCompactList}\small\item\em Adds available devices to combo\+Box menu. \end{DoxyCompactList}\item 
+void \textbf{ set\+L\+E\+Ds} ()
+\begin{DoxyCompactList}\small\item\em Sets L\+ED colors and size. \end{DoxyCompactList}\item 
 Q\+String \textbf{ get\+Error\+Text} (const quint32 error\+Code) const
 \begin{DoxyCompactList}\small\item\em Returns specific error\textquotesingle{}s text based on error\textquotesingle{}s code. \end{DoxyCompactList}\item 
 void \textbf{ show\+Message} ()
@@ -173,18 +175,18 @@ Repeats events such as\+: reading from serial port, updating rotation and distan
 Generates bar graph. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em pointer} & -\/ pointer to target qt\+Widget \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pointer} & -\/ pointer to target qt\+Widget \\
 \hline
-{\em data} & -\/ data to plot (current data) \\
+\mbox{\tt in}  & {\em data} & -\/ data to plot (current data) \\
 \hline
-{\em plots\+Amount} & -\/ plots amount (1 to maximum 3 of plots), 1 -\/ only x axis plot, 2 -\/ x and y axis plots, 3 -\/ x, y and z axis plots \\
+\mbox{\tt in}  & {\em plots\+Amount} & -\/ plots amount (1 to maximum 3 of plots), 1 -\/ only x axis plot, 2 -\/ x and y axis plots, 3 -\/ x, y and z axis plots \\
 \hline
-{\em labels} & -\/ labels for axes (which means labels for chart\textquotesingle{}s horizontal and vertical axes) \\
+\mbox{\tt in}  & {\em labels} & -\/ labels for axes (which means labels for chart\textquotesingle{}s horizontal and vertical axes) \\
 \hline
-{\em bg\+Color} & -\/ background color \\
+\mbox{\tt in}  & {\em bg\+Color} & -\/ background color \\
 \hline
-{\em fg\+Color} & -\/ foreground color (text color) \\
+\mbox{\tt in}  & {\em fg\+Color} & -\/ foreground color (text color) \\
 \hline
 \end{DoxyParams}
 \mbox{\label{class_main_window_a2f9acdc998f6f84d2b14d7feda97133c}} 
@@ -198,20 +200,20 @@ Generates bar graph.
 Generates linear graph. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em pointer} & -\/ pointer to target qt\+Widget \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pointer} & -\/ pointer to target qt\+Widget \\
 \hline
-{\em plots\+Amount} & -\/ plots amount (1 to maximum 3 of plots), 1 -\/ only x axis plot, 2 -\/ x and y axis plots, 3 -\/ x, y and z axis plots \\
+\mbox{\tt in}  & {\em plots\+Amount} & -\/ plots amount (1 to maximum 3 of plots), 1 -\/ only x axis plot, 2 -\/ x and y axis plots, 3 -\/ x, y and z axis plots \\
 \hline
-{\em labels} & -\/ labels for axes (which means labels for chart\textquotesingle{}s horizontal and vertical axes) \\
+\mbox{\tt in}  & {\em labels} & -\/ labels for axes (which means labels for chart\textquotesingle{}s horizontal and vertical axes) \\
 \hline
-{\em legend} & -\/ legend\textquotesingle{}s text (text for describing plots on chart) \\
+\mbox{\tt in}  & {\em legend} & -\/ legend\textquotesingle{}s text (text for describing plots on chart) \\
 \hline
-{\em plot\+Colors} & -\/ plot\textquotesingle{}s colors \\
+\mbox{\tt in}  & {\em plot\+Colors} & -\/ plot\textquotesingle{}s colors \\
 \hline
-{\em bg\+Color} & -\/ background color \\
+\mbox{\tt in}  & {\em bg\+Color} & -\/ background color \\
 \hline
-{\em fg\+Color} & -\/ foreground color (text color) \\
+\mbox{\tt in}  & {\em fg\+Color} & -\/ foreground color (text color) \\
 \hline
 \end{DoxyParams}
 \mbox{\label{class_main_window_a5c8dccfe7131cf3c08ff9cbb9ff642d4}} 
@@ -225,8 +227,8 @@ Generates linear graph.
 Returns specific error\textquotesingle{}s text based on error\textquotesingle{}s code. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em error\+Code} & -\/ error\textquotesingle{}s code \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em error\+Code} & -\/ error\textquotesingle{}s code \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -302,6 +304,16 @@ Adds available devices to combo\+Box menu.
 
 Sets graphs properties like background and foreground colors and amount of plots (which means 1 to maximum 3 of plots on one chart) 
 
+\mbox{\label{class_main_window_a33a37ae494ab281b466579ee54c6f642}} 
+\index{Main\+Window@{Main\+Window}!set\+L\+E\+Ds@{set\+L\+E\+Ds}}
+\index{set\+L\+E\+Ds@{set\+L\+E\+Ds}!Main\+Window@{Main\+Window}}
+\subsubsection{set\+L\+E\+Ds()}
+{\footnotesize\ttfamily void Main\+Window\+::set\+L\+E\+Ds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets L\+ED colors and size. 
+
 \mbox{\label{class_main_window_a366da6a45407c523f570ca9e4f4b40a4}} 
 \index{Main\+Window@{Main\+Window}!show\+Message@{show\+Message}}
 \index{show\+Message@{show\+Message}!Main\+Window@{Main\+Window}}
@@ -323,8 +335,8 @@ Shows message on status bar based on arduino.
 Shows message on status bar based on error\textquotesingle{}s code. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em error\+Code} & -\/ error\textquotesingle{}s code \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em error\+Code} & -\/ error\textquotesingle{}s code \\
 \hline
 \end{DoxyParams}
 \mbox{\label{class_main_window_a1e61f5c68914afa9a1054cbb9982cf17}} 
@@ -338,18 +350,18 @@ Shows message on status bar based on error\textquotesingle{}s code.
 Updated bar graph. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em pointer} & -\/ pointer to target qt\+Widget \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pointer} & -\/ pointer to target qt\+Widget \\
 \hline
-{\em data} & -\/ data to plot (current data) \\
+\mbox{\tt in}  & {\em data} & -\/ data to plot (current data) \\
 \hline
-{\em plots\+Amount} & -\/ plots amount (1 to maximum 3 of plots), 1 -\/ only x axis plot, 2 -\/ x and y axis plots, 3 -\/ x, y and z axis plots \\
+\mbox{\tt in}  & {\em plots\+Amount} & -\/ plots amount (1 to maximum 3 of plots), 1 -\/ only x axis plot, 2 -\/ x and y axis plots, 3 -\/ x, y and z axis plots \\
 \hline
-{\em labels} & -\/ labels for axes (which means labels for chart\textquotesingle{}s horizontal and vertical axes) \\
+\mbox{\tt in}  & {\em labels} & -\/ labels for axes (which means labels for chart\textquotesingle{}s horizontal and vertical axes) \\
 \hline
-{\em bg\+Color} & -\/ background color \\
+\mbox{\tt in}  & {\em bg\+Color} & -\/ background color \\
 \hline
-{\em fg\+Color} & -\/ foreground color (text color) \\
+\mbox{\tt in}  & {\em fg\+Color} & -\/ foreground color (text color) \\
 \hline
 \end{DoxyParams}
 \mbox{\label{class_main_window_a26aa34275169fb8830c03b47e97ff0ea}} 
@@ -363,12 +375,12 @@ Updated bar graph.
 Updated linear graph. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em pointer} & -\/ pointer to target qt\+Widget \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pointer} & -\/ pointer to target qt\+Widget \\
 \hline
-{\em pointers} & -\/ pointers to data received from microcontroller -\/ with history \\
+\mbox{\tt in}  & {\em pointers} & -\/ pointers to data received from microcontroller -\/ with history \\
 \hline
-{\em plots\+Amount} & -\/ plots amount (1 to maximum 3 of plots), 1 -\/ only x axis plot, 2 -\/ x and y axis plots, 3 -\/ x, y and z axis plots \\
+\mbox{\tt in}  & {\em plots\+Amount} & -\/ plots amount (1 to maximum 3 of plots), 1 -\/ only x axis plot, 2 -\/ x and y axis plots, 3 -\/ x, y and z axis plots \\
 \hline
 \end{DoxyParams}
 \mbox{\label{class_main_window_ac7fc0a361faba82837af50f2dd1b4ef4}} 

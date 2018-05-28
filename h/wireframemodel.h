@@ -23,7 +23,7 @@ public:
 	~WireframeModel();
 	/*!
 	 * \brief A method for parsing and saving a 3D model
-	 * \param filename - path for file .obj, extension not included
+	 * \param[in] filename - path for file .obj, extension not included
 	 * \return true if model is loaded succesfully
 	 */
 	bool LoadObject(const QString filename);

@@ -25,6 +25,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent),
 	generateBarGraph(ui->distanceGraph2, transform->getDistance(), plotsAmount, labels4, bgColor, fgColor);
 
 	setComboBox();
+	setLEDs();
+
+	ui->disconnectButton->setVisible(false);
 }
 
 MainWindow::~MainWindow()
@@ -36,7 +39,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::eventLoop()
 {
-	arduino->readLine();
+	if(!arduino->readLine())
+	{
+		onDisconnectButtonClicked();
+		QMessageBox::warning(this,"Fatal error","Connection has been lost. Check cable connection. Application will be closed");
+		close();
+	}
+
 	transform->calcAngleAndDistance();
 
 	updateLinearGraph(ui->accelerationGraph, transform->getVectorOfAccPointers(),plotsAmount);
@@ -51,6 +60,7 @@ void MainWindow::eventLoop()
 	ui->openGLWidget->updateRotation(transform->getAngle());
 	ui->openGLWidget->updateDistance(transform->getDistance());
 	ui->openGLWidget->update();
+
 }
 
 void MainWindow::setGraphsProperties()
@@ -226,11 +236,31 @@ void MainWindow::clearRealtimePlots()
 
 void MainWindow::setComboBox()
 {
+	ui->comboBox->clear();
 	QVector <QSerialPortInfo> temp = arduino->getInfo();
 	for(auto &i : temp)
 	{
 		ui->comboBox->addItem(i.description());
 	}
+}
+
+void MainWindow::setLEDs()
+{
+	quint32 ledSize = 40;
+	QColor onColor(0,150,0);
+	QColor offColor(175,0,0);
+
+	ui->led->setLedSize(ledSize);
+	ui->led2->setLedSize(ledSize);
+	ui->led3->setLedSize(ledSize);
+
+	ui->led->setOnColor(onColor);
+	ui->led2->setOnColor(onColor);
+	ui->led3->setOnColor(onColor);
+
+	ui->led->setOffColor(offColor);
+	ui->led2->setOffColor(offColor);
+	ui->led3->setOffColor(offColor);
 }
 
 QString MainWindow::getErrorText(const quint32 errorCode) const
@@ -334,10 +364,15 @@ void MainWindow::onConnectButtonClicked()
 	if(arduino->connect(ui->comboBox->currentIndex()))
 	{
 		loopTimer.start(0);
+		ui->connectButton->setVisible(false);
+		ui->autoButton->setVisible(false);
+		ui->disconnectButton->setVisible(true);
+		ui->led->setState(true);
+		ui->led2->setState(true);
+		ui->led3->setState(true);
+
 	}
 	showMessage();
-
-	//ui->statusBar->showMessage("Clicked");
 }
 
 void MainWindow::onAutoButtonClicked()
@@ -353,6 +388,14 @@ void MainWindow::onAutoButtonClicked()
 			{
 				showMessage();
 				loopTimer.start(0);
+
+				ui->connectButton->setVisible(false);
+				ui->autoButton->setVisible(false);
+				ui->disconnectButton->setVisible(true);
+				ui->led->setState(true);
+				ui->led2->setState(true);
+				ui->led3->setState(true);
+
 				connected = true;
 				break;
 			}
@@ -371,6 +414,12 @@ void MainWindow::onDisconnectButtonClicked()
 	loopTimer.stop();
 	if(arduino->disconnect())
 	{
+		ui->connectButton->setVisible(true);
+		ui->autoButton->setVisible(true);
+		ui->disconnectButton->setVisible(false);
+		ui->led->setState(false);
+		ui->led2->setState(false);
+		ui->led3->setState(false);
 		showMessage(7);
 		qDebug() << "Connection is being closed";
 	}
